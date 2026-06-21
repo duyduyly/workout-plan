@@ -141,7 +141,16 @@ function renderExerciseEditor(exercises) {
     <article class="editor-card">
       <div class="editor-card-heading">
         <div><span>Exercise ${index + 1}</span><strong>${escapeHtml(exercise.name || "Untitled")}</strong></div>
-        <span class="target-badge">${escapeHtml(exercise.mainTarget || "No target")}</span>
+        <div class="editor-heading-actions">
+          <span class="target-badge">${escapeHtml(exercise.mainTarget || "No target")}</span>
+          <button
+            class="btn btn-sm btn-outline-dark review-exercise"
+            type="button"
+            data-exercise-index="${index}"
+          >
+            Review
+          </button>
+        </div>
       </div>
       <div class="row g-3">
         ${managerInput("ID", exercise.id, `exercise.${index}.id`)}
@@ -154,6 +163,65 @@ function renderExerciseEditor(exercises) {
       </div>
     </article>
   `).join("") : '<div class="editor-empty">The exercise draft is empty.</div>';
+}
+
+function renderExerciseReview(exercise) {
+  const modalTitle = document.getElementById("exerciseReviewModalLabel");
+  const modalBody = document.getElementById("exercise-review-body");
+
+  if (!modalTitle || !modalBody || !exercise) {
+    return;
+  }
+
+  const embedUrl = getYoutubeEmbedUrl(exercise.youtubeUrl);
+  const muscleGroups = isArray(exercise.muscleGroups) && exercise.muscleGroups.length
+    ? exercise.muscleGroups
+      .map((group) => `<span class="muscle-badge">${escapeHtml(group)}</span>`)
+      .join("")
+    : '<span class="muscle-badge">Not specified</span>';
+  const videoContent = embedUrl
+    ? `
+      <div class="ratio ratio-16x9 tutorial-video">
+        <iframe
+          src="${escapeAttribute(embedUrl)}"
+          title="${escapeAttribute(`${exercise.name || "Exercise"} video tutorial`)}"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    `
+    : exercise.youtubeUrl
+      ? `
+        <a class="btn btn-outline-dark" href="${escapeAttribute(exercise.youtubeUrl)}"
+          target="_blank" rel="noopener noreferrer">Open video tutorial</a>
+      `
+      : '<p class="empty-tutorial mb-0">No video tutorial is available.</p>';
+
+  modalTitle.textContent = exercise.name || "Untitled exercise";
+  modalBody.innerHTML = `
+    <div class="row g-4 g-lg-5">
+      <div class="col-lg-7">
+        <h3 class="modal-section-title">Image tutorial</h3>
+        <div id="manager-review-story"></div>
+      </div>
+      <div class="col-lg-5">
+        <p class="exercise-description">${escapeHtml(exercise.description || "No description provided.")}</p>
+        <div class="detail-label">Exercise ID</div>
+        <p class="detail-value"><code>${escapeHtml(exercise.id || "Not specified")}</code></p>
+        <div class="detail-label">Main target</div>
+        <p class="detail-value">${escapeHtml(exercise.mainTarget || "Not specified")}</p>
+        <div class="detail-label">Muscle groups</div>
+        <div class="muscle-list">${muscleGroups}</div>
+      </div>
+    </div>
+    <section class="video-section">
+      <div class="detail-label mb-3">Video tutorial</div>
+      ${videoContent}
+    </section>
+  `;
+
+  renderStorySlider(document.getElementById("manager-review-story"), exercise);
 }
 
 function managerInput(label, value, path, columnClass) {
@@ -555,6 +623,14 @@ function bindManagerEvents() {
   });
 
   document.addEventListener("click", (event) => {
+    const reviewButton = event.target.closest(".review-exercise");
+    if (reviewButton) {
+      const exercise = exerciseDraft[Number(reviewButton.dataset.exerciseIndex)];
+      renderExerciseReview(exercise);
+      bootstrap.Modal.getOrCreateInstance(document.getElementById("exerciseReviewModal")).show();
+      return;
+    }
+
     const button = event.target.closest(".quick-create-exercise");
     if (!button) return;
     openQuickCreateExerciseModal({
@@ -568,6 +644,13 @@ function bindManagerEvents() {
   document.getElementById("quick-create-form").addEventListener("submit", (event) => {
     event.preventDefault();
     submitQuickCreate(event.currentTarget);
+  });
+
+  document.getElementById("exerciseReviewModal").addEventListener("hidden.bs.modal", (event) => {
+    const carouselElement = event.currentTarget.querySelector(".carousel");
+    if (carouselElement) {
+      bootstrap.Carousel.getInstance(carouselElement)?.dispose();
+    }
   });
 }
 

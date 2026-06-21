@@ -135,6 +135,22 @@
     </section>
   </main>
 
+  <div class="modal fade" id="exerciseReviewModal" tabindex="-1"
+    aria-labelledby="exerciseReviewModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content workout-modal">
+        <div class="modal-header">
+          <div>
+            <p class="eyebrow text-dark mb-2">Exercise draft review</p>
+            <h2 class="modal-title" id="exerciseReviewModalLabel">Exercise</h2>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div id="exercise-review-body" class="modal-body"></div>
+      </div>
+    </div>
+  </div>
+
   <div class="modal fade" id="quickCreateExerciseModal" tabindex="-1"
     aria-labelledby="quickCreateExerciseModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
@@ -182,6 +198,7 @@
   ></script>
   <script src="./assets/js/utils.js"></script>
   <script src="./assets/js/data-loader.js"></script>
+  <script src="./assets/js/story-slider.js"></script>
   <script src="./assets/js/import-export.js"></script>
   <script src="./assets/js/data-manager.js"></script>
 </body>
