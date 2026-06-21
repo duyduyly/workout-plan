@@ -66,3 +66,39 @@ function getYoutubeEmbedUrl(value) {
     ? `https://www.youtube-nocookie.com/embed/${videoId}`
     : "";
 }
+
+function normalizeExerciseName(name) {
+  return String(name || "")
+    .trim()
+    .toLowerCase()
+    .replace(/[-_]/g, " ")
+    .replace(/\s+/g, " ");
+}
+
+function slugifyId(value, prefix) {
+  const slug = String(value || "")
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/^_+|_+$/g, "");
+  return `${prefix || ""}${slug || "item"}`;
+}
+
+function isValidUrlOrPath(value) {
+  const candidate = String(value || "").trim();
+
+  if (!candidate) {
+    return false;
+  }
+
+  if (/^(?:\.{0,2}\/|\/)[^\s]+$/.test(candidate)) {
+    return true;
+  }
+
+  try {
+    const url = new URL(candidate);
+    return url.protocol === "http:" || url.protocol === "https:";
+  } catch (error) {
+    return false;
+  }
+}

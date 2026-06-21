@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Prepare, validate, and export workout planner JSON data." />
+  <title>Data Manager | Form & Function</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="./assets/css/main.css" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark" aria-label="Primary navigation">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html">
+        <span class="brand-mark" aria-hidden="true">F/F</span>
+        Form &amp; Function
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation"
+        aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavigation">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="./exercises.html">Exercises</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="./data-manager.html">Data Manager</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="data-manager-page">
+    <header class="manager-hero">
+      <div class="container">
+        <p class="eyebrow mb-3">Browser-based preparation tool</p>
+        <h1 class="display-title mb-3">Prepare clean data. Keep GitHub in control.</h1>
+        <p class="hero-copy mb-0">
+          Import, review, validate, and export temporary drafts. This page cannot write to the repository
+          or push to GitHub.
+        </p>
+      </div>
+    </header>
+
+    <section class="manager-section">
+      <div class="container">
+        <div class="manager-warning" role="alert">
+          <strong>Manual publishing required.</strong>
+          Export JSON, replace the matching file under <code>data/</code>, then commit and push.
+        </div>
+
+        <div class="workflow-grid" aria-label="Publishing workflow">
+          <div><strong>1</strong><span>Download a template or import current JSON/CSV.</span></div>
+          <div><strong>2</strong><span>Review, edit, and connect workouts to exercises.</span></div>
+          <div><strong>3</strong><span>Quick-create any missing exercise.</span></div>
+          <div><strong>4</strong><span>Validate and export clean JSON.</span></div>
+          <div><strong>5</strong><span>Replace <code>data/exercises.json</code> or <code>data/workout-plans.json</code>.</span></div>
+          <div><strong>6</strong><span>Commit and push; GitHub Pages redeploys.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="manager-section manager-section-alt" aria-labelledby="exercise-tools-heading">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow text-dark mb-2">Section B</p>
+            <h2 id="exercise-tools-heading" class="mb-0">Exercise data tools</h2>
+          </div>
+          <div class="manager-actions">
+            <button class="btn btn-outline-dark" type="button" data-template="exercise-json">JSON template</button>
+            <button class="btn btn-outline-dark" type="button" data-template="exercise-csv">CSV template</button>
+          </div>
+        </div>
+        <div class="import-bar">
+          <div>
+            <label for="exercise-file" class="form-label">Import Exercise JSON/CSV</label>
+            <input id="exercise-file" class="form-control" type="file" accept=".json,.csv,application/json,text/csv" />
+          </div>
+          <button id="validate-exercises" class="btn btn-outline-dark" type="button">Validate exercises</button>
+          <button id="export-exercises" class="btn btn-dark" type="button">Export exercises.json</button>
+          <button id="clear-exercises" class="btn btn-outline-danger" type="button">Clear draft</button>
+        </div>
+        <div id="exercise-import-message" class="manager-message" aria-live="polite"></div>
+        <div id="exercise-preview"></div>
+        <div id="exercise-editor" class="draft-editor"></div>
+      </div>
+    </section>
+
+    <section class="manager-section" aria-labelledby="plan-tools-heading">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow text-dark mb-2">Section C</p>
+            <h2 id="plan-tools-heading" class="mb-0">Workout plan data tools</h2>
+          </div>
+          <div class="manager-actions">
+            <button class="btn btn-outline-dark" type="button" data-template="plan-json">JSON template</button>
+            <button class="btn btn-outline-dark" type="button" data-template="plan-csv">CSV template</button>
+          </div>
+        </div>
+        <div class="import-bar">
+          <div>
+            <label for="plan-file" class="form-label">Import Workout Plan JSON/CSV</label>
+            <input id="plan-file" class="form-control" type="file" accept=".json,.csv,application/json,text/csv" />
+          </div>
+          <button id="validate-plans" class="btn btn-outline-dark" type="button">Validate plans</button>
+          <button id="export-plans" class="btn btn-dark" type="button">Export workout-plans.json</button>
+          <button id="clear-plans" class="btn btn-outline-danger" type="button">Clear draft</button>
+        </div>
+        <div id="plan-import-message" class="manager-message" aria-live="polite"></div>
+        <div id="plan-preview"></div>
+        <div id="plan-editor" class="draft-editor"></div>
+      </div>
+    </section>
+
+    <section class="manager-section manager-section-alt" aria-labelledby="combined-review-heading">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow text-dark mb-2">Section E</p>
+            <h2 id="combined-review-heading" class="mb-0">Combined review</h2>
+          </div>
+          <div class="manager-actions">
+            <button class="btn btn-outline-dark" type="button" data-export="exercises">Export exercises.json</button>
+            <button class="btn btn-dark" type="button" data-export="plans">Export workout-plans.json</button>
+          </div>
+        </div>
+        <div id="combined-review" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal fade" id="quickCreateExerciseModal" tabindex="-1"
+    aria-labelledby="quickCreateExerciseModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content workout-modal">
+        <form id="quick-create-form">
+          <div class="modal-header">
+            <div>
+              <p class="eyebrow text-dark mb-2">Workout editor</p>
+              <h2 class="modal-title" id="quickCreateExerciseModalLabel">Create New Exercise</h2>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div id="quick-create-errors" class="manager-message" aria-live="polite"></div>
+            <div class="row g-3">
+              <div class="col-md-6"><label class="form-label" for="quick-id">ID</label><input class="form-control" id="quick-id" name="id" placeholder="Generated from name if empty" /></div>
+              <div class="col-md-6"><label class="form-label" for="quick-name">Name</label><input class="form-control" id="quick-name" name="name" required /></div>
+              <div class="col-12"><label class="form-label" for="quick-description">Description</label><textarea class="form-control" id="quick-description" name="description" rows="2" required></textarea></div>
+              <div class="col-md-6"><label class="form-label" for="quick-target">Main target</label><input class="form-control" id="quick-target" name="mainTarget" required /></div>
+              <div class="col-md-6"><label class="form-label" for="quick-muscles">Muscle groups</label><input class="form-control" id="quick-muscles" name="muscleGroups" placeholder="Back, Shoulders" /></div>
+              <div class="col-12"><label class="form-label" for="quick-youtube">YouTube URL</label><input class="form-control" id="quick-youtube" name="youtubeUrl" /></div>
+              <div class="col-12"><div class="row g-2" id="quick-image-fields"></div></div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-dark">Add exercise and select</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container d-flex flex-column flex-sm-row justify-content-between gap-2">
+      <span>Form &amp; Function</span>
+      <span>Drafts live only in this browser tab until exported.</span>
+    </div>
+  </footer>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+  <script src="./assets/js/utils.js"></script>
+  <script src="./assets/js/data-loader.js"></script>
+  <script src="./assets/js/import-export.js"></script>
+  <script src="./assets/js/data-manager.js"></script>
+</body>
+</html>
