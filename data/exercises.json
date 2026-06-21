@@ -1,47 +1,482 @@
 [
   {
+    "id": "ex_barbell_bench_press",
+    "name": "Barbell Bench Press",
+    "description": "A compound chest press that builds the chest, front shoulders, and triceps.",
+    "mainTarget": "Chest",
+    "muscleGroups": [
+      "Chest",
+      "Shoulder",
+      "Triceps"
+    ],
+    "images": [
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-barbell-bench-press-front.jpg&w=3840",
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-barbell-bench-press-side.jpg&w=3840",
+      "https://musclewiki.com/exercise/barbell-bench-press"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=4XLEnwUr1d8",
+    "instructionUrl": "https://musclewiki.com/exercise/barbell-bench-press",
+    "youtubeVideoId": "4XLEnwUr1d8",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/4XLEnwUr1d8"
+  },
+  {
+    "id": "ex_dumbbell_incline_bench_press",
+    "name": "Dumbbell Incline Bench Press",
+    "description": "An upper-chest pressing movement using dumbbells with a controlled range of motion.",
+    "mainTarget": "Chest",
+    "muscleGroups": [
+      "Chest",
+      "Shoulder",
+      "Triceps"
+    ],
+    "images": [
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-dumbbell-incline-bench-press-front.jpg&w=3840",
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-dumbbell-incline-bench-press-side.jpg&w=3840",
+      "https://musclewiki.com/exercise/dumbbell-incline-bench-press"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=4XLEnwUr1d8",
+    "instructionUrl": "https://musclewiki.com/exercise/dumbbell-incline-bench-press",
+    "youtubeVideoId": "4XLEnwUr1d8",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/4XLEnwUr1d8"
+  },
+  {
+    "id": "ex_cable_chest_fly",
+    "name": "Cable Chest Fly",
+    "description": "An isolation chest exercise that keeps constant tension through the movement.",
+    "mainTarget": "Chest",
+    "muscleGroups": [
+      "Chest",
+      "Shoulder"
+    ],
+    "images": [
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-cables-standing-chest-fly-front.jpg&w=3840",
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-cables-standing-chest-fly-side.jpg&w=3840",
+      "https://musclewiki.com/exercise/cable-standing-chest-fly"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=4XLEnwUr1d8",
+    "instructionUrl": "https://musclewiki.com/exercise/cable-standing-chest-fly",
+    "youtubeVideoId": "4XLEnwUr1d8",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/4XLEnwUr1d8"
+  },
+  {
+    "id": "ex_dumbbell_lateral_raise",
+    "name": "Dumbbell Lateral Raise",
+    "description": "A shoulder isolation exercise focused on the side delts for a wider upper-body shape.",
+    "mainTarget": "Shoulder",
+    "muscleGroups": [
+      "Shoulder"
+    ],
+    "images": [
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-dumbbell-lateral-raise-front.jpg&w=3840",
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-dumbbell-lateral-raise-side.jpg&w=3840",
+      "https://musclewiki.com/exercise/dumbbell-lateral-raise"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=4XLEnwUr1d8",
+    "instructionUrl": "https://musclewiki.com/exercise/dumbbell-lateral-raise",
+    "youtubeVideoId": "4XLEnwUr1d8",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/4XLEnwUr1d8"
+  },
+  {
+    "id": "ex_rope_triceps_pushdown",
+    "name": "Rope Triceps Pushdown",
+    "description": "A cable triceps exercise that targets elbow extension and arm definition.",
+    "mainTarget": "Triceps",
+    "muscleGroups": [
+      "Triceps"
+    ],
+    "images": [
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-cables-rope-pushdown-front.jpg&w=3840",
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-cables-rope-pushdown-side.jpg&w=3840",
+      "https://musclewiki.com/exercise/cable-rope-pushdown"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=4XLEnwUr1d8",
+    "instructionUrl": "https://musclewiki.com/exercise/cable-rope-pushdown",
+    "youtubeVideoId": "4XLEnwUr1d8",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/4XLEnwUr1d8"
+  },
+  {
+    "id": "ex_lat_pulldown",
+    "name": "Lat Pulldown",
+    "description": "A machine pulling exercise that targets the lats and upper back.",
+    "mainTarget": "Back",
+    "muscleGroups": [
+      "Back",
+      "Biceps"
+    ],
+    "images": [
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-machine-pulldown-front.jpg&w=3840",
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-machine-pulldown-side.jpg&w=3840",
+      "https://musclewiki.com/exercise/machine-pulldown"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=4XLEnwUr1d8",
+    "instructionUrl": "https://musclewiki.com/exercise/machine-pulldown",
+    "youtubeVideoId": "4XLEnwUr1d8",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/4XLEnwUr1d8"
+  },
+  {
+    "id": "ex_seated_cable_row",
+    "name": "Seated Cable Row",
+    "description": "A horizontal pulling movement for the mid-back, lats, and biceps.",
+    "mainTarget": "Back",
+    "muscleGroups": [
+      "Back",
+      "Biceps"
+    ],
+    "images": [
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-cables-seated-cable-row-front.jpg&w=3840",
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-cables-seated-cable-row-side.jpg&w=3840",
+      "https://musclewiki.com/exercise/cable-seated-row"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=4XLEnwUr1d8",
+    "instructionUrl": "https://musclewiki.com/exercise/cable-seated-row",
+    "youtubeVideoId": "4XLEnwUr1d8",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/4XLEnwUr1d8"
+  },
+  {
     "id": "ex_bent_over_barbell_row",
     "name": "Bent Over Barbell Row",
-    "description": "A compound pulling exercise that develops upper-back strength and reinforces a stable hip hinge.",
+    "description": "A compound back exercise performed by rowing a barbell while hinging forward.",
     "mainTarget": "Back",
-    "muscleGroups": ["Back", "Shoulders", "Biceps"],
-    "images": [],
-    "youtubeUrl": "https://www.youtube.com/watch?v=9efgcAjQe7E"
+    "muscleGroups": [
+      "Back",
+      "Shoulder",
+      "Biceps"
+    ],
+    "images": [
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-barbell-bent-over-row-front.jpg&w=3840",
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-barbell-bent-over-row-side.jpg&w=3840",
+      "https://musclewiki.com/exercise/barbell-bent-over-row"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=4XLEnwUr1d8",
+    "instructionUrl": "https://musclewiki.com/exercise/barbell-bent-over-row",
+    "youtubeVideoId": "4XLEnwUr1d8",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/4XLEnwUr1d8"
   },
   {
-    "id": "ex_goblet_squat",
-    "name": "Goblet Squat",
-    "description": "A squat variation performed with a dumbbell held close to the chest.",
+    "id": "ex_face_pull",
+    "name": "Cable Face Pull",
+    "description": "A rear-delt and upper-back exercise that supports shoulder stability and posture.",
+    "mainTarget": "Shoulder",
+    "muscleGroups": [
+      "Shoulder",
+      "Back"
+    ],
+    "images": [
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-cables-face-pull-front.jpg&w=3840",
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-cables-face-pull-side.jpg&w=3840",
+      "https://musclewiki.com/exercise/cable-face-pull"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=4XLEnwUr1d8",
+    "instructionUrl": "https://musclewiki.com/exercise/cable-face-pull",
+    "youtubeVideoId": "4XLEnwUr1d8",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/4XLEnwUr1d8"
+  },
+  {
+    "id": "ex_dumbbell_biceps_curl",
+    "name": "Dumbbell Biceps Curl",
+    "description": "A basic biceps isolation exercise using dumbbells.",
+    "mainTarget": "Biceps",
+    "muscleGroups": [
+      "Biceps"
+    ],
+    "images": [
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-dumbbell-curl-front.jpg&w=3840",
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-dumbbell-curl-side.jpg&w=3840",
+      "https://musclewiki.com/exercise/dumbbell-curl"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=4XLEnwUr1d8",
+    "instructionUrl": "https://musclewiki.com/exercise/dumbbell-curl",
+    "youtubeVideoId": "4XLEnwUr1d8",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/4XLEnwUr1d8"
+  },
+  {
+    "id": "ex_barbell_back_squat",
+    "name": "Barbell Back Squat",
+    "description": "A lower-body compound movement for quads, glutes, hamstrings, and core strength.",
     "mainTarget": "Legs",
-    "muscleGroups": ["Quadriceps", "Glutes", "Core"],
-    "images": [],
-    "youtubeUrl": "https://www.youtube.com/watch?v=MeIiIdhvXT4"
+    "muscleGroups": [
+      "Quadriceps",
+      "Glutes",
+      "Hamstrings",
+      "Core"
+    ],
+    "images": [
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-barbell-squat-front.jpg&w=3840",
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-barbell-squat-side.jpg&w=3840",
+      "https://musclewiki.com/exercise/barbell-squat"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=4XLEnwUr1d8",
+    "instructionUrl": "https://musclewiki.com/exercise/barbell-squat",
+    "youtubeVideoId": "4XLEnwUr1d8",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/4XLEnwUr1d8"
   },
   {
-    "id": "ex_push_up",
-    "name": "Push-up",
-    "description": "A bodyweight press that builds chest, shoulder, triceps, and trunk strength.",
+    "id": "ex_leg_press",
+    "name": "Leg Press",
+    "description": "A machine leg exercise that targets quads and glutes with guided movement.",
+    "mainTarget": "Legs",
+    "muscleGroups": [
+      "Quadriceps",
+      "Glutes",
+      "Hamstrings"
+    ],
+    "images": [
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-machine-leg-press-front.jpg&w=3840",
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-machine-leg-press-side.jpg&w=3840",
+      "https://musclewiki.com/exercise/machine-leg-press"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=4XLEnwUr1d8",
+    "instructionUrl": "https://musclewiki.com/exercise/machine-leg-press",
+    "youtubeVideoId": "4XLEnwUr1d8",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/4XLEnwUr1d8"
+  },
+  {
+    "id": "ex_leg_extension",
+    "name": "Leg Extension",
+    "description": "A machine isolation exercise focused on the quadriceps.",
+    "mainTarget": "Quadriceps",
+    "muscleGroups": [
+      "Quadriceps"
+    ],
+    "images": [
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-machine-leg-extension-front.jpg&w=3840",
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-machine-leg-extension-side.jpg&w=3840",
+      "https://musclewiki.com/exercise/machine-leg-extension"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=4XLEnwUr1d8",
+    "instructionUrl": "https://musclewiki.com/exercise/machine-leg-extension",
+    "youtubeVideoId": "4XLEnwUr1d8",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/4XLEnwUr1d8"
+  },
+  {
+    "id": "ex_lying_leg_curl",
+    "name": "Lying Leg Curl",
+    "description": "A hamstring isolation exercise performed on a leg curl machine.",
+    "mainTarget": "Hamstrings",
+    "muscleGroups": [
+      "Hamstrings"
+    ],
+    "images": [
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-machine-lying-leg-curl-front.jpg&w=3840",
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-machine-lying-leg-curl-side.jpg&w=3840",
+      "https://musclewiki.com/exercise/machine-lying-leg-curl"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=4XLEnwUr1d8",
+    "instructionUrl": "https://musclewiki.com/exercise/machine-lying-leg-curl",
+    "youtubeVideoId": "4XLEnwUr1d8",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/4XLEnwUr1d8"
+  },
+  {
+    "id": "ex_standing_calf_raise",
+    "name": "Standing Calf Raise",
+    "description": "A calf exercise that trains ankle extension and lower-leg strength.",
+    "mainTarget": "Calves",
+    "muscleGroups": [
+      "Calves"
+    ],
+    "images": [
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-machine-standing-calf-raise-front.jpg&w=3840",
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-machine-standing-calf-raise-side.jpg&w=3840",
+      "https://musclewiki.com/exercise/machine-standing-calf-raise"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=4XLEnwUr1d8",
+    "instructionUrl": "https://musclewiki.com/exercise/machine-standing-calf-raise",
+    "youtubeVideoId": "4XLEnwUr1d8",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/4XLEnwUr1d8"
+  },
+  {
+    "id": "ex_dumbbell_shoulder_press",
+    "name": "Dumbbell Shoulder Press",
+    "description": "A shoulder pressing movement that targets the delts and triceps.",
+    "mainTarget": "Shoulder",
+    "muscleGroups": [
+      "Shoulder",
+      "Triceps"
+    ],
+    "images": [
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-dumbbell-seated-overhead-press-front.jpg&w=3840",
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-dumbbell-seated-overhead-press-side.jpg&w=3840",
+      "https://musclewiki.com/exercise/dumbbell-seated-overhead-press"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=4XLEnwUr1d8",
+    "instructionUrl": "https://musclewiki.com/exercise/dumbbell-seated-overhead-press",
+    "youtubeVideoId": "4XLEnwUr1d8",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/4XLEnwUr1d8"
+  },
+  {
+    "id": "ex_machine_chest_press",
+    "name": "Machine Chest Press",
+    "description": "A guided chest press that is beginner-friendly and easy to control.",
     "mainTarget": "Chest",
-    "muscleGroups": ["Chest", "Shoulders", "Triceps"],
-    "images": [],
-    "youtubeUrl": "https://www.youtube.com/watch?v=IODxDxX7oi4"
+    "muscleGroups": [
+      "Chest",
+      "Shoulder",
+      "Triceps"
+    ],
+    "images": [
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-machine-chest-press-front.jpg&w=3840",
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-machine-chest-press-side.jpg&w=3840",
+      "https://musclewiki.com/exercise/machine-chest-press"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=4XLEnwUr1d8",
+    "instructionUrl": "https://musclewiki.com/exercise/machine-chest-press",
+    "youtubeVideoId": "4XLEnwUr1d8",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/4XLEnwUr1d8"
+  },
+  {
+    "id": "ex_assisted_pull_up",
+    "name": "Assisted Pull-Up",
+    "description": "A vertical pulling exercise that develops the lats, upper back, and biceps with assistance.",
+    "mainTarget": "Back",
+    "muscleGroups": [
+      "Back",
+      "Biceps"
+    ],
+    "images": [
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-machine-assisted-pull-up-front.jpg&w=3840",
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-machine-assisted-pull-up-side.jpg&w=3840",
+      "https://musclewiki.com/exercise/machine-assisted-pull-up"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=4XLEnwUr1d8",
+    "instructionUrl": "https://musclewiki.com/exercise/machine-assisted-pull-up",
+    "youtubeVideoId": "4XLEnwUr1d8",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/4XLEnwUr1d8"
+  },
+  {
+    "id": "ex_cable_triceps_overhead_extension",
+    "name": "Cable Overhead Triceps Extension",
+    "description": "A triceps isolation exercise that emphasizes the long head of the triceps.",
+    "mainTarget": "Triceps",
+    "muscleGroups": [
+      "Triceps"
+    ],
+    "images": [
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-cables-overhead-tricep-extension-front.jpg&w=3840",
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-cables-overhead-tricep-extension-side.jpg&w=3840",
+      "https://musclewiki.com/exercise/cable-overhead-tricep-extension"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=4XLEnwUr1d8",
+    "instructionUrl": "https://musclewiki.com/exercise/cable-overhead-tricep-extension",
+    "youtubeVideoId": "4XLEnwUr1d8",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/4XLEnwUr1d8"
+  },
+  {
+    "id": "ex_hammer_curl",
+    "name": "Dumbbell Hammer Curl",
+    "description": "A curl variation that targets the biceps and forearms with a neutral grip.",
+    "mainTarget": "Biceps",
+    "muscleGroups": [
+      "Biceps",
+      "Forearms"
+    ],
+    "images": [
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-dumbbell-hammer-curl-front.jpg&w=3840",
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-dumbbell-hammer-curl-side.jpg&w=3840",
+      "https://musclewiki.com/exercise/dumbbell-hammer-curl"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=4XLEnwUr1d8",
+    "instructionUrl": "https://musclewiki.com/exercise/dumbbell-hammer-curl",
+    "youtubeVideoId": "4XLEnwUr1d8",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/4XLEnwUr1d8"
   },
   {
     "id": "ex_romanian_deadlift",
     "name": "Romanian Deadlift",
-    "description": "A controlled hip-hinge movement focused on the hamstrings and glutes.",
+    "description": "A hip-hinge movement focused on hamstrings, glutes, and posterior-chain strength.",
     "mainTarget": "Hamstrings",
-    "muscleGroups": ["Hamstrings", "Glutes", "Back"],
-    "images": [],
-    "youtubeUrl": "https://www.youtube.com/watch?v=JCXUYuzwNrM"
+    "muscleGroups": [
+      "Hamstrings",
+      "Glutes",
+      "Back"
+    ],
+    "images": [
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-barbell-romanian-deadlift-front.jpg&w=3840",
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-barbell-romanian-deadlift-side.jpg&w=3840",
+      "https://musclewiki.com/exercise/barbell-romanian-deadlift"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=4XLEnwUr1d8",
+    "instructionUrl": "https://musclewiki.com/exercise/barbell-romanian-deadlift",
+    "youtubeVideoId": "4XLEnwUr1d8",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/4XLEnwUr1d8"
   },
   {
-    "id": "ex_dead_bug",
-    "name": "Dead Bug",
-    "description": "A floor-based core drill that teaches trunk control while the limbs move.",
+    "id": "ex_barbell_hip_thrust",
+    "name": "Barbell Hip Thrust",
+    "description": "A glute-focused hip extension exercise that builds glute strength and control.",
+    "mainTarget": "Glutes",
+    "muscleGroups": [
+      "Glutes",
+      "Hamstrings",
+      "Core"
+    ],
+    "images": [
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-barbell-hip-thrust-front.jpg&w=3840",
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-barbell-hip-thrust-side.jpg&w=3840",
+      "https://musclewiki.com/exercise/barbell-hip-thrust"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=4XLEnwUr1d8",
+    "instructionUrl": "https://musclewiki.com/exercise/barbell-hip-thrust",
+    "youtubeVideoId": "4XLEnwUr1d8",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/4XLEnwUr1d8"
+  },
+  {
+    "id": "ex_walking_lunge",
+    "name": "Dumbbell Walking Lunge",
+    "description": "A unilateral leg exercise that trains quads, glutes, balance, and coordination.",
+    "mainTarget": "Legs",
+    "muscleGroups": [
+      "Quadriceps",
+      "Glutes",
+      "Hamstrings",
+      "Core"
+    ],
+    "images": [
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-dumbbell-walking-lunge-front.jpg&w=3840",
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-dumbbell-walking-lunge-side.jpg&w=3840",
+      "https://musclewiki.com/exercise/dumbbell-walking-lunge"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=4XLEnwUr1d8",
+    "instructionUrl": "https://musclewiki.com/exercise/dumbbell-walking-lunge",
+    "youtubeVideoId": "4XLEnwUr1d8",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/4XLEnwUr1d8"
+  },
+  {
+    "id": "ex_plank",
+    "name": "Plank",
+    "description": "A core stability exercise that trains the abs, lower back, and full-body tension.",
     "mainTarget": "Core",
-    "muscleGroups": ["Core", "Hip Flexors"],
-    "images": [],
-    "youtubeUrl": "https://www.youtube.com/watch?v=4XLEnwUr1d8"
+    "muscleGroups": [
+      "Core",
+      "Abs"
+    ],
+    "images": [
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-bodyweight-front-plank-front.jpg&w=3840",
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-bodyweight-front-plank-side.jpg&w=3840",
+      "https://musclewiki.com/exercise/bodyweight-front-plank"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=4XLEnwUr1d8",
+    "instructionUrl": "https://musclewiki.com/exercise/bodyweight-front-plank",
+    "youtubeVideoId": "4XLEnwUr1d8",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/4XLEnwUr1d8"
+  },
+  {
+    "id": "ex_hanging_knee_raise",
+    "name": "Hanging Knee Raise",
+    "description": "A core exercise that targets the lower abs and hip flexors while hanging from a bar.",
+    "mainTarget": "Core",
+    "muscleGroups": [
+      "Core",
+      "Abs",
+      "Hip Flexors"
+    ],
+    "images": [
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-bodyweight-hanging-knee-raises-front.jpg&w=3840",
+      "https://musclewiki.com/_next/image?q=75&url=https%3A%2F%2Fmedia.musclewiki.com%2Fmedia%2Fuploads%2Fog-male-bodyweight-hanging-knee-raises-side.jpg&w=3840",
+      "https://musclewiki.com/exercise/bodyweight-hanging-knee-raises"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=4XLEnwUr1d8",
+    "instructionUrl": "https://musclewiki.com/exercise/bodyweight-hanging-knee-raises",
+    "youtubeVideoId": "4XLEnwUr1d8",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/4XLEnwUr1d8"
   }
 ]

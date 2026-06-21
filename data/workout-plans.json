@@ -1,195 +1,241 @@
 [
   {
-    "id": "plan_4_day_strength",
-    "name": "Four-Day Foundation",
-    "description": "A balanced strength block with focused upper- and lower-body sessions.",
+    "id": "plan_5_day_toned_full_body",
+    "name": "5-Day Toned Full Body Gym Plan",
+    "description": "A 5-day gym plan designed to build a lean, toned body while covering all major muscle groups. Rest 60-90 seconds between sets and prioritize clean technique before increasing weight.",
     "days": [
       {
-        "id": "day_1_pull",
-        "name": "Day 1 - Pull",
-        "note": "Build back strength with controlled reps.",
+        "id": "day_1_push_chest_shoulder_triceps",
+        "name": "Day 1 - Push: Chest + Shoulders + Triceps",
+        "note": "Focus on chest, front shoulders, side shoulders, and triceps. Warm up for 5-8 minutes and complete 2 light warm-up sets before the main compound lift.",
         "workouts": [
           {
-            "id": "workout_row_1",
-            "exerciseId": "ex_bent_over_barbell_row",
+            "id": "workout_day1_bench_press",
+            "exerciseId": "ex_barbell_bench_press",
             "sets": 4,
             "reps": "8-10",
-            "weight": "Moderate",
-            "note": "Keep the torso stable."
-          }
-        ]
-      },
-      {
-        "id": "day_2_lower",
-        "name": "Day 2 - Lower",
-        "note": "Train the squat pattern and posterior chain.",
-        "workouts": [
-          {
-            "id": "workout_squat_1",
-            "exerciseId": "ex_goblet_squat",
-            "sets": 4,
-            "reps": "10",
-            "weight": "Moderate",
-            "note": "Stay tall through the torso."
+            "weight": "Start light / RPE 7",
+            "note": "Keep your feet planted, squeeze your shoulder blades, and do not bounce the bar."
           },
           {
-            "id": "workout_rdl_1",
-            "exerciseId": "ex_romanian_deadlift",
-            "sets": 3,
-            "reps": "8",
-            "weight": "Moderate",
-            "note": "Move through the hips."
-          }
-        ]
-      },
-      {
-        "id": "day_3_push",
-        "name": "Day 3 - Push",
-        "note": "Develop pressing strength and clean technique.",
-        "workouts": [
-          {
-            "id": "workout_pushup_1",
-            "exerciseId": "ex_push_up",
-            "sets": 4,
-            "reps": "8-15",
-            "weight": "Bodyweight",
-            "note": "Keep a straight line from head to heel."
-          }
-        ]
-      },
-      {
-        "id": "day_4_core",
-        "name": "Day 4 - Core + Recovery",
-        "note": "Finish the week with trunk control and easy movement.",
-        "workouts": [
-          {
-            "id": "workout_deadbug_1",
-            "exerciseId": "ex_dead_bug",
-            "sets": 3,
-            "reps": "8 per side",
-            "weight": "Bodyweight",
-            "note": "Keep the lower back gently pressed down."
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "plan_3_day_full_body",
-    "name": "Three-Day Full Body",
-    "description": "A practical schedule for building strength when training time is limited.",
-    "days": [
-      {
-        "id": "full_body_day_1",
-        "name": "Day 1 - Build",
-        "note": "Use steady tempo and leave two reps in reserve.",
-        "workouts": [
-          {
-            "id": "workout_goblet_2",
-            "exerciseId": "ex_goblet_squat",
+            "id": "workout_day1_incline_db_press",
+            "exerciseId": "ex_dumbbell_incline_bench_press",
             "sets": 3,
             "reps": "10-12",
             "weight": "Moderate",
-            "note": "Control the bottom position."
+            "note": "Use about a 30-degree bench angle and lower the dumbbells under control."
           },
           {
-            "id": "workout_pushup_2",
-            "exerciseId": "ex_push_up",
+            "id": "workout_day1_cable_fly",
+            "exerciseId": "ex_cable_chest_fly",
             "sets": 3,
-            "reps": "8-15",
-            "weight": "Bodyweight",
-            "note": "Use an incline if needed."
+            "reps": "12-15",
+            "weight": "Light to moderate",
+            "note": "Squeeze your chest at the center and avoid swinging your body."
+          },
+          {
+            "id": "workout_day1_lateral_raise",
+            "exerciseId": "ex_dumbbell_lateral_raise",
+            "sets": 3,
+            "reps": "12-15",
+            "weight": "Light",
+            "note": "Keep a slight bend in your elbows and avoid shrugging."
+          },
+          {
+            "id": "workout_day1_triceps_pushdown",
+            "exerciseId": "ex_rope_triceps_pushdown",
+            "sets": 3,
+            "reps": "12-15",
+            "weight": "Moderate",
+            "note": "Keep your elbows close to your body and separate the rope at the bottom."
           }
         ]
       },
       {
-        "id": "full_body_day_2",
-        "name": "Day 2 - Hinge",
-        "note": "Prioritize posterior-chain strength.",
+        "id": "day_2_pull_back_biceps_rear_delt",
+        "name": "Day 2 - Pull: Back + Biceps + Rear Delts",
+        "note": "Focus on back width, back thickness, rear delts, and biceps. Pull with your elbows first instead of only using your hands.",
         "workouts": [
           {
-            "id": "workout_rdl_2",
+            "id": "workout_day2_lat_pulldown",
+            "exerciseId": "ex_lat_pulldown",
+            "sets": 4,
+            "reps": "10-12",
+            "weight": "Moderate",
+            "note": "Pull the bar toward your upper chest and keep your torso controlled."
+          },
+          {
+            "id": "workout_day2_seated_row",
+            "exerciseId": "ex_seated_cable_row",
+            "sets": 3,
+            "reps": "10-12",
+            "weight": "Moderate",
+            "note": "Drive your elbows back and squeeze your shoulder blades."
+          },
+          {
+            "id": "workout_day2_barbell_row",
+            "exerciseId": "ex_bent_over_barbell_row",
+            "sets": 3,
+            "reps": "8-10",
+            "weight": "Start light / RPE 7",
+            "note": "Keep your back neutral and avoid jerking the bar."
+          },
+          {
+            "id": "workout_day2_face_pull",
+            "exerciseId": "ex_face_pull",
+            "sets": 3,
+            "reps": "12-15",
+            "weight": "Light to moderate",
+            "note": "Pull toward your face and keep your elbows high."
+          },
+          {
+            "id": "workout_day2_biceps_curl",
+            "exerciseId": "ex_dumbbell_biceps_curl",
+            "sets": 3,
+            "reps": "10-12",
+            "weight": "Moderate",
+            "note": "Keep your elbows stable and avoid swinging the dumbbells."
+          }
+        ]
+      },
+      {
+        "id": "day_3_legs_quads_glutes_calves",
+        "name": "Day 3 - Legs: Quads + Glutes + Calves",
+        "note": "Focus on lower-body strength and shape. Keep the reps controlled and avoid rushing the eccentric phase.",
+        "workouts": [
+          {
+            "id": "workout_day3_back_squat",
+            "exerciseId": "ex_barbell_back_squat",
+            "sets": 4,
+            "reps": "8-10",
+            "weight": "Start light / RPE 7",
+            "note": "Brace your core, keep your knees tracking with your toes, and squat with control."
+          },
+          {
+            "id": "workout_day3_leg_press",
+            "exerciseId": "ex_leg_press",
+            "sets": 3,
+            "reps": "10-12",
+            "weight": "Moderate",
+            "note": "Do not lock your knees hard at the top."
+          },
+          {
+            "id": "workout_day3_leg_extension",
+            "exerciseId": "ex_leg_extension",
+            "sets": 3,
+            "reps": "12-15",
+            "weight": "Light to moderate",
+            "note": "Pause briefly at the top and control the lowering phase."
+          },
+          {
+            "id": "workout_day3_lying_leg_curl",
+            "exerciseId": "ex_lying_leg_curl",
+            "sets": 3,
+            "reps": "12-15",
+            "weight": "Moderate",
+            "note": "Keep your hips down on the pad and avoid lifting your lower back."
+          },
+          {
+            "id": "workout_day3_calf_raise",
+            "exerciseId": "ex_standing_calf_raise",
+            "sets": 4,
+            "reps": "12-20",
+            "weight": "Moderate",
+            "note": "Use a full stretch at the bottom and pause at the top."
+          }
+        ]
+      },
+      {
+        "id": "day_4_upper_balance_chest_back_shoulders_arms",
+        "name": "Day 4 - Upper Balance: Chest + Back + Shoulders + Arms",
+        "note": "A balanced upper-body day with moderate intensity. This day adds volume without going too heavy.",
+        "workouts": [
+          {
+            "id": "workout_day4_machine_chest_press",
+            "exerciseId": "ex_machine_chest_press",
+            "sets": 3,
+            "reps": "10-12",
+            "weight": "Moderate",
+            "note": "Keep the movement smooth and avoid lifting your shoulders off the pad."
+          },
+          {
+            "id": "workout_day4_assisted_pullup",
+            "exerciseId": "ex_assisted_pull_up",
+            "sets": 3,
+            "reps": "8-10",
+            "weight": "Assisted / controlled",
+            "note": "Use enough assistance to complete clean reps."
+          },
+          {
+            "id": "workout_day4_shoulder_press",
+            "exerciseId": "ex_dumbbell_shoulder_press",
+            "sets": 3,
+            "reps": "10-12",
+            "weight": "Moderate",
+            "note": "Keep your ribs down and press overhead with control."
+          },
+          {
+            "id": "workout_day4_overhead_triceps",
+            "exerciseId": "ex_cable_triceps_overhead_extension",
+            "sets": 3,
+            "reps": "12-15",
+            "weight": "Light to moderate",
+            "note": "Keep your elbows pointing forward and stretch the triceps safely."
+          },
+          {
+            "id": "workout_day4_hammer_curl",
+            "exerciseId": "ex_hammer_curl",
+            "sets": 3,
+            "reps": "10-12",
+            "weight": "Moderate",
+            "note": "Use a neutral grip and avoid swinging your torso."
+          }
+        ]
+      },
+      {
+        "id": "day_5_lower_core_hamstrings_glutes_abs",
+        "name": "Day 5 - Lower + Core: Hamstrings + Glutes + Abs",
+        "note": "Focus on posterior chain, glutes, unilateral leg control, and core stability. Keep the movement quality high.",
+        "workouts": [
+          {
+            "id": "workout_day5_romanian_deadlift",
             "exerciseId": "ex_romanian_deadlift",
             "sets": 4,
-            "reps": "8",
+            "reps": "8-10",
+            "weight": "Start light / RPE 7",
+            "note": "Push your hips back, keep the bar close, and maintain a neutral spine."
+          },
+          {
+            "id": "workout_day5_hip_thrust",
+            "exerciseId": "ex_barbell_hip_thrust",
+            "sets": 3,
+            "reps": "10-12",
             "weight": "Moderate",
-            "note": "Stop before the back rounds."
-          }
-        ]
-      },
-      {
-        "id": "full_body_day_3",
-        "name": "Day 3 - Finish",
-        "note": "Combine upper-back work with core control.",
-        "workouts": [
-          {
-            "id": "workout_row_2",
-            "exerciseId": "ex_bent_over_barbell_row",
-            "sets": 3,
-            "reps": "10",
-            "weight": "Moderate",
-            "note": "Pause briefly at the top."
+            "note": "Pause at the top and squeeze your glutes without overextending your lower back."
           },
           {
-            "id": "workout_deadbug_2",
-            "exerciseId": "ex_dead_bug",
+            "id": "workout_day5_walking_lunge",
+            "exerciseId": "ex_walking_lunge",
             "sets": 3,
-            "reps": "10 per side",
-            "weight": "Bodyweight",
-            "note": "Move slowly."
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "plan_2_day_reset",
-    "name": "Two-Day Reset",
-    "description": "A low-complexity plan for returning to training or maintaining a busy week.",
-    "days": [
-      {
-        "id": "reset_day_1",
-        "name": "Day 1 - Strength",
-        "note": "Cover the primary movement patterns.",
-        "workouts": [
-          {
-            "id": "workout_squat_3",
-            "exerciseId": "ex_goblet_squat",
-            "sets": 3,
-            "reps": "8",
-            "weight": "Light",
-            "note": "Focus on range of motion."
+            "reps": "10-12 each leg",
+            "weight": "Light to moderate",
+            "note": "Take controlled steps and keep your front knee stable."
           },
           {
-            "id": "workout_row_3",
-            "exerciseId": "ex_bent_over_barbell_row",
+            "id": "workout_day5_plank",
+            "exerciseId": "ex_plank",
             "sets": 3,
-            "reps": "10",
-            "weight": "Light",
-            "note": "Keep the neck neutral."
-          }
-        ]
-      },
-      {
-        "id": "reset_day_2",
-        "name": "Day 2 - Control",
-        "note": "Use bodyweight movements and precise form.",
-        "workouts": [
-          {
-            "id": "workout_pushup_3",
-            "exerciseId": "ex_push_up",
-            "sets": 3,
-            "reps": "Comfortable max",
+            "reps": "30-60 seconds",
             "weight": "Bodyweight",
-            "note": "Stop before form breaks."
+            "note": "Keep your body in a straight line and breathe steadily."
           },
           {
-            "id": "workout_deadbug_3",
-            "exerciseId": "ex_dead_bug",
+            "id": "workout_day5_hanging_knee_raise",
+            "exerciseId": "ex_hanging_knee_raise",
             "sets": 3,
-            "reps": "8 per side",
+            "reps": "10-15",
             "weight": "Bodyweight",
-            "note": "Breathe out as the limbs extend."
+            "note": "Avoid swinging and lift your knees with your abs."
           }
         ]
       }
