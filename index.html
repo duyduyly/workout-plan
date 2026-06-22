@@ -14,10 +14,18 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
     crossorigin="anonymous"
   />
+  <script>
+    (() => {
+      const storedTheme = localStorage.getItem("ff-theme");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const theme = storedTheme || (prefersDark ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
   <link rel="stylesheet" href="./assets/css/main.css" />
 </head>
 <body>
-  <nav class="navbar navbar-expand-md navbar-dark" aria-label="Primary navigation">
+  <nav class="navbar navbar-expand-md navbar-light home-navbar" aria-label="Primary navigation">
     <div class="container">
       <a class="navbar-brand" href="./index.html">
         <span class="brand-mark" aria-hidden="true">F/F</span>
@@ -36,32 +44,37 @@
       </button>
       <div class="collapse navbar-collapse" id="mainNavigation">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="./index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="./index.html">Plans</a></li>
           <li class="nav-item"><a class="nav-link" href="./exercises.html">Exercises</a></li>
-          <li class="nav-item"><a class="nav-link" href="./data-manager.html">Data Manager</a></li>
+          <li class="nav-item"><a class="nav-link" href="./data-manager.html">Data</a></li>
         </ul>
+        <button
+          class="theme-toggle"
+          type="button"
+          data-theme-toggle
+          aria-label="Switch to dark mode"
+          aria-pressed="false"
+        >
+          <span class="theme-toggle-icon" aria-hidden="true"></span>
+          <span class="theme-toggle-label">Dark mode</span>
+        </button>
       </div>
     </div>
   </nav>
 
   <main>
-    <header class="hero-section">
+    <header class="home-hero">
       <div class="container">
-        <div class="row align-items-end gy-4">
-          <div class="col-lg-8">
-            <p class="eyebrow mb-3">Your training, clearly mapped</p>
-            <h1 class="display-title mb-3">Workout plans built for consistent progress.</h1>
-            <p class="hero-copy mb-0">
-              Browse structured, read-only plans loaded directly from the project JSON files.
-              Pick a plan, understand the week, and get to work.
-            </p>
-          </div>
-          <div class="col-lg-4">
-            <div class="data-note">
-              <span class="data-note-label">Data source</span>
-              <code>data/workout-plans.json</code>
-              <span>Static, portable, and GitHub Pages ready.</span>
-            </div>
+        <div class="home-hero-content">
+          <p class="eyebrow mb-3">Simple workout planning</p>
+          <h1 class="home-hero-title">Build a training routine you can stick with.</h1>
+          <p class="home-hero-copy">
+            Explore structured workout plans, review each training day, and find the exercises
+            you need to train with confidence.
+          </p>
+          <div class="home-hero-actions">
+            <a class="btn btn-dark" href="#plans-heading">View plans</a>
+            <a class="btn btn-outline-dark" href="./exercises.html">Browse exercises</a>
           </div>
         </div>
       </div>
@@ -72,12 +85,12 @@
         <div class="section-heading">
           <div>
             <p class="eyebrow text-dark mb-2">Plan library</p>
-            <h2 id="plans-heading" class="mb-0">Choose your next block</h2>
+            <h2 id="plans-heading" class="mb-0">Choose your workout plan</h2>
           </div>
-          <div class="d-flex flex-wrap gap-2">
-            <a class="btn btn-outline-dark" href="./exercises.html">Browse exercises</a>
-            <a class="btn btn-dark" href="./data-manager.html">Open data manager</a>
-          </div>
+          <a class="section-action" href="./data-manager.html">
+            Open data manager
+            <span aria-hidden="true">&rarr;</span>
+          </a>
         </div>
 
         <div id="plan-status" class="status-panel" role="status" aria-live="polite">

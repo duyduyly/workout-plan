@@ -83,8 +83,16 @@ function createWorkoutItem(workout, exercise, dayIndex, workoutIndex) {
     `;
   }
 
+  const coverImage = isArray(exercise.images)
+    ? exercise.images.find((image) => typeof image === "string" && image.trim())
+    : "";
+  const hasCoverImage = Boolean(coverImage);
+  const backgroundStyle = hasCoverImage
+    ? ` style="--workout-card-image: url('${escapeAttribute(coverImage).replace(/'/g, "%27")}');"`
+    : "";
+
   return `
-    <article class="workout-item">
+    <article class="workout-item${hasCoverImage ? " workout-item-image" : ""}"${backgroundStyle}>
       <div class="workout-overview">
         <div class="exercise-initial" aria-hidden="true">${escapeHtml(exerciseInitial)}</div>
         <div>
@@ -215,8 +223,7 @@ function renderWorkoutModal(workout, exercise) {
   modalBody.innerHTML = `
     <div class="row g-4 g-lg-5">
       <div class="col-lg-7">
-        <section aria-labelledby="image-tutorial-heading">
-          <h3 id="image-tutorial-heading" class="modal-section-title">Image tutorial</h3>
+        <section>
           <div id="exercise-story-slider"></div>
         </section>
       </div>

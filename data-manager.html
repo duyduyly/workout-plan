@@ -11,10 +11,18 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
     crossorigin="anonymous"
   />
+  <script>
+    (() => {
+      const storedTheme = localStorage.getItem("ff-theme");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const theme = storedTheme || (prefersDark ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
   <link rel="stylesheet" href="./assets/css/main.css" />
 </head>
 <body>
-  <nav class="navbar navbar-expand-md navbar-dark" aria-label="Primary navigation">
+  <nav class="navbar navbar-expand-md navbar-light home-navbar" aria-label="Primary navigation">
     <div class="container">
       <a class="navbar-brand" href="./index.html">
         <span class="brand-mark" aria-hidden="true">F/F</span>
@@ -26,10 +34,20 @@
       </button>
       <div class="collapse navbar-collapse" id="mainNavigation">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="./index.html">Plans</a></li>
           <li class="nav-item"><a class="nav-link" href="./exercises.html">Exercises</a></li>
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="./data-manager.html">Data Manager</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="./data-manager.html">Data</a></li>
         </ul>
+        <button
+          class="theme-toggle"
+          type="button"
+          data-theme-toggle
+          aria-label="Switch to dark mode"
+          aria-pressed="false"
+        >
+          <span class="theme-toggle-icon" aria-hidden="true"></span>
+          <span class="theme-toggle-label">Dark mode</span>
+        </button>
       </div>
     </div>
   </nav>
@@ -37,12 +55,17 @@
   <main id="data-manager-page">
     <header class="manager-hero">
       <div class="container">
-        <p class="eyebrow mb-3">Browser-based preparation tool</p>
-        <h1 class="display-title mb-3">Prepare clean data. Keep GitHub in control.</h1>
-        <p class="hero-copy mb-0">
-          Import, review, validate, and export temporary drafts. This page cannot write to the repository
-          or push to GitHub.
-        </p>
+        <div class="page-hero-shell">
+          <div class="page-hero-copy">
+            <p class="eyebrow mb-3">Browser-based preparation tool</p>
+            <h1 class="page-hero-title mb-3">Prepare clean data without touching the repo directly.</h1>
+            <p class="page-hero-text mb-0">
+              Import, review, validate, and export temporary drafts. This page cannot write to the
+              repository or push to GitHub, so publishing still happens through JSON replacement and
+              commit flow.
+            </p>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -68,7 +91,7 @@
       <div class="container">
         <div class="section-heading">
           <div>
-            <p class="eyebrow text-dark mb-2">Section B</p>
+            <p class="eyebrow text-dark mb-2">Exercise data</p>
             <h2 id="exercise-tools-heading" class="mb-0">Exercise data tools</h2>
           </div>
           <div class="manager-actions">
@@ -95,7 +118,7 @@
       <div class="container">
         <div class="section-heading">
           <div>
-            <p class="eyebrow text-dark mb-2">Section C</p>
+            <p class="eyebrow text-dark mb-2">Plan data</p>
             <h2 id="plan-tools-heading" class="mb-0">Workout plan data tools</h2>
           </div>
           <div class="manager-actions">
@@ -122,7 +145,7 @@
       <div class="container">
         <div class="section-heading">
           <div>
-            <p class="eyebrow text-dark mb-2">Section E</p>
+            <p class="eyebrow text-dark mb-2">Final review</p>
             <h2 id="combined-review-heading" class="mb-0">Combined review</h2>
           </div>
           <div class="manager-actions">
@@ -141,7 +164,7 @@
       <div class="modal-content workout-modal">
         <div class="modal-header">
           <div>
-            <p class="eyebrow text-dark mb-2">Exercise draft review</p>
+            <p class="eyebrow mb-2">Exercise draft review</p>
             <h2 class="modal-title" id="exerciseReviewModalLabel">Exercise</h2>
           </div>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -158,7 +181,7 @@
         <form id="quick-create-form">
           <div class="modal-header">
             <div>
-              <p class="eyebrow text-dark mb-2">Workout editor</p>
+              <p class="eyebrow mb-2">Workout editor</p>
               <h2 class="modal-title" id="quickCreateExerciseModalLabel">Create New Exercise</h2>
             </div>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>

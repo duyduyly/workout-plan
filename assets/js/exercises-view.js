@@ -99,8 +99,7 @@ function renderExerciseDetail(exercise) {
   modalBody.innerHTML = `
     <div class="row g-4 g-lg-5">
       <div class="col-lg-7">
-        <section aria-labelledby="exercise-images-heading">
-          <h3 id="exercise-images-heading" class="modal-section-title">Image tutorial</h3>
+        <section>
           <div id="library-story-slider"></div>
         </section>
       </div>

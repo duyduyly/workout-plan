@@ -12,7 +12,7 @@
           {
             "id": "workout_day1_bench_press",
             "exerciseId": "ex_barbell_bench_press",
-            "sets": 4,
+            "sets": 3,
             "reps": "8-10",
             "weight": "Start light / RPE 7",
             "note": "Keep your feet planted, squeeze your shoulder blades, and do not bounce the bar."
@@ -59,7 +59,7 @@
           {
             "id": "workout_day2_lat_pulldown",
             "exerciseId": "ex_lat_pulldown",
-            "sets": 4,
+            "sets": 3,
             "reps": "10-12",
             "weight": "Moderate",
             "note": "Pull the bar toward your upper chest and keep your torso controlled."
@@ -106,7 +106,7 @@
           {
             "id": "workout_day3_back_squat",
             "exerciseId": "ex_barbell_back_squat",
-            "sets": 4,
+            "sets": 3,
             "reps": "8-10",
             "weight": "Start light / RPE 7",
             "note": "Brace your core, keep your knees tracking with your toes, and squat with control."
@@ -138,7 +138,7 @@
           {
             "id": "workout_day3_calf_raise",
             "exerciseId": "ex_standing_calf_raise",
-            "sets": 4,
+            "sets": 3,
             "reps": "12-20",
             "weight": "Moderate",
             "note": "Use a full stretch at the bottom and pause at the top."
@@ -200,7 +200,7 @@
           {
             "id": "workout_day5_romanian_deadlift",
             "exerciseId": "ex_romanian_deadlift",
-            "sets": 4,
+            "sets": 3,
             "reps": "8-10",
             "weight": "Start light / RPE 7",
             "note": "Push your hips back, keep the bar close, and maintain a neutral spine."
