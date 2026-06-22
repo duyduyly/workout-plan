@@ -14,10 +14,18 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
     crossorigin="anonymous"
   />
+  <script>
+    (() => {
+      const storedTheme = localStorage.getItem("ff-theme");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const theme = storedTheme || (prefersDark ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
   <link rel="stylesheet" href="./assets/css/main.css" />
 </head>
 <body>
-  <nav class="navbar navbar-expand-md navbar-dark" aria-label="Primary navigation">
+  <nav class="navbar navbar-expand-md navbar-light home-navbar" aria-label="Primary navigation">
     <div class="container">
       <a class="navbar-brand" href="./index.html">
         <span class="brand-mark" aria-hidden="true">F/F</span>
@@ -36,10 +44,20 @@
       </button>
       <div class="collapse navbar-collapse" id="mainNavigation">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="./index.html">Plans</a></li>
           <li class="nav-item"><a class="nav-link" href="./exercises.html">Exercises</a></li>
-          <li class="nav-item"><a class="nav-link" href="./data-manager.html">Data Manager</a></li>
+          <li class="nav-item"><a class="nav-link" href="./data-manager.html">Data</a></li>
         </ul>
+        <button
+          class="theme-toggle"
+          type="button"
+          data-theme-toggle
+          aria-label="Switch to dark mode"
+          aria-pressed="false"
+        >
+          <span class="theme-toggle-icon" aria-hidden="true"></span>
+          <span class="theme-toggle-label">Dark mode</span>
+        </button>
       </div>
     </div>
   </nav>
@@ -47,16 +65,18 @@
   <main id="plan-detail-page">
     <header class="detail-hero">
       <div class="container">
-        <a class="back-link" href="./index.html">
-          <span aria-hidden="true">&larr;</span>
-          Back to home
-        </a>
-        <div id="plan-detail-heading" class="detail-heading">
-          <p class="eyebrow mb-3">Workout plan</p>
-          <h1 class="detail-title">Loading plan...</h1>
-          <p class="detail-description mb-0">Reading the selected plan from the project data.</p>
+        <div class="detail-hero-shell">
+          <a class="back-link" href="./index.html">
+            <span aria-hidden="true">&larr;</span>
+            Back to plans
+          </a>
+          <div id="plan-detail-heading" class="detail-heading">
+            <p class="eyebrow mb-3">Workout plan</p>
+            <h1 class="detail-title">Loading plan...</h1>
+            <p class="detail-description mb-0">Reading the selected plan from the project data.</p>
+          </div>
+          <div id="plan-summary" class="plan-summary" hidden></div>
         </div>
-        <div id="plan-summary" class="plan-summary" hidden></div>
       </div>
     </header>
 
@@ -91,7 +111,7 @@
       <div class="modal-content workout-modal">
         <div class="modal-header">
           <div>
-            <p class="eyebrow text-dark mb-2">Exercise detail</p>
+            <p class="eyebrow mb-2">Exercise detail</p>
             <h2 class="modal-title" id="workoutDetailModalLabel">Exercise</h2>
           </div>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>

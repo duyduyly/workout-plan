@@ -202,7 +202,6 @@ function renderExerciseReview(exercise) {
   modalBody.innerHTML = `
     <div class="row g-4 g-lg-5">
       <div class="col-lg-7">
-        <h3 class="modal-section-title">Image tutorial</h3>
         <div id="manager-review-story"></div>
       </div>
       <div class="col-lg-5">

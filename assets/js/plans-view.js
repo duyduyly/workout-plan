@@ -215,8 +215,7 @@ function renderWorkoutModal(workout, exercise) {
   modalBody.innerHTML = `
     <div class="row g-4 g-lg-5">
       <div class="col-lg-7">
-        <section aria-labelledby="image-tutorial-heading">
-          <h3 id="image-tutorial-heading" class="modal-section-title">Image tutorial</h3>
+        <section>
           <div id="exercise-story-slider"></div>
         </section>
       </div>

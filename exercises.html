@@ -14,10 +14,18 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
     crossorigin="anonymous"
   />
+  <script>
+    (() => {
+      const storedTheme = localStorage.getItem("ff-theme");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const theme = storedTheme || (prefersDark ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
   <link rel="stylesheet" href="./assets/css/main.css" />
 </head>
 <body>
-  <nav class="navbar navbar-expand-md navbar-dark" aria-label="Primary navigation">
+  <nav class="navbar navbar-expand-md navbar-light home-navbar" aria-label="Primary navigation">
     <div class="container">
       <a class="navbar-brand" href="./index.html">
         <span class="brand-mark" aria-hidden="true">F/F</span>
@@ -36,10 +44,20 @@
       </button>
       <div class="collapse navbar-collapse" id="mainNavigation">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="./index.html">Plans</a></li>
           <li class="nav-item"><a class="nav-link active" aria-current="page" href="./exercises.html">Exercises</a></li>
-          <li class="nav-item"><a class="nav-link" href="./data-manager.html">Data Manager</a></li>
+          <li class="nav-item"><a class="nav-link" href="./data-manager.html">Data</a></li>
         </ul>
+        <button
+          class="theme-toggle"
+          type="button"
+          data-theme-toggle
+          aria-label="Switch to dark mode"
+          aria-pressed="false"
+        >
+          <span class="theme-toggle-icon" aria-hidden="true"></span>
+          <span class="theme-toggle-label">Dark mode</span>
+        </button>
       </div>
     </div>
   </nav>
@@ -47,17 +65,17 @@
   <main id="exercises-page">
     <header class="library-hero">
       <div class="container">
-        <div class="row align-items-end gy-4">
-          <div class="col-lg-8">
+        <div class="page-hero-shell">
+          <div class="page-hero-copy">
             <p class="eyebrow mb-3">Movement library</p>
-            <h1 class="display-title mb-3">Know the movement. Train with intent.</h1>
-            <p class="hero-copy mb-0">
+            <h1 class="page-hero-title mb-3">Know the movement before you load the plan.</h1>
+            <p class="page-hero-text mb-0">
               Search the official exercise library by name or narrow it by muscle group.
               Each entry is read-only and loaded from <code>data/exercises.json</code>.
             </p>
           </div>
-          <div class="col-lg-4 text-lg-end">
-            <a class="btn btn-light" href="./data-manager.html">Open data manager</a>
+          <div class="page-hero-actions">
+            <a class="btn btn-outline-dark" href="./data-manager.html">Open data manager</a>
           </div>
         </div>
       </div>
