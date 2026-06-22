@@ -694,7 +694,45 @@ textarea.form-control::placeholder {
   display: flex;
   gap: 1.5rem;
   justify-content: space-between;
+  overflow: hidden;
   padding: 1.25rem;
+  position: relative;
+}
+
+.workout-item > * {
+  position: relative;
+  z-index: 1;
+}
+
+.workout-item-image {
+  background:
+    linear-gradient(135deg, rgba(16, 18, 24, 0.84), rgba(16, 18, 24, 0.58)),
+    var(--workout-card-image) center / cover no-repeat;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.workout-item-image .exercise-initial {
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+}
+
+.workout-item-image .workout-name,
+.workout-item-image .target-badge,
+.workout-item-image .muscle-badge,
+.workout-item-image .workout-note,
+.workout-item-image .workout-stat strong,
+.workout-item-image .workout-stat span {
+  color: #ffffff;
+}
+
+.workout-item-image .target-badge,
+.workout-item-image .muscle-badge,
+.workout-item-image .workout-stat {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.workout-item-image .workout-stat {
+  backdrop-filter: blur(8px);
 }
 
 .workout-overview {

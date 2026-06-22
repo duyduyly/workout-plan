@@ -83,8 +83,16 @@ function createWorkoutItem(workout, exercise, dayIndex, workoutIndex) {
     `;
   }
 
+  const coverImage = isArray(exercise.images)
+    ? exercise.images.find((image) => typeof image === "string" && image.trim())
+    : "";
+  const hasCoverImage = Boolean(coverImage);
+  const backgroundStyle = hasCoverImage
+    ? ` style="--workout-card-image: url('${escapeAttribute(coverImage).replace(/'/g, "%27")}');"`
+    : "";
+
   return `
-    <article class="workout-item">
+    <article class="workout-item${hasCoverImage ? " workout-item-image" : ""}"${backgroundStyle}>
       <div class="workout-overview">
         <div class="exercise-initial" aria-hidden="true">${escapeHtml(exerciseInitial)}</div>
         <div>
