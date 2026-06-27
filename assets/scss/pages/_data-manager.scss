@@ -1,0 +1,334 @@
+﻿
+@use "../abstracts/mixins" as m;
+
+.manager-section {
+  background: var(--color-bg);
+  padding: clamp(3.5rem, 7vw, 6rem) 0;
+}
+
+.manager-section-alt {
+  background: var(--color-bg);
+  border-block: 1px solid var(--line);
+}
+
+.manager-warning {
+  background: var(--surface-panel);
+  border: 1px solid var(--warning-border);
+  border-radius: 1.25rem;
+  color: var(--ink);
+  margin-bottom: 2rem;
+  padding: 1rem 1.2rem;
+}
+
+.workflow-grid {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.workflow-grid > div {
+  align-items: flex-start;
+  display: flex;
+  gap: 0.8rem;
+  min-height: 6rem;
+  padding: 1rem;
+}
+
+.workflow-grid strong {
+  align-items: center;
+  background: var(--accent-gradient);
+  border-radius: 50%;
+  color: var(--text-inverse);
+  display: flex;
+  flex: 0 0 auto;
+  height: 2rem;
+  justify-content: center;
+  width: 2rem;
+}
+
+.workflow-grid span {
+  color: var(--ink-soft);
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.manager-actions,
+.import-bar {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.import-bar {
+  backdrop-filter: blur(12px);
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.import-bar > div,
+.import-bar-controls > div {
+  flex: 1 1 18rem;
+}
+
+.import-bar-copy {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.import-bar-kicker,
+.manager-panel-kicker {
+  color: var(--moss);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.import-bar-text {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  max-width: 48rem;
+}
+
+.import-bar-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.manager-message {
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+  min-height: 0;
+  padding: 0;
+}
+
+.manager-message:not(:empty) {
+  padding: 0.8rem 1rem;
+}
+
+.message-success {
+  background: var(--success-bg);
+  color: var(--success-text);
+}
+
+.message-error {
+  background: var(--error-bg);
+  color: var(--error-text);
+}
+
+.review-stats {
+  display: grid;
+  gap: 0.65rem;
+  grid-template-columns: repeat(6, 1fr);
+  margin: 1.25rem 0;
+}
+
+.manager-panel-title {
+  color: var(--ink);
+  font-family: var(--font-heading);
+  font-size: clamp(1.35rem, 3vw, 1.8rem);
+  letter-spacing: -0.03em;
+}
+
+.review-stats > div {
+  display: grid;
+  background: var(--surface-panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 0.9rem;
+}
+
+.review-stats strong {
+  font-family: var(--font-heading);
+  font-size: 1.65rem;
+}
+
+.review-stats span {
+  color: var(--ink-soft);
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+.validation-ok,
+.validation-list,
+.combined-status {
+  border-radius: 0.85rem;
+  margin: 0.75rem 0;
+  padding: 1rem;
+}
+
+.validation-ok,
+.combined-status.is-valid {
+  background: var(--success-bg);
+  color: var(--success-text);
+}
+
+.validation-errors,
+.combined-status.has-errors {
+  background: var(--error-bg);
+  color: var(--error-text);
+}
+
+.validation-warnings {
+  background: var(--warning-bg);
+  color: var(--warning-text);
+}
+
+.validation-list ul {
+  margin: 0.5rem 0 0;
+  max-height: 12rem;
+  overflow: auto;
+  padding-left: 1.2rem;
+}
+
+.draft-editor {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.editor-card {
+  padding: 1.25rem;
+}
+
+.editor-card-heading,
+.day-editor-heading,
+.workout-editor-heading {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.editor-card-heading > div {
+  display: grid;
+}
+
+.editor-card-heading span,
+.day-editor-heading span {
+  color: var(--ink-soft);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.editor-card-heading strong {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+}
+
+.editor-heading-actions {
+  align-items: center;
+  display: flex;
+  gap: 0.6rem;
+}
+
+.editor-heading-actions .target-badge {
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  line-height: 1;
+  margin: 0;
+}
+
+.day-editor-list,
+.workout-editor-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.day-editor {
+  background: var(--surface-primary-soft);
+  border-radius: 1.15rem;
+  padding: 1rem;
+}
+
+.workout-editor {
+  background: var(--surface-panel);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.workout-editor.missing-reference {
+  border-color: #dc3545;
+}
+
+.reference-ok,
+.reference-missing {
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 0.35rem 0.55rem;
+}
+
+.reference-ok {
+  background: var(--success-bg);
+  color: var(--success-text);
+}
+
+.reference-missing {
+  background: var(--error-bg);
+  color: var(--error-text);
+}
+
+.selector-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.55rem;
+}
+
+.workout-editor details summary {
+  color: var(--ink-soft);
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.editor-empty {
+  background: var(--surface-elevated);
+}
+
+@include m.respond-down {
+  .workflow-grid,
+  .review-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .manager-actions,
+  .import-bar-controls {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .manager-actions .btn,
+  .import-bar-controls .btn,
+  .import-bar-controls > div {
+    flex: none;
+    width: 100%;
+  }
+
+  .manager-preview-heading,
+  .manager-health-row {
+    grid-template-columns: 1fr;
+  }
+
+  .manager-preview-heading {
+    display: grid;
+  }
+
+  .editor-card-heading {
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .editor-heading-actions {
+    align-items: flex-end;
+    flex-direction: column;
+  }
+}

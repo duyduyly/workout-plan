@@ -1,0 +1,1114 @@
+{
+  "id": "plan_15_day_toned_body_from_exercises",
+  "name": "15-Day Toned Body Gym Program",
+  "description": "A 15-day gym program based on the provided exercises.json and existing 5-day toned full body plan. Designed for basic-to-intermediate gym level, lean/toned goal, and practical gym equipment.",
+  "startDate": "2026-06-26",
+  "endDate": "2026-07-10",
+  "goal": "Build a stronger, tighter, more toned body foundation in 15 days without excessive fatigue.",
+  "rules": {
+    "defaultTempoCompound": "3-1-1-0",
+    "defaultTempoIsolation": "2-1-2-0",
+    "defaultIntensity": "RPE 7-8 on training days; RPE 6-7 on light/pump days",
+    "progression": "In week 2, increase either weight by 2.5-5%, or add 1-2 reps, or improve tempo. Do not increase all at once.",
+    "safety": "Stop a set when form breaks. Avoid RPE 10 in this short 15-day block."
+  },
+  "days": [
+    {
+      "dayNumber": 1,
+      "date": "2026-06-26",
+      "type": "training",
+      "name": "Push A - Chest + Shoulders + Triceps",
+      "focus": "Chest, shoulders, triceps",
+      "intensity": "RPE 7",
+      "warmup": [
+        "5 minutes light cardio",
+        "2-3 minutes joint mobility",
+        "1-2 light warm-up sets before first compound exercise"
+      ],
+      "workouts": [
+        {
+          "id": "workout_day1_bench_press",
+          "exerciseId": "ex_barbell_bench_press",
+          "sets": 4,
+          "reps": "8-10",
+          "weight": "Start light / RPE 7",
+          "tempo": "3-1-1-0",
+          "rpe": "7",
+          "restSeconds": "90-120",
+          "note": "Squeeze shoulder blades, lower the bar under control, no bouncing."
+        },
+        {
+          "id": "workout_day1_incline_db_press",
+          "exerciseId": "ex_dumbbell_incline_bench_press",
+          "sets": 3,
+          "reps": "10-12",
+          "weight": "Moderate",
+          "tempo": "3-1-1-0",
+          "rpe": "7",
+          "restSeconds": "75-90",
+          "note": "Use a controlled range of motion and avoid flaring elbows too wide."
+        },
+        {
+          "id": "workout_day1_machine_shoulder_press",
+          "exerciseId": "ex_machine_shoulder_press",
+          "sets": 3,
+          "reps": "8-10",
+          "weight": "Moderate",
+          "tempo": "2-1-1-0",
+          "rpe": "7",
+          "restSeconds": "75-90",
+          "note": "Keep ribs down and press without leaning back."
+        },
+        {
+          "id": "workout_day1_lateral_raise",
+          "exerciseId": "ex_dumbbell_lateral_raise",
+          "sets": 3,
+          "reps": "12-15",
+          "weight": "Light",
+          "tempo": "2-1-2-0",
+          "rpe": "7",
+          "restSeconds": "45-60",
+          "note": "Lead with elbows, do not shrug."
+        },
+        {
+          "id": "workout_day1_triceps_pushdown",
+          "exerciseId": "ex_rope_triceps_pushdown",
+          "sets": 3,
+          "reps": "12-15",
+          "weight": "Moderate",
+          "tempo": "2-1-2-0",
+          "rpe": "7",
+          "restSeconds": "45-60",
+          "note": "Keep elbows close, separate rope at bottom."
+        }
+      ],
+      "cardio": {
+        "type": "optional",
+        "durationMinutes": 0,
+        "intensity": "none"
+      },
+      "cooldown": [
+        "3-5 minutes easy walking",
+        "5 minutes light stretching"
+      ],
+      "note": "First day: do not chase heavy weight; build form and rhythm."
+    },
+    {
+      "dayNumber": 2,
+      "date": "2026-06-27",
+      "type": "training",
+      "name": "Pull A - Back + Biceps",
+      "focus": "Back, rear delts, biceps",
+      "intensity": "RPE 7-8",
+      "warmup": [
+        "5 minutes light cardio",
+        "2-3 minutes joint mobility",
+        "1-2 light warm-up sets before first compound exercise"
+      ],
+      "workouts": [
+        {
+          "id": "workout_day2_lat_pulldown",
+          "exerciseId": "ex_lat_pulldown",
+          "sets": 4,
+          "reps": "8-12",
+          "weight": "Moderate",
+          "tempo": "3-1-1-1",
+          "rpe": "7-8",
+          "restSeconds": "75-120",
+          "note": "Pull to upper chest and pause with lats squeezed."
+        },
+        {
+          "id": "workout_day2_seated_row",
+          "exerciseId": "ex_seated_cable_row",
+          "sets": 3,
+          "reps": "10-12",
+          "weight": "Moderate",
+          "tempo": "3-1-1-1",
+          "rpe": "7",
+          "restSeconds": "75-90",
+          "note": "Drive elbows back; avoid rounding lower back."
+        },
+        {
+          "id": "workout_day2_single_arm_db_row",
+          "exerciseId": "ex_single_arm_dumbbell_row",
+          "sets": 3,
+          "reps": "10 each side",
+          "weight": "Moderate",
+          "tempo": "2-1-1-1",
+          "rpe": "7",
+          "restSeconds": "60-75",
+          "note": "Pull with elbow toward hip."
+        },
+        {
+          "id": "workout_day2_face_pull",
+          "exerciseId": "ex_face_pull",
+          "sets": 3,
+          "reps": "12-15",
+          "weight": "Light to moderate",
+          "tempo": "2-1-2-1",
+          "rpe": "7",
+          "restSeconds": "45-60",
+          "note": "Pull toward face, elbows high."
+        },
+        {
+          "id": "workout_day2_db_curl",
+          "exerciseId": "ex_dumbbell_biceps_curl",
+          "sets": 3,
+          "reps": "10-12",
+          "weight": "Moderate",
+          "tempo": "2-1-2-0",
+          "rpe": "7",
+          "restSeconds": "45-60",
+          "note": "No swinging; control the lowering."
+        }
+      ],
+      "cardio": {
+        "type": "optional",
+        "durationMinutes": 0,
+        "intensity": "none"
+      },
+      "cooldown": [
+        "3-5 minutes easy walking",
+        "5 minutes light stretching"
+      ],
+      "note": ""
+    },
+    {
+      "dayNumber": 3,
+      "date": "2026-06-28",
+      "type": "training",
+      "name": "Legs A - Quads + Glutes + Core",
+      "focus": "Legs, glutes, calves, core",
+      "intensity": "RPE 7",
+      "warmup": [
+        "5 minutes light cardio",
+        "2-3 minutes joint mobility",
+        "1-2 light warm-up sets before first compound exercise"
+      ],
+      "workouts": [
+        {
+          "id": "workout_day3_goblet_or_back_squat",
+          "exerciseId": "ex_goblet_squat",
+          "sets": 4,
+          "reps": "8-10",
+          "weight": "Start light / RPE 7",
+          "tempo": "3-1-1-0",
+          "rpe": "7",
+          "restSeconds": "90-120",
+          "note": "Use goblet squat if barbell squat form is not stable."
+        },
+        {
+          "id": "workout_day3_leg_press",
+          "exerciseId": "ex_leg_press",
+          "sets": 3,
+          "reps": "10-12",
+          "weight": "Moderate",
+          "tempo": "3-1-1-0",
+          "rpe": "7",
+          "restSeconds": "90",
+          "note": "Do not hard lock knees at top."
+        },
+        {
+          "id": "workout_day3_db_rdl",
+          "exerciseId": "ex_dumbbell_romanian_deadlift",
+          "sets": 3,
+          "reps": "8-10",
+          "weight": "Light to moderate",
+          "tempo": "3-1-1-0",
+          "rpe": "7",
+          "restSeconds": "90",
+          "note": "Push hips back and keep spine neutral."
+        },
+        {
+          "id": "workout_day3_leg_curl",
+          "exerciseId": "ex_seated_leg_curl",
+          "sets": 3,
+          "reps": "12-15",
+          "weight": "Moderate",
+          "tempo": "2-1-2-1",
+          "rpe": "7",
+          "restSeconds": "60",
+          "note": "Pause at contraction; do not rush."
+        },
+        {
+          "id": "workout_day3_calf_raise",
+          "exerciseId": "ex_standing_calf_raise",
+          "sets": 3,
+          "reps": "12-20",
+          "weight": "Moderate",
+          "tempo": "2-1-2-1",
+          "rpe": "7",
+          "restSeconds": "45-60",
+          "note": "Full stretch at bottom, pause at top."
+        },
+        {
+          "id": "workout_day3_plank",
+          "exerciseId": "ex_plank",
+          "sets": 3,
+          "reps": "30-45 seconds",
+          "weight": "Bodyweight",
+          "tempo": "hold",
+          "rpe": "7",
+          "restSeconds": "45",
+          "note": "Keep straight line and breathe."
+        }
+      ],
+      "cardio": {
+        "type": "optional",
+        "durationMinutes": 0,
+        "intensity": "none"
+      },
+      "cooldown": [
+        "3-5 minutes easy walking",
+        "5 minutes light stretching"
+      ],
+      "note": ""
+    },
+    {
+      "dayNumber": 4,
+      "date": "2026-06-29",
+      "type": "active_recovery",
+      "name": "Active Recovery - Walk + Mobility",
+      "focus": "Recovery, mobility, sleep, hydration",
+      "intensity": "RPE 2-4",
+      "warmup": [],
+      "workouts": [],
+      "cardio": {
+        "type": "walking",
+        "durationMinutes": "20-35",
+        "intensity": "easy"
+      },
+      "cooldown": [
+        "Light stretching 5-10 minutes"
+      ],
+      "note": "Keep it easy. Recovery is part of the 15-day result."
+    },
+    {
+      "dayNumber": 5,
+      "date": "2026-06-30",
+      "type": "training",
+      "name": "Upper Balance A",
+      "focus": "Chest, back, shoulders, arms",
+      "intensity": "RPE 7-8",
+      "warmup": [
+        "5 minutes light cardio",
+        "2-3 minutes joint mobility",
+        "1-2 light warm-up sets before first compound exercise"
+      ],
+      "workouts": [
+        {
+          "id": "workout_day5_machine_chest_press",
+          "exerciseId": "ex_machine_chest_press",
+          "sets": 3,
+          "reps": "10-12",
+          "weight": "Moderate",
+          "tempo": "3-1-1-0",
+          "rpe": "7",
+          "restSeconds": "75-90",
+          "note": "Smooth press, shoulders stay down."
+        },
+        {
+          "id": "workout_day5_assisted_pullup",
+          "exerciseId": "ex_assisted_pull_up",
+          "sets": 3,
+          "reps": "8-10",
+          "weight": "Assisted / controlled",
+          "tempo": "3-1-1-1",
+          "rpe": "7",
+          "restSeconds": "90",
+          "note": "Use enough assistance to keep clean reps."
+        },
+        {
+          "id": "workout_day5_cable_row",
+          "exerciseId": "ex_seated_cable_row",
+          "sets": 3,
+          "reps": "10-12",
+          "weight": "Moderate",
+          "tempo": "3-1-1-1",
+          "rpe": "7",
+          "restSeconds": "75",
+          "note": "Squeeze shoulder blades."
+        },
+        {
+          "id": "workout_day5_db_shoulder_press",
+          "exerciseId": "ex_dumbbell_shoulder_press",
+          "sets": 3,
+          "reps": "8-10",
+          "weight": "Moderate",
+          "tempo": "2-1-1-0",
+          "rpe": "7",
+          "restSeconds": "75",
+          "note": "Do not overarch lower back."
+        },
+        {
+          "id": "workout_day5_lateral_raise",
+          "exerciseId": "ex_dumbbell_lateral_raise",
+          "sets": 3,
+          "reps": "15",
+          "weight": "Light",
+          "tempo": "2-1-2-0",
+          "rpe": "7",
+          "restSeconds": "45",
+          "note": "Stop before traps take over."
+        },
+        {
+          "id": "workout_day5_hammer_curl",
+          "exerciseId": "ex_hammer_curl",
+          "sets": 2,
+          "reps": "12-15",
+          "weight": "Moderate",
+          "tempo": "2-1-2-0",
+          "rpe": "7",
+          "restSeconds": "45",
+          "note": "Neutral grip; no torso swing."
+        },
+        {
+          "id": "workout_day5_overhead_triceps",
+          "exerciseId": "ex_cable_triceps_overhead_extension",
+          "sets": 2,
+          "reps": "12-15",
+          "weight": "Light to moderate",
+          "tempo": "2-1-2-0",
+          "rpe": "7",
+          "restSeconds": "45",
+          "note": "Stretch triceps safely."
+        }
+      ],
+      "cardio": {
+        "type": "optional",
+        "durationMinutes": 0,
+        "intensity": "none"
+      },
+      "cooldown": [
+        "3-5 minutes easy walking",
+        "5 minutes light stretching"
+      ],
+      "note": ""
+    },
+    {
+      "dayNumber": 6,
+      "date": "2026-07-01",
+      "type": "training",
+      "name": "Full Body A + Light Cardio",
+      "focus": "Full body conditioning",
+      "intensity": "RPE 6-7",
+      "warmup": [
+        "5 minutes light cardio",
+        "2-3 minutes joint mobility",
+        "1-2 light warm-up sets before first compound exercise"
+      ],
+      "workouts": [
+        {
+          "id": "workout_day6_bodyweight_squat",
+          "exerciseId": "ex_bodyweight_squat",
+          "sets": 3,
+          "reps": "12-15",
+          "weight": "Bodyweight",
+          "tempo": "3-1-1-0",
+          "rpe": "6",
+          "restSeconds": "45-60",
+          "note": "Use as pattern quality work."
+        },
+        {
+          "id": "workout_day6_db_flat_press",
+          "exerciseId": "ex_dumbbell_flat_bench_press",
+          "sets": 3,
+          "reps": "10",
+          "weight": "Moderate",
+          "tempo": "3-1-1-0",
+          "rpe": "7",
+          "restSeconds": "75",
+          "note": "Controlled dumbbells; no bouncing."
+        },
+        {
+          "id": "workout_day6_lat_pulldown",
+          "exerciseId": "ex_lat_pulldown",
+          "sets": 3,
+          "reps": "12",
+          "weight": "Moderate",
+          "tempo": "3-1-1-1",
+          "rpe": "7",
+          "restSeconds": "75",
+          "note": "Pull with back, not only arms."
+        },
+        {
+          "id": "workout_day6_db_rdl",
+          "exerciseId": "ex_dumbbell_romanian_deadlift",
+          "sets": 3,
+          "reps": "10",
+          "weight": "Light to moderate",
+          "tempo": "3-1-1-0",
+          "rpe": "7",
+          "restSeconds": "75-90",
+          "note": "Hamstring stretch, neutral spine."
+        },
+        {
+          "id": "workout_day6_dead_bug",
+          "exerciseId": "ex_dead_bug",
+          "sets": 3,
+          "reps": "10 each side",
+          "weight": "Bodyweight",
+          "tempo": "2-1-2",
+          "rpe": "6",
+          "restSeconds": "30-45",
+          "note": "Slow and controlled."
+        }
+      ],
+      "cardio": {
+        "type": "incline walk or bike",
+        "durationMinutes": "12-15",
+        "intensity": "easy to moderate"
+      },
+      "cooldown": [
+        "3-5 minutes easy walking",
+        "5 minutes light stretching"
+      ],
+      "note": "This is not HIIT; keep cardio controlled."
+    },
+    {
+      "dayNumber": 7,
+      "date": "2026-07-02",
+      "type": "rest",
+      "name": "Full Rest",
+      "focus": "Recovery, mobility, sleep, hydration",
+      "intensity": "RPE 1",
+      "warmup": [],
+      "workouts": [],
+      "cardio": {
+        "type": "none",
+        "durationMinutes": 0,
+        "intensity": "easy"
+      },
+      "cooldown": [],
+      "note": "Sleep, hydration, and food quality matter today."
+    },
+    {
+      "dayNumber": 8,
+      "date": "2026-07-03",
+      "type": "training",
+      "name": "Push B - Chest + Shoulders + Triceps",
+      "focus": "Chest, shoulders, triceps",
+      "intensity": "RPE 8 main lifts / RPE 7 accessories",
+      "warmup": [
+        "5 minutes light cardio",
+        "2-3 minutes joint mobility",
+        "1-2 light warm-up sets before first compound exercise"
+      ],
+      "workouts": [
+        {
+          "id": "workout_day8_bench_press",
+          "exerciseId": "ex_barbell_bench_press",
+          "sets": 4,
+          "reps": "6-8",
+          "weight": "Slightly heavier if form is clean",
+          "tempo": "3-1-1-0",
+          "rpe": "8",
+          "restSeconds": "120",
+          "note": "Add small weight only if day 1 was easy."
+        },
+        {
+          "id": "workout_day8_incline_machine_press",
+          "exerciseId": "ex_incline_machine_chest_press",
+          "sets": 3,
+          "reps": "8-10",
+          "weight": "Moderate",
+          "tempo": "3-1-1-0",
+          "rpe": "7-8",
+          "restSeconds": "90",
+          "note": "Stable option for upper chest."
+        },
+        {
+          "id": "workout_day8_pec_deck",
+          "exerciseId": "ex_pec_deck_fly",
+          "sets": 3,
+          "reps": "12-15",
+          "weight": "Light to moderate",
+          "tempo": "2-1-2-1",
+          "rpe": "7",
+          "restSeconds": "60",
+          "note": "Pause when chest is squeezed."
+        },
+        {
+          "id": "workout_day8_machine_shoulder_press",
+          "exerciseId": "ex_machine_shoulder_press",
+          "sets": 3,
+          "reps": "8-10",
+          "weight": "Moderate",
+          "tempo": "2-1-1-0",
+          "rpe": "7-8",
+          "restSeconds": "75-90",
+          "note": "Controlled overhead press."
+        },
+        {
+          "id": "workout_day8_cable_lateral_raise",
+          "exerciseId": "ex_cable_lateral_raise",
+          "sets": 3,
+          "reps": "12-15",
+          "weight": "Light",
+          "tempo": "2-1-2-0",
+          "rpe": "7",
+          "restSeconds": "45-60",
+          "note": "Constant tension; no shrug."
+        },
+        {
+          "id": "workout_day8_overhead_triceps",
+          "exerciseId": "ex_cable_triceps_overhead_extension",
+          "sets": 3,
+          "reps": "12",
+          "weight": "Light to moderate",
+          "tempo": "2-1-2-0",
+          "rpe": "7",
+          "restSeconds": "45-60",
+          "note": "Do not flare elbows too much."
+        }
+      ],
+      "cardio": {
+        "type": "optional",
+        "durationMinutes": 0,
+        "intensity": "none"
+      },
+      "cooldown": [
+        "3-5 minutes easy walking",
+        "5 minutes light stretching"
+      ],
+      "note": ""
+    },
+    {
+      "dayNumber": 9,
+      "date": "2026-07-04",
+      "type": "training",
+      "name": "Pull B - Back + Biceps",
+      "focus": "Back width/thickness, rear delts, biceps",
+      "intensity": "RPE 7-8",
+      "warmup": [
+        "5 minutes light cardio",
+        "2-3 minutes joint mobility",
+        "1-2 light warm-up sets before first compound exercise"
+      ],
+      "workouts": [
+        {
+          "id": "workout_day9_assisted_pullup",
+          "exerciseId": "ex_assisted_pull_up",
+          "sets": 4,
+          "reps": "8-10",
+          "weight": "Assisted / controlled",
+          "tempo": "3-1-1-1",
+          "rpe": "8",
+          "restSeconds": "90-120",
+          "note": "Reduce assistance only if reps stay clean."
+        },
+        {
+          "id": "workout_day9_chest_supported_row",
+          "exerciseId": "ex_chest_supported_dumbbell_row",
+          "sets": 3,
+          "reps": "8-10",
+          "weight": "Moderate",
+          "tempo": "3-1-1-1",
+          "rpe": "7-8",
+          "restSeconds": "75-90",
+          "note": "Chest supported to reduce lower-back demand."
+        },
+        {
+          "id": "workout_day9_straight_arm_pulldown",
+          "exerciseId": "ex_straight_arm_pulldown",
+          "sets": 3,
+          "reps": "12-15",
+          "weight": "Light to moderate",
+          "tempo": "2-1-2-1",
+          "rpe": "7",
+          "restSeconds": "60",
+          "note": "Keep arms mostly straight and use lats."
+        },
+        {
+          "id": "workout_day9_rear_delt_fly",
+          "exerciseId": "ex_rear_delt_fly",
+          "sets": 3,
+          "reps": "12-15",
+          "weight": "Light",
+          "tempo": "2-1-2-1",
+          "rpe": "7",
+          "restSeconds": "45-60",
+          "note": "Small controlled arc."
+        },
+        {
+          "id": "workout_day9_ez_bar_curl",
+          "exerciseId": "ex_ez_bar_curl",
+          "sets": 3,
+          "reps": "10-12",
+          "weight": "Moderate",
+          "tempo": "2-1-2-0",
+          "rpe": "7",
+          "restSeconds": "45-60",
+          "note": "Keep elbows stable."
+        },
+        {
+          "id": "workout_day9_hammer_curl",
+          "exerciseId": "ex_hammer_curl",
+          "sets": 2,
+          "reps": "12-15",
+          "weight": "Moderate",
+          "tempo": "2-1-2-0",
+          "rpe": "7",
+          "restSeconds": "45",
+          "note": "Do not swing."
+        }
+      ],
+      "cardio": {
+        "type": "optional",
+        "durationMinutes": 0,
+        "intensity": "none"
+      },
+      "cooldown": [
+        "3-5 minutes easy walking",
+        "5 minutes light stretching"
+      ],
+      "note": ""
+    },
+    {
+      "dayNumber": 10,
+      "date": "2026-07-05",
+      "type": "training",
+      "name": "Legs B - Legs + Glutes + Abs",
+      "focus": "Quads, hamstrings, glutes, calves, core",
+      "intensity": "RPE 8 main lifts / RPE 7 accessories",
+      "warmup": [
+        "5 minutes light cardio",
+        "2-3 minutes joint mobility",
+        "1-2 light warm-up sets before first compound exercise"
+      ],
+      "workouts": [
+        {
+          "id": "workout_day10_leg_press",
+          "exerciseId": "ex_leg_press",
+          "sets": 4,
+          "reps": "8-10",
+          "weight": "Moderate to heavy",
+          "tempo": "3-1-1-0",
+          "rpe": "8",
+          "restSeconds": "120",
+          "note": "Safer heavy leg option; do not lock knees."
+        },
+        {
+          "id": "workout_day10_romanian_deadlift",
+          "exerciseId": "ex_romanian_deadlift",
+          "sets": 4,
+          "reps": "8-10",
+          "weight": "Start light / moderate",
+          "tempo": "3-1-1-0",
+          "rpe": "7-8",
+          "restSeconds": "90-120",
+          "note": "Keep bar close and hinge at hips."
+        },
+        {
+          "id": "workout_day10_walking_lunge",
+          "exerciseId": "ex_walking_lunge",
+          "sets": 3,
+          "reps": "10 each leg",
+          "weight": "Light to moderate",
+          "tempo": "2-1-1-0",
+          "rpe": "7",
+          "restSeconds": "75-90",
+          "note": "Controlled steps, knee stable."
+        },
+        {
+          "id": "workout_day10_leg_extension",
+          "exerciseId": "ex_leg_extension",
+          "sets": 3,
+          "reps": "12-15",
+          "weight": "Light to moderate",
+          "tempo": "2-1-2-1",
+          "rpe": "7",
+          "restSeconds": "60",
+          "note": "Pause at top, lower slowly."
+        },
+        {
+          "id": "workout_day10_lying_leg_curl",
+          "exerciseId": "ex_lying_leg_curl",
+          "sets": 3,
+          "reps": "12-15",
+          "weight": "Moderate",
+          "tempo": "2-1-2-1",
+          "rpe": "7",
+          "restSeconds": "60",
+          "note": "Keep hips down."
+        },
+        {
+          "id": "workout_day10_cable_crunch",
+          "exerciseId": "ex_cable_crunch",
+          "sets": 3,
+          "reps": "12-15",
+          "weight": "Light to moderate",
+          "tempo": "2-1-2",
+          "rpe": "7",
+          "restSeconds": "45",
+          "note": "Round abs, not hips only."
+        }
+      ],
+      "cardio": {
+        "type": "optional",
+        "durationMinutes": 0,
+        "intensity": "none"
+      },
+      "cooldown": [
+        "3-5 minutes easy walking",
+        "5 minutes light stretching"
+      ],
+      "note": ""
+    },
+    {
+      "dayNumber": 11,
+      "date": "2026-07-06",
+      "type": "active_recovery",
+      "name": "Active Recovery - Walk + Stretch",
+      "focus": "Recovery, mobility, sleep, hydration",
+      "intensity": "RPE 2-4",
+      "warmup": [],
+      "workouts": [],
+      "cardio": {
+        "type": "walking",
+        "durationMinutes": "20-35",
+        "intensity": "easy"
+      },
+      "cooldown": [
+        "Light stretching 5-10 minutes"
+      ],
+      "note": "Do not add hard cardio. Prepare for upper pump day."
+    },
+    {
+      "dayNumber": 12,
+      "date": "2026-07-07",
+      "type": "training",
+      "name": "Upper Pump",
+      "focus": "Chest, back, shoulders, arms",
+      "intensity": "RPE 7",
+      "warmup": [
+        "5 minutes light cardio",
+        "2-3 minutes joint mobility",
+        "1-2 light warm-up sets before first compound exercise"
+      ],
+      "workouts": [
+        {
+          "id": "workout_day12_db_flat_press",
+          "exerciseId": "ex_dumbbell_flat_bench_press",
+          "sets": 3,
+          "reps": "10-12",
+          "weight": "Moderate",
+          "tempo": "3-1-1-0",
+          "rpe": "7",
+          "restSeconds": "75",
+          "note": "Controlled press."
+        },
+        {
+          "id": "workout_day12_reverse_lat_pulldown",
+          "exerciseId": "ex_reverse_grip_lat_pulldown",
+          "sets": 3,
+          "reps": "10-12",
+          "weight": "Moderate",
+          "tempo": "3-1-1-1",
+          "rpe": "7",
+          "restSeconds": "75",
+          "note": "Underhand grip; keep torso controlled."
+        },
+        {
+          "id": "workout_day12_seated_cable_row",
+          "exerciseId": "ex_seated_cable_row",
+          "sets": 3,
+          "reps": "12",
+          "weight": "Moderate",
+          "tempo": "3-1-1-1",
+          "rpe": "7",
+          "restSeconds": "75",
+          "note": "Squeeze mid-back."
+        },
+        {
+          "id": "workout_day12_machine_shoulder_press",
+          "exerciseId": "ex_machine_shoulder_press",
+          "sets": 3,
+          "reps": "10",
+          "weight": "Moderate",
+          "tempo": "2-1-1-0",
+          "rpe": "7",
+          "restSeconds": "75",
+          "note": "Smooth reps."
+        },
+        {
+          "id": "workout_day12_cable_chest_fly",
+          "exerciseId": "ex_cable_chest_fly",
+          "sets": 2,
+          "reps": "15",
+          "weight": "Light to moderate",
+          "tempo": "2-1-2-1",
+          "rpe": "7",
+          "restSeconds": "45-60",
+          "note": "Chest squeeze, no swinging."
+        },
+        {
+          "id": "workout_day12_lateral_raise",
+          "exerciseId": "ex_dumbbell_lateral_raise",
+          "sets": 3,
+          "reps": "15",
+          "weight": "Light",
+          "tempo": "2-1-2-0",
+          "rpe": "7",
+          "restSeconds": "45",
+          "note": "Burn is okay; form must stay clean."
+        },
+        {
+          "id": "workout_day12_triceps_pushdown",
+          "exerciseId": "ex_rope_triceps_pushdown",
+          "sets": 2,
+          "reps": "15",
+          "weight": "Moderate",
+          "tempo": "2-1-2-0",
+          "rpe": "7",
+          "restSeconds": "45",
+          "note": "Elbows fixed."
+        },
+        {
+          "id": "workout_day12_db_curl",
+          "exerciseId": "ex_dumbbell_biceps_curl",
+          "sets": 2,
+          "reps": "15",
+          "weight": "Light to moderate",
+          "tempo": "2-1-2-0",
+          "rpe": "7",
+          "restSeconds": "45",
+          "note": "Slow lowering."
+        }
+      ],
+      "cardio": {
+        "type": "optional",
+        "durationMinutes": 0,
+        "intensity": "none"
+      },
+      "cooldown": [
+        "3-5 minutes easy walking",
+        "5 minutes light stretching"
+      ],
+      "note": ""
+    },
+    {
+      "dayNumber": 13,
+      "date": "2026-07-08",
+      "type": "training",
+      "name": "Full Body B + Cardio",
+      "focus": "Full body, posture, light conditioning",
+      "intensity": "RPE 6-7",
+      "warmup": [
+        "5 minutes light cardio",
+        "2-3 minutes joint mobility",
+        "1-2 light warm-up sets before first compound exercise"
+      ],
+      "workouts": [
+        {
+          "id": "workout_day13_goblet_squat",
+          "exerciseId": "ex_goblet_squat",
+          "sets": 3,
+          "reps": "12",
+          "weight": "Moderate",
+          "tempo": "3-1-1-0",
+          "rpe": "7",
+          "restSeconds": "75",
+          "note": "Controlled depth."
+        },
+        {
+          "id": "workout_day13_incline_db_press",
+          "exerciseId": "ex_dumbbell_incline_bench_press",
+          "sets": 3,
+          "reps": "10",
+          "weight": "Moderate",
+          "tempo": "3-1-1-0",
+          "rpe": "7",
+          "restSeconds": "75",
+          "note": "Upper chest focus."
+        },
+        {
+          "id": "workout_day13_chest_supported_row",
+          "exerciseId": "ex_chest_supported_dumbbell_row",
+          "sets": 3,
+          "reps": "12",
+          "weight": "Moderate",
+          "tempo": "3-1-1-1",
+          "rpe": "7",
+          "restSeconds": "75",
+          "note": "No lower-back stress."
+        },
+        {
+          "id": "workout_day13_db_rdl",
+          "exerciseId": "ex_dumbbell_romanian_deadlift",
+          "sets": 3,
+          "reps": "10",
+          "weight": "Light to moderate",
+          "tempo": "3-1-1-0",
+          "rpe": "7",
+          "restSeconds": "75",
+          "note": "Hamstring stretch."
+        },
+        {
+          "id": "workout_day13_face_pull",
+          "exerciseId": "ex_face_pull",
+          "sets": 3,
+          "reps": "15",
+          "weight": "Light",
+          "tempo": "2-1-2-1",
+          "rpe": "6-7",
+          "restSeconds": "45",
+          "note": "Shoulder health and posture."
+        },
+        {
+          "id": "workout_day13_plank",
+          "exerciseId": "ex_plank",
+          "sets": 3,
+          "reps": "45 seconds",
+          "weight": "Bodyweight",
+          "tempo": "hold",
+          "rpe": "7",
+          "restSeconds": "45",
+          "note": "Stable trunk."
+        }
+      ],
+      "cardio": {
+        "type": "incline walk or bike",
+        "durationMinutes": "15-20",
+        "intensity": "easy to moderate"
+      },
+      "cooldown": [
+        "3-5 minutes easy walking",
+        "5 minutes light stretching"
+      ],
+      "note": ""
+    },
+    {
+      "dayNumber": 14,
+      "date": "2026-07-09",
+      "type": "active_recovery",
+      "name": "Recovery / Mobility",
+      "focus": "Recovery, mobility, sleep, hydration",
+      "intensity": "RPE 2-4",
+      "warmup": [],
+      "workouts": [],
+      "cardio": {
+        "type": "walking",
+        "durationMinutes": "20-35",
+        "intensity": "easy"
+      },
+      "cooldown": [
+        "Light stretching 5-10 minutes"
+      ],
+      "note": "Keep body fresh. No heavy lifting today."
+    },
+    {
+      "dayNumber": 15,
+      "date": "2026-07-10",
+      "type": "training",
+      "name": "Full Body Light Pump",
+      "focus": "Full body, final pump, no soreness chasing",
+      "intensity": "RPE 6-7",
+      "warmup": [
+        "5 minutes light cardio",
+        "2-3 minutes joint mobility",
+        "1-2 light warm-up sets before first compound exercise"
+      ],
+      "workouts": [
+        {
+          "id": "workout_day15_push_up",
+          "exerciseId": "ex_push_up",
+          "sets": 3,
+          "reps": "10-15",
+          "weight": "Bodyweight",
+          "tempo": "2-1-1-0",
+          "rpe": "6-7",
+          "restSeconds": "45-60",
+          "note": "Use incline push-up if normal push-up form breaks."
+        },
+        {
+          "id": "workout_day15_lat_pulldown",
+          "exerciseId": "ex_lat_pulldown",
+          "sets": 3,
+          "reps": "12",
+          "weight": "Moderate",
+          "tempo": "3-1-1-1",
+          "rpe": "7",
+          "restSeconds": "75",
+          "note": "Clean pulldown."
+        },
+        {
+          "id": "workout_day15_machine_chest_press",
+          "exerciseId": "ex_machine_chest_press",
+          "sets": 2,
+          "reps": "12",
+          "weight": "Moderate",
+          "tempo": "3-1-1-0",
+          "rpe": "6-7",
+          "restSeconds": "60",
+          "note": "Do not max out."
+        },
+        {
+          "id": "workout_day15_leg_press_light",
+          "exerciseId": "ex_leg_press",
+          "sets": 3,
+          "reps": "12",
+          "weight": "Light to moderate",
+          "tempo": "3-1-1-0",
+          "rpe": "6-7",
+          "restSeconds": "75",
+          "note": "Move smoothly."
+        },
+        {
+          "id": "workout_day15_lateral_raise",
+          "exerciseId": "ex_dumbbell_lateral_raise",
+          "sets": 3,
+          "reps": "15",
+          "weight": "Light",
+          "tempo": "2-1-2-0",
+          "rpe": "7",
+          "restSeconds": "45",
+          "note": "Controlled pump."
+        },
+        {
+          "id": "workout_day15_cable_curl",
+          "exerciseId": "ex_dumbbell_biceps_curl",
+          "sets": 2,
+          "reps": "15",
+          "weight": "Light to moderate",
+          "tempo": "2-1-2-0",
+          "rpe": "6-7",
+          "restSeconds": "45",
+          "note": "Can use dumbbells if no cable."
+        },
+        {
+          "id": "workout_day15_triceps_pushdown",
+          "exerciseId": "ex_rope_triceps_pushdown",
+          "sets": 2,
+          "reps": "15",
+          "weight": "Light to moderate",
+          "tempo": "2-1-2-0",
+          "rpe": "6-7",
+          "restSeconds": "45",
+          "note": "Controlled contraction."
+        },
+        {
+          "id": "workout_day15_plank",
+          "exerciseId": "ex_plank",
+          "sets": 3,
+          "reps": "30-45 seconds",
+          "weight": "Bodyweight",
+          "tempo": "hold",
+          "rpe": "6-7",
+          "restSeconds": "45",
+          "note": "Finish strong, no need to destroy yourself."
+        }
+      ],
+      "cardio": {
+        "type": "optional",
+        "durationMinutes": 0,
+        "intensity": "none"
+      },
+      "cooldown": [
+        "3-5 minutes easy walking",
+        "5 minutes light stretching"
+      ],
+      "note": "Final day should make you feel sharp, not broken."
+    }
+  ]
+}

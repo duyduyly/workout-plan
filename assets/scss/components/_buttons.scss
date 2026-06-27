@@ -1,0 +1,110 @@
+﻿.btn {
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  padding: 0.72rem 1.15rem;
+}
+
+.btn-dark {
+  background: linear-gradient(135deg, var(--color-primary), #7b845c);
+  border-color: transparent;
+  color: var(--text-inverse);
+}
+
+.btn-dark:hover,
+.btn-dark:focus {
+  background: linear-gradient(135deg, #5f6841, #747d56);
+  border-color: transparent;
+  color: var(--text-inverse);
+}
+
+.btn-outline-dark {
+  border-color: var(--color-text);
+  color: var(--color-text);
+}
+
+.btn-outline-dark:hover,
+.btn-outline-dark:focus {
+  background: var(--color-text);
+  border-color: var(--color-text);
+  color: var(--color-bg);
+}
+
+.section-action {
+  align-items: center;
+  color: var(--color-text);
+  display: inline-flex;
+  font-size: 0.85rem;
+  font-weight: 800;
+  gap: 0.45rem;
+  text-decoration: none;
+}
+
+.section-action:hover {
+  color: var(--moss);
+}
+
+.btn.btn--primary,
+.btn.btn--secondary,
+.btn.btn--outline {
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  font-weight: 800;
+  gap: 0.35rem;
+  justify-content: center;
+  line-height: 1;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.btn.btn--primary {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-surface);
+}
+
+.btn.btn--primary:hover,
+.btn.btn--primary:focus-visible {
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  color: var(--color-surface);
+}
+
+.btn.btn--secondary {
+  background: var(--surface-card);
+  border-color: var(--border-soft);
+  color: var(--text-primary);
+}
+
+.btn.btn--secondary:hover,
+.btn.btn--secondary:focus-visible {
+  background: var(--surface-panel);
+  border-color: var(--color-border);
+  color: var(--text-primary);
+}
+
+.btn.btn--outline {
+  background: transparent;
+  border-color: var(--border-soft);
+  color: var(--text-primary);
+}
+
+.btn.btn--outline:hover,
+.btn.btn--outline:focus-visible {
+  background: var(--color-primary-soft);
+  border-color: var(--color-primary-soft);
+  color: var(--text-primary);
+}
+
+.btn--sm {
+  min-height: 34px;
+  padding: 0 18px;
+  font-size: 12px;
+}

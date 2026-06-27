@@ -1,0 +1,94 @@
+﻿@use "../abstracts/mixins" as m;
+
+.page-banner {
+  width: min(100%, var(--container-width));
+  margin: 0 auto;
+  padding: var(--space-4) 0 var(--space-5);
+
+  &__content {
+    width: 100%;
+  }
+
+  &__eyebrow {
+    margin: 0 0 var(--space-3);
+    color: var(--color-primary-dark);
+    font-size: var(--font-size-eyebrow);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  &__main {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--space-5);
+  }
+
+  &__text {
+    min-width: 0;
+  }
+
+  &__title {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: var(--font-size-page-title);
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -0.06em;
+    text-wrap: balance;
+  }
+
+  &__description {
+    max-width: 760px;
+    margin: var(--space-3) 0 0;
+    color: var(--text-muted);
+    font-size: var(--font-size-body-sm);
+    line-height: 1.7;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 0 0 auto;
+    padding-bottom: 2px;
+  }
+}
+
+@include m.respond-down {
+  .page-banner {
+    padding: var(--space-4) 0 var(--space-5);
+
+    &__main {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+
+    &__actions {
+      justify-content: flex-start;
+      width: 100%;
+      padding-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .page-banner {
+    &__title {
+      font-size: clamp(34px, 13vw, 44px);
+    }
+
+    &__description {
+      font-size: 12px;
+    }
+
+    &__actions {
+      .btn--sm {
+        width: 100%;
+      }
+    }
+  }
+}

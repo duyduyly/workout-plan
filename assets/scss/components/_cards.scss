@@ -1,0 +1,154 @@
+﻿.dashboard-stat {
+  background: var(--surface-panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  display: grid;
+  gap: 0.3rem;
+  box-shadow: var(--card-shadow-soft);
+  padding: 1rem 1.1rem;
+}
+
+.dashboard-stat span {
+  color: var(--ink-soft);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.dashboard-stat strong {
+  color: var(--ink);
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  letter-spacing: -0.04em;
+}
+
+.hero-metric {
+  display: grid;
+  gap: 0.3rem;
+  padding: 1rem 1.1rem;
+  text-align: left;
+}
+
+.hero-metric span {
+  color: var(--ink-soft);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero-metric strong {
+  color: var(--ink);
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  letter-spacing: -0.04em;
+}
+
+.hero-metric.is-loading {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.manager-preview-shell {
+  display: grid;
+  gap: 1rem;
+}
+
+.manager-preview-heading {
+  align-items: flex-start;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.manager-status-chips,
+.editor-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.manager-status-chip {
+  background: var(--surface-primary-soft);
+  border: 1px solid var(--border-soft);
+  border-radius: 999px;
+  color: var(--color-text);
+  display: inline-flex;
+  font-size: 0.68rem;
+  font-weight: 800;
+  line-height: 1;
+  padding: 0.45rem 0.7rem;
+  text-transform: uppercase;
+}
+
+.manager-health-row {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.manager-health-card {
+  background: var(--surface-panel);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  display: grid;
+  gap: 0.2rem;
+  box-shadow: var(--card-shadow-soft);
+  padding: 0.95rem 1rem;
+}
+
+.manager-health-card span {
+  color: var(--ink-soft);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.manager-health-card strong {
+  color: var(--ink);
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+}
+
+.manager-health-card small {
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.hero-metric,
+.status-panel,
+.summary-stat,
+.filter-panel,
+.workflow-grid > div,
+.import-bar,
+.review-stats > div,
+.editor-card {
+  background: var(--surface-panel);
+  border: 1px solid var(--line);
+  box-shadow: var(--card-shadow-soft);
+}
+
+.hero-metric,
+.summary-stat {
+  border-radius: var(--radius-md);
+}
+
+.status-panel,
+.filter-panel,
+.workflow-grid > div,
+.import-bar,
+.editor-card {
+  border-radius: 1.25rem;
+}
+
+.editor-empty,
+.empty-panel {
+  border: 1px dashed var(--line);
+  border-radius: 1rem;
+  color: var(--ink-soft);
+  padding: 2rem;
+  text-align: center;
+}

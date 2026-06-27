@@ -22,60 +22,66 @@
       document.documentElement.setAttribute("data-theme", theme);
     })();
   </script>
-  <link rel="stylesheet" href="./assets/css/main.css" />
+  <link rel="stylesheet" href="./assets/scss/main.css" />
 </head>
 <body>
   <nav class="navbar navbar-expand-md navbar-light home-navbar" aria-label="Primary navigation">
     <div class="container">
-      <a class="navbar-brand" href="./index.html">
-        <span class="brand-mark" aria-hidden="true">F/F</span>
-        Form &amp; Function
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#mainNavigation"
-        aria-controls="mainNavigation"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNavigation">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="./index.html">Plans</a></li>
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="./exercises.html">Exercises</a></li>
-          <li class="nav-item"><a class="nav-link" href="./data-manager.html">Data</a></li>
-        </ul>
+      <div class="site-nav-shell">
+        <a class="navbar-brand" href="./index.html">
+          <span class="brand-mark" aria-hidden="true">F/F</span>
+          <span class="brand-copy">
+            <span class="brand-name">Form &amp; Function</span>
+            <span class="brand-subtitle">Workout planning dashboard</span>
+          </span>
+        </a>
         <button
-          class="theme-toggle"
+          class="navbar-toggler"
           type="button"
-          data-theme-toggle
-          aria-label="Switch to dark mode"
-          aria-pressed="false"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavigation"
+          aria-controls="mainNavigation"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
-          <span class="theme-toggle-icon" aria-hidden="true"></span>
-          <span class="theme-toggle-label">Dark mode</span>
+          <span class="navbar-toggler-icon"></span>
         </button>
+      </div>
+      <div class="collapse navbar-collapse" id="mainNavigation">
+        <div class="site-nav-panel ms-auto">
+          <ul class="navbar-nav site-nav-links">
+            <li class="nav-item"><a class="nav-link" href="./index.html">Plans</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="./exercises.html">Exercises</a></li>
+            <li class="nav-item"><a class="nav-link" href="./data-manager.html">Data</a></li>
+          </ul>
+          <button
+            class="theme-toggle"
+            type="button"
+            data-theme-toggle
+            aria-label="Switch to dark mode"
+            aria-pressed="false"
+          >
+            <span class="theme-toggle-icon" aria-hidden="true"></span>
+            <span class="theme-toggle-label">Dark mode</span>
+          </button>
+        </div>
       </div>
     </div>
   </nav>
 
   <main id="exercises-page">
-    <header class="library-hero">
-      <div class="container">
-        <div class="page-hero-shell">
-          <div class="page-hero-copy">
-            <p class="eyebrow mb-3">Movement library</p>
-            <h1 class="page-hero-title mb-3">Know the movement before you load the plan.</h1>
-            <p class="page-hero-text mb-0">
-              Search the official exercise library by name or narrow it by muscle group.
-              Each entry is read-only and loaded from <code>data/exercises.json</code>.
+    <header class="page-banner" aria-labelledby="exercise-page-banner-title">
+      <div class="page-banner__content">
+        <p class="page-banner__eyebrow">// LIBRARY</p>
+        <div class="page-banner__main">
+          <div class="page-banner__text">
+            <h1 id="exercise-page-banner-title" class="page-banner__title">Exercise Page</h1>
+            <p class="page-banner__description">
+              Clean search, filter, and compact cards. Each exercise should be selected by ID when building a plan.
             </p>
           </div>
-          <div class="page-hero-actions">
-            <a class="btn btn-outline-dark" href="./data-manager.html">Open data manager</a>
+          <div class="page-banner__actions">
+            <a class="btn btn--primary btn--sm" href="./data-manager.html#exercise-tools-heading">+ Add Exercise</a>
           </div>
         </div>
       </div>
@@ -85,32 +91,37 @@
       <div class="container">
         <div class="section-heading">
           <div>
-            <p class="eyebrow text-dark mb-2">Official exercises</p>
-            <h2 id="exercise-library-heading" class="mb-0">Browse the library</h2>
+            <p class="eyebrow mb-2">Official exercises</p>
           </div>
           <p id="exercise-result-count" class="result-count mb-0" aria-live="polite"></p>
         </div>
 
         <form id="exercise-filters" class="filter-panel" role="search">
-          <div class="filter-field filter-search">
-            <label for="exercise-search" class="form-label">Search by name</label>
-            <input
-              id="exercise-search"
-              class="form-control"
-              type="search"
-              placeholder="Try Push-up or Dead Bug"
-              autocomplete="off"
-            />
+          <div class="filter-panel-heading">
+            <p class="filter-panel-kicker mb-1">Library filters</p>
+            <p class="filter-panel-copy mb-0">Search by name, ID, target, or muscle group. Clear filters to return to the full exercise library.</p>
           </div>
-          <div class="filter-field">
-            <label for="muscle-group-filter" class="form-label">Muscle group</label>
-            <select id="muscle-group-filter" class="form-select">
-              <option value="">All muscle groups</option>
-            </select>
+          <div class="filter-panel-controls">
+            <div class="filter-field filter-search">
+              <label for="exercise-search" class="form-label">Search by name</label>
+              <input
+                id="exercise-search"
+                class="form-control"
+                type="search"
+                placeholder="Try Push-up or Dead Bug"
+                autocomplete="off"
+              />
+            </div>
+            <div class="filter-field">
+              <label for="muscle-group-filter" class="form-label">Muscle group</label>
+              <select id="muscle-group-filter" class="form-select">
+                <option value="">All muscle groups</option>
+              </select>
+            </div>
+            <button id="clear-exercise-filters" class="btn btn-outline-dark" type="button">
+              Clear filters
+            </button>
           </div>
-          <button id="clear-exercise-filters" class="btn btn-outline-dark" type="button">
-            Clear filters
-          </button>
         </form>
 
         <div id="exercise-status" class="status-panel" role="status" aria-live="polite">

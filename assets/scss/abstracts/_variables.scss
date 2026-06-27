@@ -1,0 +1,255 @@
+﻿// Sass token aliases for source-level reuse.
+$color-bg: #f7f6f1;
+$color-surface: #ffffff;
+$color-text: #211d17;
+$color-muted: #72695b;
+$color-primary: #69724a;
+$color-primary-dark: #56623d;
+$color-primary-soft: #eceee4;
+$color-border: rgba(33, 29, 23, 0.11);
+
+$text-primary: $color-text;
+$text-muted: $color-muted;
+$text-inverse: #fbf8f1;
+$text-inverse-soft: rgba(251, 248, 241, 0.72);
+
+$surface-page: $color-bg;
+$surface-card: $color-surface;
+$surface-primary: $color-primary;
+$surface-primary-soft: $color-primary-soft;
+$surface-panel: rgba(255, 255, 255, 0.72);
+$surface-strong: rgba(255, 255, 255, 0.82);
+$surface-alt: $color-primary-soft;
+$surface-dark: #211d17;
+$surface-shell: rgba(255, 252, 246, 0.62);
+$surface-cream: rgba(247, 243, 234, 0.92);
+$surface-elevated: $surface-strong;
+
+$border-soft: $color-border;
+$shell-border: rgba(255, 255, 255, 0.65);
+$hero-panel-border: rgba(105, 114, 74, 0.12);
+
+$radius-pill: 999px;
+$radius-lg: 24px;
+$radius-md: 16px;
+$radius-sm: 10px;
+$radius-xl: 32px;
+
+$shadow-soft: 0 18px 50px rgba(33, 33, 25, 0.08);
+$shadow-card: 0 10px 28px rgba(33, 33, 25, 0.06);
+$shadow: 0 24px 70px rgba(34, 28, 20, 0.08);
+$card-shadow-soft: $shadow-card;
+
+$container-width: 1100px;
+$container-shell-width: 1180px;
+$header-height: 44px;
+$z-header: 1040;
+
+$space-1: 4px;
+$space-2: 8px;
+$space-3: 12px;
+$space-4: 16px;
+$space-5: 24px;
+$space-6: 32px;
+$space-7: 48px;
+
+$font-family-heading: "Fraunces", Georgia, serif;
+$font-family-body: "Manrope", system-ui, sans-serif;
+$font-heading: $font-family-heading;
+$font-body: $font-family-body;
+$font-size-xs: 11px;
+$font-size-sm: 13px;
+$font-size-md: 15px;
+$font-size-lg: 18px;
+$font-size-eyebrow: 10px;
+$font-size-page-title: clamp(38px, 5vw, 52px);
+$font-size-body-sm: 13px;
+
+$ink: $text-primary;
+$ink-soft: $text-muted;
+$paper: $surface-page;
+$paper-light: $surface-card;
+$moss: $color-primary;
+$lime: #d9dfbf;
+$line: $border-soft;
+$color-accent: $color-primary-soft;
+$color-accent-contrast: #211d17;
+
+$nav-bg: rgba(251, 248, 241, 0.74);
+$nav-link: $color-muted;
+$nav-link-active-bg: $color-primary-soft;
+$nav-link-active-text: $color-text;
+$nav-toggler-border: $color-border;
+$accent-gradient: linear-gradient(135deg, $color-primary, #889169);
+$badge-bg: $color-primary;
+$badge-text: #ffffff;
+$muted-panel: #f0ebdf;
+$warning-border: rgba(63, 125, 88, 0.14);
+$success-bg: #d1e7dd;
+$success-text: #0f5132;
+$error-bg: #f8d7da;
+$error-text: #842029;
+$warning-bg: #fff3cd;
+$warning-text: #664d03;
+$toggle-bg: rgba(255, 255, 255, 0.7);
+$toggle-border: $color-border;
+$toggle-text: $color-text;
+$focus-ring: rgba(63, 125, 88, 0.18);
+
+:root {
+  --color-bg: #{$color-bg};
+  --color-surface: #{$color-surface};
+  --color-text: #{$color-text};
+  --color-muted: #{$color-muted};
+  --color-primary: #{$color-primary};
+  --color-primary-dark: #{$color-primary-dark};
+  --color-primary-soft: #{$color-primary-soft};
+  --color-border: #{$color-border};
+
+  --text-primary: #{$color-text};
+  --text-muted: #{$color-muted};
+  --text-inverse: #fbf8f1;
+  --text-inverse-soft: rgba(251, 248, 241, 0.72);
+
+  --surface-page: #{$color-bg};
+  --surface-card: #{$color-surface};
+  --surface-primary: #{$color-primary};
+  --surface-primary-soft: #{$color-primary-soft};
+  --surface-panel: rgba(255, 255, 255, 0.72);
+  --surface-strong: rgba(255, 255, 255, 0.82);
+  --surface-alt: #{$color-primary-soft};
+  --surface-dark: #211d17;
+  --surface-shell: rgba(255, 252, 246, 0.62);
+  --surface-cream: rgba(247, 243, 234, 0.92);
+
+  --border-soft: #{$color-border};
+  --shell-border: rgba(255, 255, 255, 0.65);
+  --hero-panel-border: rgba(105, 114, 74, 0.12);
+
+  --radius-pill: 999px;
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 10px;
+
+  --shadow-soft: 0 18px 50px rgba(33, 33, 25, 0.08);
+  --shadow-card: 0 10px 28px rgba(33, 33, 25, 0.06);
+  --shadow: 0 24px 70px rgba(34, 28, 20, 0.08);
+  --card-shadow-soft: #{$shadow-card};
+
+  --container-width: 1100px;
+  --container-shell-width: 1180px;
+  --header-height: 44px;
+  --z-header: 1040;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  --font-family-heading: "Fraunces", Georgia, serif;
+  --font-family-body: "Manrope", system-ui, sans-serif;
+  --font-heading: #{$font-family-heading};
+  --font-body: #{$font-family-body};
+  --font-size-xs: 11px;
+  --font-size-sm: 13px;
+  --font-size-md: 15px;
+  --font-size-lg: 18px;
+  --font-size-eyebrow: 10px;
+  --font-size-page-title: clamp(38px, 5vw, 52px);
+  --font-size-body-sm: 13px;
+
+  --ink: #{$text-primary};
+  --ink-soft: #{$text-muted};
+  --paper: #{$surface-page};
+  --paper-light: #{$surface-card};
+  --moss: #{$color-primary};
+  --lime: #d9dfbf;
+  --line: #{$border-soft};
+  --color-accent: #{$color-primary-soft};
+  --color-accent-contrast: #211d17;
+
+  --nav-bg: rgba(251, 248, 241, 0.74);
+  --nav-link: #{$color-muted};
+  --nav-link-active-bg: #{$nav-link-active-bg};
+  --nav-link-active-text: #{$nav-link-active-text};
+  --nav-toggler-border: #{$color-border};
+  --accent-gradient: linear-gradient(135deg, #{$color-primary}, #889169);
+  --badge-bg: #{$color-primary};
+  --badge-text: #ffffff;
+  --muted-panel: #f0ebdf;
+  --warning-border: rgba(63, 125, 88, 0.14);
+  --success-bg: #d1e7dd;
+  --success-text: #0f5132;
+  --error-bg: #f8d7da;
+  --error-text: #842029;
+  --warning-bg: #fff3cd;
+  --warning-text: #664d03;
+  --toggle-bg: #{$toggle-bg};
+  --toggle-border: #{$toggle-border};
+  --toggle-text: #{$toggle-text};
+  --focus-ring: rgba(63, 125, 88, 0.18);
+
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --color-bg: #171511;
+  --color-surface: #1f1b15;
+  --color-text: #f4efe4;
+  --color-muted: #b4ab9c;
+  --color-primary: #aab38a;
+  --color-primary-dark: #889169;
+  --color-primary-soft: #2f3123;
+  --color-border: rgba(245, 239, 230, 0.1);
+
+  --text-primary: #f4efe4;
+  --text-muted: #b4ab9c;
+  --text-inverse: #f4efe4;
+  --text-inverse-soft: rgba(245, 239, 230, 0.74);
+
+  --surface-page: #171511;
+  --surface-card: #1f1b15;
+  --surface-primary: #aab38a;
+  --surface-primary-soft: #2f3123;
+  --surface-panel: rgba(39, 35, 28, 0.76);
+  --surface-strong: rgba(39, 35, 28, 0.9);
+  --surface-alt: #2f3123;
+  --surface-dark: #0f0f0d;
+  --surface-shell: rgba(39, 35, 28, 0.82);
+  --surface-cream: rgba(39, 35, 28, 0.9);
+
+  --border-soft: rgba(245, 239, 230, 0.1);
+  --shell-border: rgba(245, 239, 230, 0.08);
+  --hero-panel-border: rgba(105, 114, 74, 0.12);
+
+  --shadow-soft: 0 18px 50px rgba(0, 0, 0, 0.32);
+  --shadow-card: 0 10px 28px rgba(0, 0, 0, 0.24);
+  --shadow: 0 26px 64px rgba(0, 0, 0, 0.45);
+  --card-shadow-soft: 0 10px 28px rgba(0, 0, 0, 0.24);
+
+  --nav-bg: rgba(23, 21, 17, 0.74);
+  --nav-link: #b4ab9c;
+  --nav-link-active-bg: #2f3123;
+  --nav-link-active-text: #f4efe4;
+  --nav-toggler-border: rgba(236, 241, 234, 0.16);
+  --accent-gradient: linear-gradient(135deg, #aab38a, #889169);
+  --badge-bg: #aab38a;
+  --badge-text: #10100d;
+  --muted-panel: #26221c;
+  --warning-border: rgba(116, 165, 127, 0.18);
+  --success-bg: #123227;
+  --success-text: #9fd8bc;
+  --error-bg: #3b1d22;
+  --error-text: #f4b5be;
+  --warning-bg: #40331a;
+  --warning-text: #f2db9c;
+  --toggle-bg: #2f3123;
+  --toggle-border: rgba(236, 241, 234, 0.12);
+  --toggle-text: #f4efe4;
+  --focus-ring: rgba(116, 165, 127, 0.26);
+
+  color-scheme: dark;
+}

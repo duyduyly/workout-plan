@@ -22,42 +22,49 @@
       document.documentElement.setAttribute("data-theme", theme);
     })();
   </script>
-  <link rel="stylesheet" href="./assets/css/main.css" />
+  <link rel="stylesheet" href="./assets/scss/main.css" />
 </head>
 <body>
   <nav class="navbar navbar-expand-md navbar-light home-navbar" aria-label="Primary navigation">
     <div class="container">
-      <a class="navbar-brand" href="./index.html">
-        <span class="brand-mark" aria-hidden="true">F/F</span>
-        Form &amp; Function
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#mainNavigation"
-        aria-controls="mainNavigation"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNavigation">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="./index.html">Plans</a></li>
-          <li class="nav-item"><a class="nav-link" href="./exercises.html">Exercises</a></li>
-          <li class="nav-item"><a class="nav-link" href="./data-manager.html">Data</a></li>
-        </ul>
+      <div class="site-nav-shell">
+        <a class="navbar-brand" href="./index.html">
+          <span class="brand-mark" aria-hidden="true">F/F</span>
+          <span class="brand-copy">
+            <span class="brand-name">Form &amp; Function</span>
+            <span class="brand-subtitle">Workout planning dashboard</span>
+          </span>
+        </a>
         <button
-          class="theme-toggle"
+          class="navbar-toggler"
           type="button"
-          data-theme-toggle
-          aria-label="Switch to dark mode"
-          aria-pressed="false"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavigation"
+          aria-controls="mainNavigation"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
-          <span class="theme-toggle-icon" aria-hidden="true"></span>
-          <span class="theme-toggle-label">Dark mode</span>
+          <span class="navbar-toggler-icon"></span>
         </button>
+      </div>
+      <div class="collapse navbar-collapse" id="mainNavigation">
+        <div class="site-nav-panel ms-auto">
+          <ul class="navbar-nav site-nav-links">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="./index.html">Plans</a></li>
+            <li class="nav-item"><a class="nav-link" href="./exercises.html">Exercises</a></li>
+            <li class="nav-item"><a class="nav-link" href="./data-manager.html">Data</a></li>
+          </ul>
+          <button
+            class="theme-toggle"
+            type="button"
+            data-theme-toggle
+            aria-label="Switch to dark mode"
+            aria-pressed="false"
+          >
+            <span class="theme-toggle-icon" aria-hidden="true"></span>
+            <span class="theme-toggle-label">Dark mode</span>
+          </button>
+        </div>
       </div>
     </div>
   </nav>
@@ -66,16 +73,34 @@
     <header class="home-hero">
       <div class="container">
         <div class="home-hero-content">
-          <p class="eyebrow mb-3">Simple workout planning</p>
-          <h1 class="home-hero-title">Build a training routine you can stick with.</h1>
-          <p class="home-hero-copy">
-            Explore structured workout plans, review each training day, and find the exercises
-            you need to train with confidence.
-          </p>
-          <div class="home-hero-actions">
-            <a class="btn btn-dark" href="#plans-heading">View plans</a>
-            <a class="btn btn-outline-dark" href="./exercises.html">Browse exercises</a>
+          <div class="home-hero-copyblock">
+            <p class="eyebrow mb-3"><span class="slash">///</span> Workout System</p>
+            <h1 class="home-hero-title">Build Your <span>Best Version</span></h1>
+            <p class="home-hero-copy">
+              Create clean workout plans, organize training days, track sets and reps, then export everything
+              as JSON for your static website.
+            </p>
+            <div class="home-hero-actions">
+              <a class="btn btn-dark" href="#plans-heading">See Workout Plan</a>
+              <a class="btn btn-outline-dark" href="./exercises.html">Browse Exercises</a>
+            </div>
+            <div id="plan-metrics" class="hero-metrics" aria-live="polite">
+              <div class="hero-metric is-loading">
+                <span>Loading</span>
+                <strong>Plans</strong>
+              </div>
+            </div>
           </div>
+
+          <figure class="home-hero-visual" aria-hidden="true">
+            <img
+              class="home-hero-image"
+              src="./assets/images/muscle-icon.jpg"
+              alt=""
+              loading="eager"
+              decoding="async"
+            />
+          </figure>
         </div>
       </div>
     </header>
@@ -84,8 +109,9 @@
       <div class="container">
         <div class="section-heading">
           <div>
-            <p class="eyebrow text-dark mb-2">Plan library</p>
+            <p class="eyebrow text-dark mb-2">Plan dashboard</p>
             <h2 id="plans-heading" class="mb-0">Choose your workout plan</h2>
+            <p class="plan-section-copy mb-0">Each card is rendered from indexed metadata only. Open the detail page to inspect full training days and exercise references.</p>
           </div>
           <a class="section-action" href="./data-manager.html">
             Open data manager
@@ -102,11 +128,11 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container d-flex flex-column flex-sm-row justify-content-between gap-2">
-      <span>Form &amp; Function</span>
-      <span>Static workout planning, without the noise.</span>
-    </div>
+  <footer class="mini-footer">
+    <span>◎ Set Goals</span>
+    <span>↗ Track Progress</span>
+    <span>◇ Stay Consistent</span>
+    <span>▣ Achieve Results</span>
   </footer>
 
   <script

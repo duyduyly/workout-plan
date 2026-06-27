@@ -22,60 +22,72 @@
       document.documentElement.setAttribute("data-theme", theme);
     })();
   </script>
-  <link rel="stylesheet" href="./assets/css/main.css" />
+  <link rel="stylesheet" href="./assets/scss/main.css" />
 </head>
 <body>
   <nav class="navbar navbar-expand-md navbar-light home-navbar" aria-label="Primary navigation">
     <div class="container">
-      <a class="navbar-brand" href="./index.html">
-        <span class="brand-mark" aria-hidden="true">F/F</span>
-        Form &amp; Function
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#mainNavigation"
-        aria-controls="mainNavigation"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNavigation">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="./index.html">Plans</a></li>
-          <li class="nav-item"><a class="nav-link" href="./exercises.html">Exercises</a></li>
-          <li class="nav-item"><a class="nav-link" href="./data-manager.html">Data</a></li>
-        </ul>
+      <div class="site-nav-shell">
+        <a class="navbar-brand" href="./index.html">
+          <span class="brand-mark" aria-hidden="true">F/F</span>
+          <span class="brand-copy">
+            <span class="brand-name">Form &amp; Function</span>
+            <span class="brand-subtitle">Workout planning dashboard</span>
+          </span>
+        </a>
         <button
-          class="theme-toggle"
+          class="navbar-toggler"
           type="button"
-          data-theme-toggle
-          aria-label="Switch to dark mode"
-          aria-pressed="false"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavigation"
+          aria-controls="mainNavigation"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
-          <span class="theme-toggle-icon" aria-hidden="true"></span>
-          <span class="theme-toggle-label">Dark mode</span>
+          <span class="navbar-toggler-icon"></span>
         </button>
+      </div>
+      <div class="collapse navbar-collapse" id="mainNavigation">
+        <div class="site-nav-panel ms-auto">
+          <ul class="navbar-nav site-nav-links">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="./index.html">Plans</a></li>
+            <li class="nav-item"><a class="nav-link" href="./exercises.html">Exercises</a></li>
+            <li class="nav-item"><a class="nav-link" href="./data-manager.html">Data</a></li>
+          </ul>
+          <button
+            class="theme-toggle"
+            type="button"
+            data-theme-toggle
+            aria-label="Switch to dark mode"
+            aria-pressed="false"
+          >
+            <span class="theme-toggle-icon" aria-hidden="true"></span>
+            <span class="theme-toggle-label">Dark mode</span>
+          </button>
+        </div>
       </div>
     </div>
   </nav>
 
   <main id="plan-detail-page">
-    <header class="detail-hero">
-      <div class="container">
-        <div class="detail-hero-shell">
-          <a class="back-link" href="./index.html">
-            <span aria-hidden="true">&larr;</span>
-            Back to plans
-          </a>
-          <div id="plan-detail-heading" class="detail-heading">
-            <p class="eyebrow mb-3">Workout plan</p>
-            <h1 class="detail-title">Loading plan...</h1>
-            <p class="detail-description mb-0">Reading the selected plan from the project data.</p>
+    <header class="page-banner" aria-labelledby="plan-detail-banner-title">
+      <div class="page-banner__content">
+        <p class="page-banner__eyebrow">// BUILDER</p>
+        <div class="page-banner__main">
+          <div class="page-banner__text">
+            <a class="back-link mb-3" href="./index.html">
+              <span aria-hidden="true">&larr;</span>
+              Back to plans
+            </a>
+            <div id="plan-detail-heading">
+              <h1 id="plan-detail-banner-title" class="page-banner__title">Planning Detail</h1>
+              <p class="page-banner__description">Build weekly training days, assign exercises, and keep each workout plan structured.</p>
+            </div>
+            <div id="plan-summary" class="plan-summary" hidden></div>
           </div>
-          <div id="plan-summary" class="plan-summary" hidden></div>
+          <div class="page-banner__actions">
+            <a class="btn btn--primary btn--sm" href="./data-manager.html#plan-tools-heading">+ Add Day</a>
+          </div>
         </div>
       </div>
     </header>
@@ -91,6 +103,7 @@
             <div>
               <p class="eyebrow text-dark mb-2">Weekly structure</p>
               <h2 id="schedule-heading" class="mb-0">Training days</h2>
+              <p class="detail-section-copy mb-0">Each day remains grouped in the current accordion structure. Open a panel to review the linked exercises and workout prescriptions in order.</p>
             </div>
             <p class="schedule-note mb-0">Open a day to review its exercises and targets.</p>
           </div>

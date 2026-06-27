@@ -1,0 +1,40 @@
+﻿.section-kicker,
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  color: var(--color-primary-dark);
+}
+
+.section-title {
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+  text-wrap: balance;
+}
+
+.display-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.8rem, 7vw, 5.8rem);
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+  max-width: 13ch;
+  text-wrap: balance;
+}
+
+.hero-copy {
+  color: var(--color-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 42rem;
+}
+
+.detail-description code {
+  color: var(--moss);
+}

@@ -1,0 +1,19 @@
+﻿.plan-section-copy,
+.exercise-section-copy,
+.detail-section-copy,
+.manager-section-copy {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin-top: 0.85rem;
+}
+
+.plan-section-copy,
+.exercise-section-copy,
+.detail-section-copy {
+  max-width: 42rem;
+}
+
+.manager-section-copy {
+  max-width: 46rem;
+}

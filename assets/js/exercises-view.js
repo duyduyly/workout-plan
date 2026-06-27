@@ -20,23 +20,52 @@ function createExerciseCard(exercise) {
   const hasVideo = Boolean(getYoutubeEmbedUrl(exercise.youtubeUrl));
   const exerciseId = escapeAttribute(exercise.id || "");
   const exerciseInitial = String(exercise.name || "E").charAt(0);
+  const coverImage = images[0] || "";
+  const mediaLabel = hasVideo ? "Video ready" : "No video";
+  const imageLabel = coverImage ? "Image ready" : "No image";
+  const targetLabel = exercise.mainTarget || "General";
+  const heroContent = coverImage
+    ? `<img class="exercise-thumb" src="${escapeAttribute(coverImage)}" alt="${escapeAttribute(exercise.name || "Exercise image")}" loading="lazy" />`
+    : `
+      <div class="exercise-thumb exercise-thumb-fallback" aria-hidden="true">
+        <span>${escapeHtml(exerciseInitial)}</span>
+        <small>${escapeHtml(imageLabel)}</small>
+      </div>
+    `;
 
   return `
     <div class="col-12 col-md-6 col-xl-4">
       <article class="exercise-card">
         <div class="exercise-card-top">
-          <div class="exercise-card-initial" aria-hidden="true">${escapeHtml(exerciseInitial)}</div>
-          <span class="target-badge">${escapeHtml(exercise.mainTarget || "General")}</span>
+          <div class="exercise-card-media-state">
+            <span class="exercise-media-chip">${escapeHtml(imageLabel)}</span>
+            <span class="exercise-media-chip">${escapeHtml(mediaLabel)}</span>
+          </div>
+          ${heroContent}
         </div>
         <div class="exercise-card-body">
+          <div class="exercise-card-meta">
+            <span class="plan-meta-chip">${escapeHtml(exercise.id || "No ID")}</span>
+            <span class="target-badge">${escapeHtml(targetLabel)}</span>
+          </div>
           <h3>${escapeHtml(exercise.name || "Untitled exercise")}</h3>
           <p>${escapeHtml(exercise.description || "No description provided.")}</p>
+          <div class="exercise-record-row">
+            <div class="exercise-record-item">
+              <span>Main target</span>
+              <strong>${escapeHtml(targetLabel)}</strong>
+            </div>
+            <div class="exercise-record-item">
+              <span>Tutorial</span>
+              <strong>${escapeHtml(hasVideo ? "Available" : "Missing")}</strong>
+            </div>
+          </div>
           <div class="muscle-list">${createExerciseBadges(exercise.muscleGroups)}</div>
         </div>
         <div class="exercise-card-footer">
           <div class="media-summary" aria-label="Tutorial media availability">
             <span>${formatCount(images.length, "image")}</span>
-            <span class="${hasVideo ? "has-media" : ""}">${hasVideo ? "Video available" : "No video"}</span>
+            <span class="${hasVideo ? "has-media" : ""}">${hasVideo ? "Video available" : "Video missing"}</span>
           </div>
           <button
             class="btn btn-dark w-100 view-exercise-detail"

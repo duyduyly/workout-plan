@@ -1,0 +1,39 @@
+﻿.form-control,
+.form-select,
+textarea.form-control {
+  background-color: var(--surface-strong);
+  border-color: var(--line);
+  color: var(--color-text);
+}
+
+.form-control:focus,
+.form-select:focus,
+textarea.form-control:focus {
+  background-color: var(--surface-strong);
+  border-color: var(--moss);
+  box-shadow: 0 0 0 0.25rem var(--focus-ring);
+  color: var(--color-text);
+}
+
+.form-control::placeholder,
+textarea.form-control::placeholder {
+  color: var(--color-muted);
+}
+
+.form-control::file-selector-button {
+  background: var(--surface-elevated);
+  border: 0;
+  color: var(--color-text);
+}
+
+.filter-panel .form-label,
+.import-bar .form-label,
+.editor-card .form-label,
+.workout-editor .form-label,
+#quick-create-form .form-label {
+  color: var(--ink-soft);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
