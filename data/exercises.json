@@ -353,5 +353,426 @@
       "https://i.pinimg.com/originals/21/86/e7/2186e7a33fda75a9ff3f1f2a8eef435a.gif"
     ],
     "youtubeUrl": "https://www.youtube.com/watch?v=p9hhX_Sx5v0"
+  },
+  {
+    "id": "ex_push_up",
+    "name": "Push-Up",
+    "description": "A bodyweight chest press that trains chest, shoulders, triceps, and core control.",
+    "mainTarget": "Chest",
+    "muscleGroups": [
+      "Chest",
+      "Shoulder",
+      "Triceps",
+      "Core"
+    ],
+    "images": [
+      "https://fitnessprogramer.com/wp-content/uploads/2021/02/Push-Up.gif"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=IODxDxX7oi4"
+  },
+  {
+    "id": "ex_dumbbell_flat_bench_press",
+    "name": "Dumbbell Flat Bench Press",
+    "description": "A dumbbell chest press with a natural range of motion and easier setup than barbell bench.",
+    "mainTarget": "Chest",
+    "muscleGroups": [
+      "Chest",
+      "Shoulder",
+      "Triceps"
+    ],
+    "images": [
+      "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Press.gif"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=O7ECGhZj_Hc"
+  },
+  {
+    "id": "ex_pec_deck_fly",
+    "name": "Pec Deck Fly",
+    "description": "A machine chest isolation exercise that is easy to control and beginner-friendly.",
+    "mainTarget": "Chest",
+    "muscleGroups": [
+      "Chest",
+      "Shoulder"
+    ],
+    "images": [
+      "https://fitnessprogramer.com/wp-content/uploads/2021/02/Pec-Deck-Fly.gif"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=3jYo5cMU3d4"
+  },
+  {
+    "id": "ex_dumbbell_chest_fly",
+    "name": "Dumbbell Chest Fly",
+    "description": "A chest isolation movement using dumbbells and a bench.",
+    "mainTarget": "Chest",
+    "muscleGroups": [
+      "Chest",
+      "Shoulder"
+    ],
+    "images": [
+      "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Fly.gif"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=QENKPHhQVi4"
+  },
+  {
+    "id": "ex_incline_machine_chest_press",
+    "name": "Incline Machine Chest Press",
+    "description": "A guided upper-chest press that is easier to control than free-weight incline pressing.",
+    "mainTarget": "Chest",
+    "muscleGroups": [
+      "Chest",
+      "Shoulder",
+      "Triceps"
+    ],
+    "images": [
+      "https://fitnessprogramer.com/wp-content/uploads/2021/02/Incline-Chest-Press-Machine.gif"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=VesHgJR14E8"
+  },
+  {
+    "id": "ex_single_arm_dumbbell_row",
+    "name": "Single Arm Dumbbell Row",
+    "description": "A unilateral dumbbell row that trains the lats, upper back, and core stability.",
+    "mainTarget": "Back",
+    "muscleGroups": [
+      "Back",
+      "Biceps",
+      "Core"
+    ],
+    "images": [
+      "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Row.gif"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=dFzUjzfih7k"
+  },
+  {
+    "id": "ex_chest_supported_dumbbell_row",
+    "name": "Chest Supported Dumbbell Row",
+    "description": "A back row variation that supports the torso and reduces lower-back demand.",
+    "mainTarget": "Back",
+    "muscleGroups": [
+      "Back",
+      "Biceps",
+      "Shoulder"
+    ],
+    "images": [
+      "https://i.pinimg.com/originals/d9/67/73/d96773f8c201820aa58bd5250a99dc46.gif"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=vmX58YYK3-8"
+  },
+  {
+    "id": "ex_straight_arm_pulldown",
+    "name": "Straight Arm Pulldown",
+    "description": "A cable lat isolation exercise focused on pulling with the back instead of the arms.",
+    "mainTarget": "Back",
+    "muscleGroups": [
+      "Back"
+    ],
+    "images": [
+      "https://fitnessprogramer.com/wp-content/uploads/2021/05/Cable-Straight-Arm-Pulldown.gif"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=32auHIqgEoM"
+  },
+  {
+    "id": "ex_reverse_grip_lat_pulldown",
+    "name": "Reverse Grip Lat Pulldown",
+    "description": "A pulldown variation using an underhand grip that also involves the biceps.",
+    "mainTarget": "Back",
+    "muscleGroups": [
+      "Back",
+      "Biceps"
+    ],
+    "images": [
+      "https://fitnessprogramer.com/wp-content/uploads/2021/04/Reverse-Lat-Pulldown.gif"
+    ],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Reverse%20Grip%20Lat%20Pulldown%20exercise%20tutorial%20proper%20form"
+  },
+  {
+    "id": "ex_machine_shoulder_press",
+    "name": "Machine Shoulder Press",
+    "description": "A guided shoulder press that is stable and beginner-friendly.",
+    "mainTarget": "Shoulder",
+    "muscleGroups": [
+      "Shoulder",
+      "Triceps"
+    ],
+    "images": [
+      "https://fitnessprogramer.com/wp-content/uploads/2021/02/Shoulder-Press-Machine.gif"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=SALxEARiMkw"
+  },
+  {
+    "id": "ex_cable_lateral_raise",
+    "name": "Cable Lateral Raise",
+    "description": "A side-delt isolation exercise with constant cable tension.",
+    "mainTarget": "Shoulder",
+    "muscleGroups": [
+      "Shoulder"
+    ],
+    "images": [
+      "https://i.pinimg.com/736x/63/eb/e9/63ebe992ba1d2264bf5ebb274cca3cf7.jpg"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=FGU9j1P5L-w"
+  },
+  {
+    "id": "ex_rear_delt_fly",
+    "name": "Rear Delt Fly",
+    "description": "A rear-shoulder exercise that supports posture and shoulder balance.",
+    "mainTarget": "Shoulder",
+    "muscleGroups": [
+      "Shoulder",
+      "Back"
+    ],
+    "images": [
+      "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Reverse-Fly.gif"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=6yMdhi2DVao"
+  },
+  {
+    "id": "ex_bodyweight_squat",
+    "name": "Bodyweight Squat",
+    "description": "A basic squat pattern used to learn lower-body control before loaded squats.",
+    "mainTarget": "Legs",
+    "muscleGroups": [
+      "Quadriceps",
+      "Glutes",
+      "Hamstrings",
+      "Core"
+    ],
+    "images": [
+      "https://fitnessprogramer.com/wp-content/uploads/2021/05/Bodyweight-Squat.gif"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=8uoaYwS6iFM"
+  },
+  {
+    "id": "ex_goblet_squat",
+    "name": "Goblet Squat",
+    "description": "A dumbbell squat variation that is easier to learn than barbell back squat.",
+    "mainTarget": "Legs",
+    "muscleGroups": [
+      "Quadriceps",
+      "Glutes",
+      "Hamstrings",
+      "Core"
+    ],
+    "images": [
+      "https://i.pinimg.com/736x/8e/83/6c/8e836c875a7442841431ed8bad70cd91.jpg"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=9W5KAqHfDe8"
+  },
+  {
+    "id": "ex_dumbbell_romanian_deadlift",
+    "name": "Dumbbell Romanian Deadlift",
+    "description": "A beginner-friendly hip-hinge exercise for hamstrings and glutes using dumbbells.",
+    "mainTarget": "Hamstrings",
+    "muscleGroups": [
+      "Hamstrings",
+      "Glutes",
+      "Back"
+    ],
+    "images": [
+      "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Romanian-Deadlift.gif"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=hQgFixeXdZo"
+  },
+  {
+    "id": "ex_bulgarian_split_squat",
+    "name": "Bulgarian Split Squat",
+    "description": "A single-leg squat variation for quads, glutes, and balance.",
+    "mainTarget": "Legs",
+    "muscleGroups": [
+      "Quadriceps",
+      "Glutes",
+      "Hamstrings",
+      "Core"
+    ],
+    "images": [
+      "https://i.pinimg.com/736x/83/ca/4b/83ca4b11b5fa3668ae8a666ccee3c135.jpg"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=SkNsa3eBwLA"
+  },
+  {
+    "id": "ex_step_up",
+    "name": "Dumbbell Step-Up",
+    "description": "A simple unilateral leg exercise using a box or bench.",
+    "mainTarget": "Legs",
+    "muscleGroups": [
+      "Quadriceps",
+      "Glutes",
+      "Hamstrings",
+      "Core"
+    ],
+    "images": [
+      "https://i.pinimg.com/originals/1c/88/eb/1c88ebbc4c4c05f7e108a8339f6c22fd.gif"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=9ZknEYboBOQ"
+  },
+  {
+    "id": "ex_seated_leg_curl",
+    "name": "Seated Leg Curl",
+    "description": "A hamstring isolation exercise done on a seated leg curl machine.",
+    "mainTarget": "Hamstrings",
+    "muscleGroups": [
+      "Hamstrings"
+    ],
+    "images": [
+      "https://fitnessprogramer.com/wp-content/uploads/2021/08/Seated-Leg-Curl.gif"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=swZQC689o9U"
+  },
+  {
+    "id": "ex_seated_calf_raise",
+    "name": "Seated Calf Raise",
+    "description": "A calf raise variation that emphasizes the lower calf area.",
+    "mainTarget": "Calves",
+    "muscleGroups": [
+      "Calves"
+    ],
+    "images": [
+      "https://i.pinimg.com/736x/dc/5d/6e/dc5d6e82dde5d44e0daae787a1b6ef23.jpg"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=ORY-ke6vcgk"
+  },
+  {
+    "id": "ex_cable_glute_kickback",
+    "name": "Cable Glute Kickback",
+    "description": "A cable glute isolation exercise that trains hip extension with low technical risk.",
+    "mainTarget": "Glutes",
+    "muscleGroups": [
+      "Glutes",
+      "Hamstrings"
+    ],
+    "images": [
+      "https://i.pinimg.com/originals/db/76/11/db76117e94e058f29d313798d051ed86.gif"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=8UzzL5thzRg"
+  },
+  {
+    "id": "ex_glute_bridge",
+    "name": "Glute Bridge",
+    "description": "A simple bodyweight hip-extension exercise for learning glute activation.",
+    "mainTarget": "Glutes",
+    "muscleGroups": [
+      "Glutes",
+      "Hamstrings",
+      "Core"
+    ],
+    "images": [
+      "https://i.pinimg.com/originals/a3/ea/4a/a3ea4a6b58402620d5e170ca2d998127.gif"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=Q_Bpj91Yiis"
+  },
+  {
+    "id": "ex_ez_bar_curl",
+    "name": "EZ Bar Curl",
+    "description": "A biceps curl variation that is often more wrist-friendly than a straight bar.",
+    "mainTarget": "Biceps",
+    "muscleGroups": [
+      "Biceps",
+      "Forearms"
+    ],
+    "images": [
+      "https://i.pinimg.com/originals/14/36/8f/14368fed947dcb25a641155cedec3422.gif"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=kwG2ipFRgfo"
+  },
+  {
+    "id": "ex_preacher_curl",
+    "name": "Preacher Curl",
+    "description": "A supported biceps curl that reduces body momentum.",
+    "mainTarget": "Biceps",
+    "muscleGroups": [
+      "Biceps"
+    ],
+    "images": [
+      "https://fitnessprogramer.com/wp-content/uploads/2021/02/Preacher-Curl.gif"
+    ],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Preacher%20Curl%20exercise%20tutorial%20proper%20form"
+  },
+  {
+    "id": "ex_close_grip_push_up",
+    "name": "Close Grip Push-Up",
+    "description": "A bodyweight triceps-focused push-up variation.",
+    "mainTarget": "Triceps",
+    "muscleGroups": [
+      "Triceps",
+      "Chest",
+      "Shoulder",
+      "Core"
+    ],
+    "images": [
+      "https://fitnessprogramer.com/wp-content/uploads/2021/02/Close-Grip-Push-Up.gif"
+    ],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Close%20Grip%20Push-Up%20exercise%20tutorial%20proper%20form"
+  },
+  {
+    "id": "ex_dumbbell_skull_crusher",
+    "name": "Dumbbell Skull Crusher",
+    "description": "A lying dumbbell triceps extension that trains elbow extension.",
+    "mainTarget": "Triceps",
+    "muscleGroups": [
+      "Triceps"
+    ],
+    "images": [
+      "https://fitnessprogramer.com/wp-content/uploads/2021/04/Dumbbell-Skull-Crusher.gif"
+    ],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Dumbbell%20Skull%20Crusher%20exercise%20tutorial%20proper%20form"
+  },
+  {
+    "id": "ex_cable_crunch",
+    "name": "Cable Crunch",
+    "description": "A weighted core flexion exercise using a cable machine.",
+    "mainTarget": "Core",
+    "muscleGroups": [
+      "Core",
+      "Abs"
+    ],
+    "images": [
+      "https://fitnessprogramer.com/wp-content/uploads/2021/02/Cable-Crunch.gif"
+    ],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Cable%20Crunch%20exercise%20tutorial%20proper%20form"
+  },
+  {
+    "id": "ex_dead_bug",
+    "name": "Dead Bug",
+    "description": "A beginner core stability exercise that trains control without stressing the lower back.",
+    "mainTarget": "Core",
+    "muscleGroups": [
+      "Core",
+      "Abs",
+      "Hip Flexors"
+    ],
+    "images": [
+      "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dead-Bug.gif"
+    ],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Dead%20Bug%20exercise%20tutorial%20proper%20form"
+  },
+  {
+    "id": "ex_bird_dog",
+    "name": "Bird Dog",
+    "description": "A low-risk core and back stability exercise for coordination and posture.",
+    "mainTarget": "Core",
+    "muscleGroups": [
+      "Core",
+      "Back",
+      "Glutes"
+    ],
+    "images": [
+      "https://fitnessprogramer.com/wp-content/uploads/2021/02/Bird-Dog.gif"
+    ],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Bird%20Dog%20exercise%20tutorial%20proper%20form"
+  },
+  {
+    "id": "ex_bicycle_crunch",
+    "name": "Bicycle Crunch",
+    "description": "A bodyweight ab exercise that trains the abs and obliques.",
+    "mainTarget": "Core",
+    "muscleGroups": [
+      "Core",
+      "Abs",
+      "Obliques"
+    ],
+    "images": [
+      "https://fitnessprogramer.com/wp-content/uploads/2021/02/Bicycle-Crunch.gif"
+    ],
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Bicycle%20Crunch%20exercise%20tutorial%20proper%20form"
   }
 ]

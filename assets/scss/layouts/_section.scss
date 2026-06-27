@@ -1,0 +1,19 @@
+.plans-section {
+  background: var(--color-bg);
+  padding: clamp(3.5rem, 7vw, 5.5rem) 0;
+  scroll-margin-top: 1rem;
+}
+
+.section-heading {
+  align-items: end;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+
+.section-heading h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  letter-spacing: -0.035em;
+}

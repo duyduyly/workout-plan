@@ -1,0 +1,369 @@
+@use "../abstracts/mixins" as m;
+
+.home-hero {
+  background: var(--color-bg);
+  padding: clamp(3.5rem, 7vw, 5rem) 0 3rem;
+}
+
+.home-hero-content {
+  align-items: center;
+  background: var(--color-surface);
+  border: 1px solid var(--line);
+  border-radius: 2.25rem;
+  box-shadow: var(--card-shadow-soft);
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.82fr);
+  margin: 0 auto;
+  min-height: 29rem;
+  overflow: hidden;
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+
+.home-hero-copyblock {
+  min-width: 0;
+  max-width: 42rem;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  text-align: left;
+}
+
+.home-hero-visual {
+  align-self: stretch;
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.9), rgba(238, 235, 225, 0.94)),
+    var(--surface-cream);
+  border: 1px solid var(--hero-panel-border);
+  border-radius: 2rem;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.42);
+  display: flex;
+  margin: 0;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.home-hero-image {
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  width: 100%;
+}
+
+.home-hero .eyebrow {
+  color: var(--moss);
+}
+
+.home-hero-title {
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 8vw, 6.6rem);
+  letter-spacing: -0.075em;
+  line-height: 0.88;
+  margin: 0;
+  max-width: 10ch;
+}
+
+.home-hero-title span {
+  color: var(--moss);
+}
+
+.home-hero-copy {
+  color: var(--color-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 1.5rem 0 0;
+  max-width: 42rem;
+}
+
+.hero-metrics {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 2rem 0 0;
+  max-width: 42rem;
+}
+
+.hero-metric {
+  display: grid;
+  gap: 0.3rem;
+  padding: 1rem 1.1rem;
+  text-align: left;
+}
+
+.hero-metric span {
+  color: var(--ink-soft);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero-metric strong {
+  color: var(--ink);
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  letter-spacing: -0.04em;
+}
+
+.hero-metric.is-loading {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.home-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: flex-start;
+  margin-top: 2rem;
+}
+
+.home-feature-grid {
+  margin-bottom: 2.5rem;
+}
+
+.plan-card,
+.exercise-card {
+  background: var(--surface-card);
+  border: 1px solid var(--line);
+  box-shadow: var(--card-shadow-soft);
+}
+
+.plan-card {
+  border-radius: 1.5rem;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+
+  @include card-hover-lift;
+}
+
+.plan-card::before {
+  background: linear-gradient(90deg, var(--moss), rgba(160, 170, 126, 0.86));
+  content: "";
+  height: 0.3rem;
+  inset: 0 0 auto;
+  position: absolute;
+}
+
+.plan-card .card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.85rem;
+}
+
+.plan-card-top {
+  align-items: center;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: space-between;
+}
+
+.plan-number {
+  color: var(--moss);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.plan-state-chip {
+  background: rgba(105, 114, 74, 0.12);
+  border: 1px solid rgba(105, 114, 74, 0.14);
+  border-radius: 999px;
+  color: var(--ink);
+  display: inline-flex;
+  font-size: 0.67rem;
+  font-weight: 800;
+  line-height: 1;
+  padding: 0.45rem 0.7rem;
+  text-transform: uppercase;
+}
+
+.plan-card .card-title {
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-size: 1.85rem;
+  letter-spacing: -0.03em;
+}
+
+.plan-card .card-text {
+  color: var(--ink-soft);
+  line-height: 1.65;
+}
+
+.plan-summary-line {
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+
+.plan-card-details {
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 0.8rem;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.plan-progress {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.plan-progress-heading {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.plan-progress-heading span {
+  color: var(--ink-soft);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.plan-progress-heading strong {
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.plan-progress-bar {
+  height: 0.5rem;
+  border-radius: 999px;
+  background: rgba(105, 114, 74, 0.13);
+  overflow: hidden;
+}
+
+.plan-progress-bar .progress-bar {
+  background: var(--moss);
+}
+
+.plan-meta-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.plan-meta-chip {
+  background: rgba(233, 228, 214, 0.82);
+}
+
+.day-count {
+  align-items: center;
+  color: var(--ink-soft);
+  display: flex;
+  font-size: 0.82rem;
+  font-weight: 800;
+  justify-content: space-between;
+}
+
+.day-count span:last-child {
+  color: var(--ink);
+  font-size: 0.88rem;
+  text-align: right;
+}
+
+.plan-file-note {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.plan-file-note span {
+  color: var(--ink-soft);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.plan-file-note code {
+  color: var(--moss);
+  font-size: 0.78rem;
+  overflow-wrap: anywhere;
+}
+
+.plan-card-actions {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.plan-action-note {
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+@include m.respond-down {
+  .home-hero {
+    padding: 3rem 0 2.5rem;
+  }
+
+  .home-hero-content {
+    border-radius: 1.5rem;
+    min-height: auto;
+    grid-template-columns: 1fr;
+    padding: 1.25rem;
+  }
+
+  .home-hero-copyblock {
+    max-width: none;
+    padding: 0.5rem;
+  }
+
+  .home-hero-title {
+    font-size: clamp(2.6rem, 11vw, 3.5rem);
+    max-width: 12ch;
+  }
+
+  .home-hero-copy {
+    max-width: none;
+  }
+
+  .hero-metrics {
+    grid-template-columns: 1fr;
+    max-width: none;
+  }
+
+  .home-hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: stretch;
+  }
+
+  .home-hero-actions .btn {
+    width: 100%;
+  }
+
+  .home-hero-visual {
+    border-radius: 1.25rem;
+    min-height: 15rem;
+    order: 2;
+  }
+
+  .home-hero-image {
+    max-height: 22rem;
+  }
+
+  .home-feature-grid {
+    margin-bottom: 2rem;
+  }
+
+  .section-heading .btn {
+    flex: 1 1 auto;
+  }
+
+  .plan-card-top,
+  .day-count {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .plan-progress-heading {
+    flex-direction: row;
+  }
+}

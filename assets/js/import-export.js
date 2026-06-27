@@ -19,30 +19,28 @@ const EXERCISE_JSON_TEMPLATE = [
 const EXERCISE_CSV_TEMPLATE = `id,name,description,mainTarget,muscleGroups,image1,image2,image3,image4,image5,youtubeUrl
 ex_bent_over_barbell_row,Bent Over Barbell Row,A back exercise performed with a barbell while bending forward.,Back,"Back,Shoulder",https://example.com/row-1.jpg,https://example.com/row-2.jpg,https://example.com/row-3.jpg,,,https://www.youtube.com/watch?v=example`;
 
-const WORKOUT_PLAN_JSON_TEMPLATE = [
-  {
-    id: "plan_4_day_strength",
-    name: "4-Day Strength Plan",
-    description: "A simple 4-day workout plan.",
-    days: [
-      {
-        id: "day_1_back_shoulder",
-        name: "Day 1 - Back + Shoulder",
-        note: "Focus on back strength.",
-        workouts: [
-          {
-            id: "workout_bent_over_row",
-            exerciseId: "ex_bent_over_barbell_row",
-            sets: 4,
-            reps: "10",
-            weight: "20kg",
-            note: "Keep back straight"
-          }
-        ]
-      }
-    ]
-  }
-];
+const WORKOUT_PLAN_JSON_TEMPLATE = {
+  id: "plan_4_day_strength",
+  name: "4-Day Strength Plan",
+  description: "A simple 4-day workout plan.",
+  days: [
+    {
+      id: "day_1_back_shoulder",
+      name: "Day 1 - Back + Shoulder",
+      note: "Focus on back strength.",
+      workouts: [
+        {
+          id: "workout_bent_over_row",
+          exerciseId: "ex_bent_over_barbell_row",
+          sets: 4,
+          reps: "10",
+          weight: "20kg",
+          note: "Keep back straight"
+        }
+      ]
+    }
+  ]
+};
 
 const WORKOUT_PLAN_CSV_TEMPLATE = `planId,planName,planDescription,dayId,dayName,dayNote,workoutId,exerciseId,sets,reps,weight,note
 plan_4_day_strength,4-Day Strength Plan,A simple 4-day workout plan.,day_1_back_shoulder,Day 1 - Back + Shoulder,Focus on back strength.,workout_bent_over_row,ex_bent_over_barbell_row,4,10,20kg,Keep back straight`;
@@ -108,8 +106,8 @@ function parseCsv(text) {
 
   const headers = rows[0].map((header) => header.trim());
   return rows.slice(1).map((values) => {
-    return headers.reduce((record, header, index) => {
-      record[header] = values[index] == null ? "" : values[index].trim();
+    return headers.reduce((record, header, headerIndex) => {
+      record[header] = values[headerIndex] == null ? "" : values[headerIndex].trim();
       return record;
     }, {});
   });
@@ -141,10 +139,10 @@ function normalizeExercise(exercise) {
 
 function normalizeWorkoutPlan(plan) {
   return {
-    id: String(plan.id || "").trim(),
-    name: String(plan.name || "").trim(),
-    description: String(plan.description || "").trim(),
-    days: (isArray(plan.days) ? plan.days : []).map((day) => ({
+    id: String(plan?.id || "").trim(),
+    name: String(plan?.name || "").trim(),
+    description: String(plan?.description || "").trim(),
+    days: (isArray(plan?.days) ? plan.days : []).map((day) => ({
       id: String(day.id || "").trim(),
       name: String(day.name || "").trim(),
       note: String(day.note || "").trim(),
@@ -157,6 +155,18 @@ function normalizeWorkoutPlan(plan) {
         note: workout.note == null ? "" : workout.note
       }))
     }))
+  };
+}
+
+function normalizeWorkoutPlanIndexItem(item) {
+  return {
+    id: String(item?.id || "").trim(),
+    name: String(item?.name || "").trim(),
+    description: String(item?.description || "").trim(),
+    file: String(item?.file || "").trim(),
+    level: String(item?.level || "").trim(),
+    daysPerWeek: item?.daysPerWeek == null || item.daysPerWeek === "" ? "" : Number(item.daysPerWeek),
+    goal: String(item?.goal || "").trim()
   };
 }
 
@@ -174,43 +184,46 @@ function parseExerciseCsv(text) {
 
 function parseWorkoutPlanJson(text) {
   const parsed = JSON.parse(text);
-  if (!isArray(parsed)) {
-    throw new Error("Workout plan JSON must contain an array.");
+  if (isArray(parsed) || !parsed || typeof parsed !== "object") {
+    throw new Error("Workout plan JSON must contain one object.");
   }
-  return parsed.map(normalizeWorkoutPlan);
+  return normalizeWorkoutPlan(parsed);
 }
 
 function parseWorkoutPlanCsv(text) {
   const records = parseCsv(text);
-  const plans = new Map();
+  let plan = null;
+  const days = new Map();
 
-  records.forEach((record) => {
-    const planId = record.planId.trim();
-    const dayId = record.dayId.trim();
+  records.forEach((record, recordIndex) => {
+    const planId = String(record.planId || "").trim();
+    const planName = String(record.planName || "").trim();
+    const planDescription = String(record.planDescription || "").trim();
+    const dayId = String(record.dayId || "").trim();
 
-    if (!plans.has(planId)) {
-      plans.set(planId, {
+    if (!plan) {
+      plan = {
         id: planId,
-        name: record.planName,
-        description: record.planDescription,
-        days: [],
-        _days: new Map()
-      });
+        name: planName,
+        description: planDescription,
+        days: []
+      };
+    } else if (plan.id !== planId || plan.name !== planName || plan.description !== planDescription) {
+      throw new Error(`Workout plan CSV must describe one plan only. Row ${recordIndex + 2} does not match the first plan.`);
     }
 
-    const plan = plans.get(planId);
-    if (!plan._days.has(dayId)) {
+    if (!days.has(dayId)) {
       const day = {
         id: dayId,
         name: record.dayName,
         note: record.dayNote,
         workouts: []
       };
-      plan._days.set(dayId, day);
+      days.set(dayId, day);
       plan.days.push(day);
     }
 
-    plan._days.get(dayId).workouts.push({
+    days.get(dayId).workouts.push({
       id: record.workoutId,
       exerciseId: record.exerciseId,
       sets: record.sets,
@@ -220,10 +233,15 @@ function parseWorkoutPlanCsv(text) {
     });
   });
 
-  return [...plans.values()].map((plan) => {
-    delete plan._days;
-    return normalizeWorkoutPlan(plan);
-  });
+  return normalizeWorkoutPlan(plan || { id: "", name: "", description: "", days: [] });
+}
+
+function parseWorkoutPlanIndexJson(text) {
+  const parsed = JSON.parse(text);
+  if (!isArray(parsed)) {
+    throw new Error("Workout plan index JSON must contain an array.");
+  }
+  return parsed.map(normalizeWorkoutPlanIndexItem);
 }
 
 async function importExerciseFile(file) {
@@ -234,6 +252,11 @@ async function importExerciseFile(file) {
 async function importWorkoutPlanFile(file) {
   const text = await file.text();
   return file.name.toLowerCase().endsWith(".csv") ? parseWorkoutPlanCsv(text) : parseWorkoutPlanJson(text);
+}
+
+async function importWorkoutPlanIndexFile(file) {
+  const text = await file.text();
+  return parseWorkoutPlanIndexJson(text);
 }
 
 function validateExercises(exercises) {
@@ -279,56 +302,81 @@ function validateExercises(exercises) {
   return { errors, warnings, invalidRows: [...invalidRows], duplicateIds, duplicateNames };
 }
 
-function validateWorkoutPlans(plans, exercises) {
+function validateWorkoutPlan(plan, exercises) {
   const errors = [];
   const warnings = [];
   const exerciseIds = new Set(exercises.map((exercise) => exercise.id));
-  const planIds = new Map();
   const missingReferences = [];
   let totalDays = 0;
   let totalWorkouts = 0;
 
+  if (!plan) {
+    return { errors, warnings, missingReferences, totalDays, totalWorkouts };
+  }
+
+  if (!plan.id) errors.push("Plan: id is required.");
+  if (!plan.name) errors.push("Plan: name is required.");
+  if (!plan.description) errors.push("Plan: description is required.");
+  if (!isArray(plan.days)) errors.push("Plan: days must be an array.");
+  const dayIds = new Map();
+
+  (isArray(plan.days) ? plan.days : []).forEach((day, dayIndex) => {
+    totalDays += 1;
+    const dayLabel = `Plan day ${dayIndex + 1}`;
+    if (!day.id) errors.push(`${dayLabel}: id is required.`);
+    if (!day.name) errors.push(`${dayLabel}: name is required.`);
+    if (!isArray(day.workouts)) errors.push(`${dayLabel}: workouts must be an array.`);
+    if (!dayIds.has(day.id)) dayIds.set(day.id, []);
+    dayIds.get(day.id).push(dayIndex + 1);
+    const workoutIds = new Map();
+
+    (isArray(day.workouts) ? day.workouts : []).forEach((workout, workoutIndex) => {
+      totalWorkouts += 1;
+      const workoutLabel = `${dayLabel}, workout ${workoutIndex + 1}`;
+      if (!workout.id) errors.push(`${workoutLabel}: id is required.`);
+      if (!workout.exerciseId) errors.push(`${workoutLabel}: exerciseId is required.`);
+      if (workout.exerciseId && !exerciseIds.has(workout.exerciseId)) {
+        const reference = `${plan.id || "plan"} / ${day.id || dayLabel} / ${workout.id || workoutLabel}: ${workout.exerciseId}`;
+        missingReferences.push(reference);
+        errors.push(`Missing exercise reference: ${reference}.`);
+      }
+      if (!workoutIds.has(workout.id)) workoutIds.set(workout.id, []);
+      workoutIds.get(workout.id).push(workoutIndex + 1);
+    });
+
+    [...workoutIds.entries()].filter(([, rows]) => rows.length > 1).forEach(([id]) => {
+      errors.push(`${dayLabel}: duplicate workout ID "${id}".`);
+    });
+  });
+
+  [...dayIds.entries()].filter(([, rows]) => rows.length > 1).forEach(([id]) => {
+    errors.push(`Plan: duplicate day ID "${id}".`);
+  });
+
+  return { errors, warnings, missingReferences, totalDays, totalWorkouts };
+}
+
+function validateWorkoutPlans(plans, exercises) {
+  if (!isArray(plans)) {
+    return validateWorkoutPlan(null, exercises);
+  }
+
+  const errors = [];
+  const warnings = [];
+  const missingReferences = [];
+  let totalDays = 0;
+  let totalWorkouts = 0;
+  const planIds = new Map();
+
   plans.forEach((plan, planIndex) => {
-    const planLabel = `Plan ${planIndex + 1}`;
-    if (!plan.id) errors.push(`${planLabel}: id is required.`);
-    if (!plan.name) errors.push(`${planLabel}: name is required.`);
-    if (!isArray(plan.days)) errors.push(`${planLabel}: days must be an array.`);
+    const result = validateWorkoutPlan(plan, exercises);
+    errors.push(...result.errors.map((message) => `Plan ${planIndex + 1}: ${message}`));
+    warnings.push(...result.warnings);
+    missingReferences.push(...result.missingReferences);
+    totalDays += result.totalDays;
+    totalWorkouts += result.totalWorkouts;
     if (!planIds.has(plan.id)) planIds.set(plan.id, []);
     planIds.get(plan.id).push(planIndex + 1);
-    const dayIds = new Map();
-
-    (isArray(plan.days) ? plan.days : []).forEach((day, dayIndex) => {
-      totalDays += 1;
-      const dayLabel = `${planLabel}, day ${dayIndex + 1}`;
-      if (!day.id) errors.push(`${dayLabel}: id is required.`);
-      if (!day.name) errors.push(`${dayLabel}: name is required.`);
-      if (!isArray(day.workouts)) errors.push(`${dayLabel}: workouts must be an array.`);
-      if (!dayIds.has(day.id)) dayIds.set(day.id, []);
-      dayIds.get(day.id).push(dayIndex + 1);
-      const workoutIds = new Map();
-
-      (isArray(day.workouts) ? day.workouts : []).forEach((workout, workoutIndex) => {
-        totalWorkouts += 1;
-        const workoutLabel = `${dayLabel}, workout ${workoutIndex + 1}`;
-        if (!workout.id) errors.push(`${workoutLabel}: id is required.`);
-        if (!workout.exerciseId) errors.push(`${workoutLabel}: exerciseId is required.`);
-        if (workout.exerciseId && !exerciseIds.has(workout.exerciseId)) {
-          const reference = `${plan.id || planLabel} / ${day.id || dayLabel} / ${workout.id || workoutLabel}: ${workout.exerciseId}`;
-          missingReferences.push(reference);
-          errors.push(`Missing exercise reference: ${reference}.`);
-        }
-        if (!workoutIds.has(workout.id)) workoutIds.set(workout.id, []);
-        workoutIds.get(workout.id).push(workoutIndex + 1);
-      });
-
-      [...workoutIds.entries()].filter(([, rows]) => rows.length > 1).forEach(([id]) => {
-        errors.push(`${dayLabel}: duplicate workout ID "${id}".`);
-      });
-    });
-
-    [...dayIds.entries()].filter(([, rows]) => rows.length > 1).forEach(([id]) => {
-      errors.push(`${planLabel}: duplicate day ID "${id}".`);
-    });
   });
 
   [...planIds.entries()].filter(([, rows]) => rows.length > 1).forEach(([id]) => {
@@ -336,6 +384,79 @@ function validateWorkoutPlans(plans, exercises) {
   });
 
   return { errors, warnings, missingReferences, totalDays, totalWorkouts };
+}
+
+function validateWorkoutPlanIndex(index, activePlan) {
+  const errors = [];
+  const warnings = [];
+  const normalizedNameRows = new Map();
+  const idRows = new Map();
+  const fileRows = new Map();
+  const items = isArray(index) ? index : null;
+
+  if (!items) {
+    return {
+      errors: ["Workout plan index must contain an array."],
+      warnings,
+      duplicateIds: [],
+      duplicateFiles: []
+    };
+  }
+
+  items.forEach((item, indexPosition) => {
+    const row = indexPosition + 1;
+    if (!item.id) errors.push(`Index row ${row}: id is required.`);
+    if (item.id && !/^[a-z0-9]+(?:_[a-z0-9]+)*$/.test(item.id)) errors.push(`Index row ${row}: id must be lowercase and slug-like.`);
+    if (!item.name) errors.push(`Index row ${row}: name is required.`);
+    if (!item.description) errors.push(`Index row ${row}: description is required.`);
+    if (!item.file) errors.push(`Index row ${row}: file is required.`);
+    if (item.file && !item.file.startsWith("workout-plans/")) errors.push(`Index row ${row}: file must start with "workout-plans/".`);
+    if (item.file && !item.file.endsWith(".json")) errors.push(`Index row ${row}: file must end with ".json".`);
+    if (item.file && item.file.includes("..")) errors.push(`Index row ${row}: file cannot contain "..".`);
+    if (activePlan && activePlan.id && item.id === activePlan.id && item.file !== `workout-plans/${activePlan.id}.json`) {
+      errors.push(`Index row ${row}: file should equal "workout-plans/${activePlan.id}.json".`);
+    }
+    if (activePlan && activePlan.id && item.file === `workout-plans/${activePlan.id}.json` && item.id !== activePlan.id) {
+      errors.push(`Index row ${row}: current plan id must match the linked index item id.`);
+    }
+
+    if (!idRows.has(item.id)) idRows.set(item.id, []);
+    idRows.get(item.id).push(row);
+    if (!fileRows.has(item.file)) fileRows.set(item.file, []);
+    fileRows.get(item.file).push(row);
+
+    const normalizedName = normalizeExerciseName(item.name);
+    if (normalizedName) {
+      if (!normalizedNameRows.has(normalizedName)) normalizedNameRows.set(normalizedName, []);
+      normalizedNameRows.get(normalizedName).push(row);
+    }
+  });
+
+  const duplicateIds = [...idRows.entries()].filter(([id, rows]) => id && rows.length > 1);
+  const duplicateFiles = [...fileRows.entries()].filter(([file, rows]) => file && rows.length > 1);
+  const duplicateNames = [...normalizedNameRows.entries()].filter(([, rows]) => rows.length > 1);
+
+  if (activePlan && activePlan.id && !items.some((item) => item.id === activePlan.id)) {
+    errors.push(`Workout plan index is missing an entry for "${activePlan.id}".`);
+  }
+
+  duplicateIds.forEach(([id, rows]) => errors.push(`Duplicate plan index ID "${id}" in rows ${rows.join(", ")}.`));
+  duplicateFiles.forEach(([file, rows]) => errors.push(`Duplicate plan index file "${file}" in rows ${rows.join(", ")}.`));
+  duplicateNames.forEach(([name, rows]) => warnings.push(`Duplicate normalized plan name "${name}" in rows ${rows.join(", ")}.`));
+
+  return { errors, warnings, duplicateIds, duplicateFiles };
+}
+
+function createPlanIndexItem(plan, existingItem) {
+  return {
+    id: plan.id,
+    name: plan.name,
+    description: plan.description,
+    file: `workout-plans/${plan.id}.json`,
+    level: existingItem?.level || "",
+    daysPerWeek: isArray(plan.days) ? plan.days.length : 0,
+    goal: existingItem?.goal || ""
+  };
 }
 
 function downloadExerciseJsonTemplate() {

@@ -1,0 +1,159 @@
+.workout-modal {
+  background: var(--surface-elevated);
+  border: 0;
+  border-radius: 1.25rem;
+}
+
+.workout-modal .modal-header {
+  border-bottom-color: var(--line);
+  color: var(--color-text);
+  padding: 1.35rem 1.5rem;
+}
+
+.workout-modal .modal-title,
+.modal-section-title {
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  letter-spacing: -0.03em;
+}
+
+.workout-modal .modal-body {
+  padding: 1.5rem;
+}
+
+.exercise-description {
+  color: var(--ink-soft);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.detail-label,
+.workout-stat span {
+  color: var(--ink-soft);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.detail-value {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  margin: 0.25rem 0 1.25rem;
+}
+
+.story-slider {
+  background: var(--surface-dark);
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.story-progress {
+  display: flex;
+  gap: 0.35rem;
+  inset: 0.8rem 0.8rem auto;
+  position: absolute;
+  z-index: 3;
+}
+
+.story-progress-track {
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  flex: 1;
+  height: 0.22rem;
+  overflow: hidden;
+}
+
+.story-progress-fill {
+  background: var(--text-inverse);
+  display: block;
+  height: 100%;
+  width: 0;
+}
+
+.story-progress-fill.is-active {
+  animation: story-progress 5s linear forwards;
+}
+
+.story-slider .carousel-inner {
+  min-height: clamp(24rem, 65vh, 46rem);
+}
+
+.story-slider .carousel-item {
+  align-items: center;
+  background: var(--surface-dark);
+  justify-content: center;
+  min-height: clamp(24rem, 65vh, 46rem);
+}
+
+.story-image {
+  display: block;
+  height: clamp(24rem, 65vh, 46rem);
+  margin-inline: auto;
+  max-width: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
+.story-placeholder {
+  align-items: center;
+  aspect-ratio: 4 / 3;
+  background:
+    radial-gradient(circle at 50% 40%, rgba(213, 242, 101, 0.18), transparent 30%),
+    var(--surface-dark);
+  border-radius: 1rem;
+  color: var(--text-inverse-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.story-placeholder-mark {
+  @include flex-center;
+  border: 1px solid rgba(213, 242, 101, 0.55);
+  border-radius: 50%;
+  color: var(--lime);
+  font-weight: 800;
+  height: 4rem;
+  width: 4rem;
+}
+
+.video-section {
+  border-top: 1px solid var(--line);
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+}
+
+.video-section > .detail-label {
+  width: 100%;
+}
+
+.tutorial-video {
+  border-radius: 1rem;
+  margin-inline: auto;
+  max-width: 52rem;
+  overflow: hidden;
+}
+
+.video-section .btn,
+.video-section .empty-tutorial {
+  margin-inline: auto;
+}
+
+.video-section .btn {
+  display: inline-flex;
+}
+
+@keyframes story-progress {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}

@@ -1,0 +1,323 @@
+@use "../abstracts/mixins" as m;
+
+.plan-summary {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-start;
+  margin-top: 2.5rem;
+}
+
+.summary-stat {
+  display: grid;
+  min-width: 9rem;
+  padding: 1rem 1.2rem;
+}
+
+.summary-stat strong {
+  color: var(--moss);
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.summary-stat span {
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  font-weight: 800;
+  margin-top: 0.4rem;
+}
+
+.detail-content {
+  background: var(--color-bg);
+  min-height: 30rem;
+  padding: clamp(4rem, 8vw, 7rem) 0;
+}
+
+.schedule-note {
+  color: var(--ink-soft);
+  max-width: 28rem;
+  text-align: right;
+}
+
+.plan-accordion {
+  display: grid;
+  gap: 1rem;
+}
+
+.workout-day-accordion {
+  background: var(--surface-panel);
+}
+
+.workout-day-accordion .accordion-button {
+  gap: 1rem;
+  min-height: 6.5rem;
+  padding: 1.35rem 1.5rem;
+}
+
+.day-heading-copy {
+  display: grid;
+  gap: 0.35rem;
+  margin-right: auto;
+}
+
+.day-heading-copy strong {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+}
+
+.day-heading-copy small {
+  color: var(--ink-soft);
+  line-height: 1.45;
+}
+
+.day-workout-count {
+  background: var(--surface-dark);
+  border-radius: 999px;
+  color: var(--text-inverse);
+  flex: 0 0 auto;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.45rem 0.7rem;
+}
+
+.day-workout-meta {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 0.45rem;
+}
+
+.day-set-count {
+  background: rgba(105, 114, 74, 0.12);
+  border: 1px solid rgba(105, 114, 74, 0.14);
+  border-radius: 999px;
+  color: var(--ink);
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.45rem 0.7rem;
+}
+
+.workout-day-accordion .accordion-body {
+  display: grid;
+  gap: 1rem;
+  padding: 1.25rem;
+}
+
+.workout-item {
+  align-items: center;
+  background: var(--surface-strong);
+  border: 1px solid var(--line);
+  border-radius: 1.1rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 1.25rem;
+  position: relative;
+}
+
+.workout-item > * {
+  position: relative;
+  z-index: 1;
+}
+
+.workout-item-image {
+  background:
+    linear-gradient(135deg, rgba(16, 18, 24, 0.84), rgba(16, 18, 24, 0.58)),
+    var(--workout-card-image) center / cover no-repeat;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.workout-item-image .exercise-initial {
+  background: rgba(255, 255, 255, 0.16);
+  color: var(--text-inverse);
+}
+
+.workout-item-image .workout-name,
+.workout-item-image .target-badge,
+.workout-item-image .muscle-badge,
+.workout-item-image .workout-note,
+.workout-item-image .workout-stat strong,
+.workout-item-image .workout-stat span {
+  color: var(--text-inverse);
+}
+
+.workout-item-image .target-badge,
+.workout-item-image .muscle-badge,
+.workout-item-image .workout-stat {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.workout-item-image .workout-stat {
+  backdrop-filter: blur(8px);
+}
+
+.workout-overview {
+  align-items: flex-start;
+  display: flex;
+  gap: 1rem;
+}
+
+.exercise-initial {
+  align-items: center;
+  background: var(--lime);
+  border-radius: 0.75rem;
+  color: var(--color-accent-contrast);
+  display: flex;
+  flex: 0 0 auto;
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  height: 3rem;
+  justify-content: center;
+  width: 3rem;
+}
+
+.workout-name {
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+}
+
+.target-badge,
+.muscle-badge {
+  border-radius: 999px;
+  display: inline-flex;
+  font-size: 0.68rem;
+  font-weight: 800;
+  line-height: 1;
+  padding: 0.4rem 0.6rem;
+}
+
+.target-badge {
+  background: var(--badge-bg);
+  color: var(--badge-text);
+}
+
+.muscle-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.muscle-badge {
+  background: var(--surface-alt);
+  color: var(--ink-soft);
+}
+
+.workout-note {
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+
+.workout-actions {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.workout-row-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  justify-content: flex-end;
+}
+
+.workout-stats {
+  display: flex;
+  gap: 0.45rem;
+}
+
+.workout-stat {
+  background: rgba(232, 228, 214, 0.72);
+  border-radius: 0.85rem;
+  display: grid;
+  min-width: 4.5rem;
+  padding: 0.65rem 0.75rem;
+}
+
+.workout-stat strong {
+  color: var(--ink);
+  font-size: 0.88rem;
+  margin-top: 0.15rem;
+}
+
+.missing-workout {
+  align-items: end;
+  border-color: rgba(202, 138, 4, 0.35);
+}
+
+.empty-day,
+.empty-tutorial {
+  color: var(--ink-soft);
+  padding: 1rem;
+  text-align: center;
+}
+
+.workout-note-panel {
+  background: var(--surface-alt);
+  border-radius: 0.9rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  margin-top: 1.25rem;
+  padding: 1rem;
+}
+
+@include m.respond-down {
+  .section-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .schedule-note {
+    text-align: left;
+  }
+
+  .plan-summary {
+    flex-wrap: wrap;
+  }
+
+  .day-workout-meta {
+    flex-wrap: wrap;
+  }
+
+  .summary-stat {
+    flex: 1 1 8rem;
+  }
+
+  .workout-day-accordion .accordion-button {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 1.1rem;
+  }
+
+  .day-heading-copy {
+    flex: 1 1 calc(100% - 3rem);
+  }
+
+  .day-workout-count {
+    order: 3;
+  }
+
+  .workout-item,
+  .workout-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .workout-overview {
+    flex-direction: column;
+  }
+
+  .workout-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .view-workout-detail {
+    width: 100%;
+  }
+}

@@ -1,0 +1,4 @@
+.app-shell,
+.dashboard-shell {
+  width: min(calc(100% - 1.5rem), var(--container-shell-width));
+}

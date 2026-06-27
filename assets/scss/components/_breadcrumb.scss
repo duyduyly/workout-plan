@@ -1,0 +1,14 @@
+.back-link {
+  color: var(--color-muted);
+  display: inline-flex;
+  font-size: 0.82rem;
+  font-weight: 800;
+  gap: 0.5rem;
+  letter-spacing: 0.04em;
+  margin-bottom: clamp(3rem, 7vw, 5.5rem);
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: var(--moss);
+}

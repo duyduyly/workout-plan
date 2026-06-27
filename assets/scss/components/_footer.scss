@@ -1,0 +1,20 @@
+.site-footer {
+  background: var(--color-bg);
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+  padding: 1.5rem 0;
+}
+
+.mini-footer {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--color-bg);
+  color: var(--ink-soft);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  justify-content: center;
+  margin: 4rem auto 0;
+  max-width: 64rem;
+  padding: 1.15rem 1.4rem;
+}

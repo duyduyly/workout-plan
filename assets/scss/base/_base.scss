@@ -1,0 +1,60 @@
+.dashboard-panel,
+.surface-panel,
+.toolbar-panel,
+.form-shell {
+  background: var(--surface-panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+}
+
+.dashboard-card,
+.surface-card {
+  background: var(--surface-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--card-shadow-soft);
+}
+
+.dashboard-shell-card {
+  background: var(--surface-shell);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
+}
+
+.dashboard-chip,
+.meta-chip,
+.plan-meta-chip {
+  align-items: center;
+  background: rgba(233, 228, 214, 0.82);
+  border: 1px solid rgba(105, 114, 74, 0.12);
+  border-radius: 999px;
+  color: var(--ink);
+  display: inline-flex;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  padding: 0.5rem 0.7rem;
+  text-transform: uppercase;
+}
+
+.empty-panel {
+  background: var(--surface-elevated);
+  border: 1px dashed var(--line);
+  border-radius: var(--radius-md);
+  color: var(--ink-soft);
+  padding: 2rem;
+  text-align: center;
+}
+
+.status-panel {
+  align-items: center;
+  color: var(--ink-soft);
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  min-height: 9rem;
+  padding: 2rem;
+  text-align: center;
+}

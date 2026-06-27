@@ -1,0 +1,36 @@
+html {
+  min-width: 320px;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: rgba(105, 114, 74, 0.2);
+  color: var(--ink);
+}
+
+@include reduced-motion {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .story-progress-fill.is-active {
+    animation: none;
+    width: 100%;
+  }
+}

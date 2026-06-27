@@ -19,51 +19,59 @@
       document.documentElement.setAttribute("data-theme", theme);
     })();
   </script>
-  <link rel="stylesheet" href="./assets/css/main.css" />
+  <link rel="stylesheet" href="./assets/scss/main.css" />
 </head>
 <body>
   <nav class="navbar navbar-expand-md navbar-light home-navbar" aria-label="Primary navigation">
     <div class="container">
-      <a class="navbar-brand" href="./index.html">
-        <span class="brand-mark" aria-hidden="true">F/F</span>
-        Form &amp; Function
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation"
-        aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNavigation">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="./index.html">Plans</a></li>
-          <li class="nav-item"><a class="nav-link" href="./exercises.html">Exercises</a></li>
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="./data-manager.html">Data</a></li>
-        </ul>
-        <button
-          class="theme-toggle"
-          type="button"
-          data-theme-toggle
-          aria-label="Switch to dark mode"
-          aria-pressed="false"
-        >
-          <span class="theme-toggle-icon" aria-hidden="true"></span>
-          <span class="theme-toggle-label">Dark mode</span>
+      <div class="site-nav-shell">
+        <a class="navbar-brand" href="./index.html">
+          <span class="brand-mark" aria-hidden="true">F/F</span>
+          <span class="brand-copy">
+            <span class="brand-name">Form &amp; Function</span>
+            <span class="brand-subtitle">Workout planning dashboard</span>
+          </span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation"
+          aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </button>
+      </div>
+      <div class="collapse navbar-collapse" id="mainNavigation">
+        <div class="site-nav-panel ms-auto">
+          <ul class="navbar-nav site-nav-links">
+            <li class="nav-item"><a class="nav-link" href="./index.html">Plans</a></li>
+            <li class="nav-item"><a class="nav-link" href="./exercises.html">Exercises</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="./data-manager.html">Data</a></li>
+          </ul>
+          <button
+            class="theme-toggle"
+            type="button"
+            data-theme-toggle
+            aria-label="Switch to dark mode"
+            aria-pressed="false"
+          >
+            <span class="theme-toggle-icon" aria-hidden="true"></span>
+            <span class="theme-toggle-label">Dark mode</span>
+          </button>
+        </div>
       </div>
     </div>
   </nav>
 
   <main id="data-manager-page">
-    <header class="manager-hero">
-      <div class="container">
-        <div class="page-hero-shell">
-          <div class="page-hero-copy">
-            <p class="eyebrow mb-3">Browser-based preparation tool</p>
-            <h1 class="page-hero-title mb-3">Prepare clean data without touching the repo directly.</h1>
-            <p class="page-hero-text mb-0">
-              Import, review, validate, and export temporary drafts. This page cannot write to the
-              repository or push to GitHub, so publishing still happens through JSON replacement and
-              commit flow.
+    <header class="page-banner" aria-labelledby="data-manager-banner-title">
+      <div class="page-banner__content">
+        <p class="page-banner__eyebrow">// DATA CENTER</p>
+        <div class="page-banner__main">
+          <div class="page-banner__text">
+            <h1 id="data-manager-banner-title" class="page-banner__title">Data Manager</h1>
+            <p class="page-banner__description">
+              Import, export, validate, and manage workout JSON data for your static website.
             </p>
+          </div>
+          <div class="page-banner__actions">
+            <button class="btn btn--primary btn--sm" type="button" data-export="exercises">Export Data</button>
           </div>
         </div>
       </div>
@@ -81,7 +89,7 @@
           <div><strong>2</strong><span>Review, edit, and connect workouts to exercises.</span></div>
           <div><strong>3</strong><span>Quick-create any missing exercise.</span></div>
           <div><strong>4</strong><span>Validate and export clean JSON.</span></div>
-          <div><strong>5</strong><span>Replace <code>data/exercises.json</code> or <code>data/workout-plans.json</code>.</span></div>
+          <div><strong>5</strong><span>Replace <code>data/exercises.json</code>, one file in <code>data/workout-plans/</code>, or <code>data/workout-plans.index.json</code>.</span></div>
           <div><strong>6</strong><span>Commit and push; GitHub Pages redeploys.</span></div>
         </div>
       </div>
@@ -93,6 +101,7 @@
           <div>
             <p class="eyebrow text-dark mb-2">Exercise data</p>
             <h2 id="exercise-tools-heading" class="mb-0">Exercise data tools</h2>
+            <p class="manager-section-copy mb-0">Use this area to import exercise records, validate media coverage, review duplicates, and maintain the source library used by workout plans.</p>
           </div>
           <div class="manager-actions">
             <button class="btn btn-outline-dark" type="button" data-template="exercise-json">JSON template</button>
@@ -100,13 +109,19 @@
           </div>
         </div>
         <div class="import-bar">
-          <div>
-            <label for="exercise-file" class="form-label">Import Exercise JSON/CSV</label>
-            <input id="exercise-file" class="form-control" type="file" accept=".json,.csv,application/json,text/csv" />
+          <div class="import-bar-copy">
+            <p class="import-bar-kicker mb-1">Import and validate</p>
+            <p class="import-bar-text mb-0">Start from the current library, a clean template, or a CSV draft, then validate before exporting <code>exercises.json</code>.</p>
           </div>
-          <button id="validate-exercises" class="btn btn-outline-dark" type="button">Validate exercises</button>
-          <button id="export-exercises" class="btn btn-dark" type="button">Export exercises.json</button>
-          <button id="clear-exercises" class="btn btn-outline-danger" type="button">Clear draft</button>
+          <div class="import-bar-controls">
+            <div>
+              <label for="exercise-file" class="form-label">Import Exercise JSON/CSV</label>
+              <input id="exercise-file" class="form-control" type="file" accept=".json,.csv,application/json,text/csv" />
+            </div>
+            <button id="validate-exercises" class="btn btn-outline-dark" type="button">Validate exercises</button>
+            <button id="export-exercises" class="btn btn-dark" type="button">Export exercises.json</button>
+            <button id="clear-exercises" class="btn btn-outline-danger" type="button">Clear draft</button>
+          </div>
         </div>
         <div id="exercise-import-message" class="manager-message" aria-live="polite"></div>
         <div id="exercise-preview"></div>
@@ -120,6 +135,7 @@
           <div>
             <p class="eyebrow text-dark mb-2">Plan data</p>
             <h2 id="plan-tools-heading" class="mb-0">Workout plan data tools</h2>
+            <p class="manager-section-copy mb-0">This editor works on one plan file at a time while also keeping the matching <code>workout-plans.index.json</code> entry in sync.</p>
           </div>
           <div class="manager-actions">
             <button class="btn btn-outline-dark" type="button" data-template="plan-json">JSON template</button>
@@ -127,13 +143,20 @@
           </div>
         </div>
         <div class="import-bar">
-          <div>
-            <label for="plan-file" class="form-label">Import Workout Plan JSON/CSV</label>
-            <input id="plan-file" class="form-control" type="file" accept=".json,.csv,application/json,text/csv" />
+          <div class="import-bar-copy">
+            <p class="import-bar-kicker mb-1">Plan and index maintenance</p>
+            <p class="import-bar-text mb-0">Import a single plan JSON/CSV or load <code>workout-plans.index.json</code> to update the discoverability layer separately.</p>
           </div>
-          <button id="validate-plans" class="btn btn-outline-dark" type="button">Validate plans</button>
-          <button id="export-plans" class="btn btn-dark" type="button">Export workout-plans.json</button>
-          <button id="clear-plans" class="btn btn-outline-danger" type="button">Clear draft</button>
+          <div class="import-bar-controls">
+            <div>
+              <label for="plan-file" class="form-label">Import Workout Plan JSON/CSV</label>
+              <input id="plan-file" class="form-control" type="file" accept=".json,.csv,application/json,text/csv" />
+            </div>
+            <button id="validate-plans" class="btn btn-outline-dark" type="button">Validate plan</button>
+            <button id="export-plans" class="btn btn-dark" type="button">Export current plan JSON</button>
+            <button id="export-plan-index" class="btn btn-outline-dark" type="button">Export workout-plans.index.json</button>
+            <button id="clear-plans" class="btn btn-outline-danger" type="button">Clear draft</button>
+          </div>
         </div>
         <div id="plan-import-message" class="manager-message" aria-live="polite"></div>
         <div id="plan-preview"></div>
@@ -147,10 +170,12 @@
           <div>
             <p class="eyebrow text-dark mb-2">Final review</p>
             <h2 id="combined-review-heading" class="mb-0">Combined review</h2>
+            <p class="manager-section-copy mb-0">Review the current exercise draft, single-plan draft, and index draft together before downloading production-ready JSON files.</p>
           </div>
           <div class="manager-actions">
             <button class="btn btn-outline-dark" type="button" data-export="exercises">Export exercises.json</button>
-            <button class="btn btn-dark" type="button" data-export="plans">Export workout-plans.json</button>
+            <button class="btn btn-dark" type="button" data-export="plans">Export current plan JSON</button>
+            <button class="btn btn-outline-dark" type="button" data-export="plan-index">Export workout-plans.index.json</button>
           </div>
         </div>
         <div id="combined-review" aria-live="polite"></div>

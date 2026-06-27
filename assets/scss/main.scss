@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+@import "vendors/bootstrap-overrides";
+
+@import "base/reset";
+@import "base/typography";
+@import "base/base";
+
+@import "layouts/container";
+@import "layouts/grid";
+@import "layouts/section";
+
+@import "components/header";
+@import "components/footer";
+@import "components/buttons";
+@import "components/page-banner";
+@import "components/forms";
+@import "components/cards";
+@import "components/modals";
+@import "components/breadcrumb";
+
+@import "utils/helpers";
+@import "utils/spacing";
+@import "utils/visibility";
+
+@import "pages/home";
+@import "pages/exercises";
+@import "pages/plan-detail";
+@import "pages/data-manager";
