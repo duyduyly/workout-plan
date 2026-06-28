@@ -122,6 +122,7 @@
 }
 
 .exercise-card-body h3 {
+  color: var(--color-text);
   font-family: var(--font-heading);
   font-size: 1.7rem;
   letter-spacing: -0.03em;
@@ -163,7 +164,7 @@
 }
 
 .exercise-record-item strong {
-  color: var(--ink);
+  color: var(--color-text);
   font-size: 0.9rem;
 }
 
@@ -223,7 +224,7 @@
 }
 
 .exercise-id-panel code {
-  color: var(--ink);
+  color: var(--color-text);
   display: block;
   margin-top: 0.35rem;
   overflow-wrap: anywhere;

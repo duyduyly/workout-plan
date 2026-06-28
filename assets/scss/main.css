@@ -56,23 +56,23 @@
   --font-size-eyebrow: 10px;
   --font-size-page-title: clamp(38px, 5vw, 52px);
   --font-size-body-sm: 13px;
-  --ink: #211d17;
-  --ink-soft: #72695b;
-  --paper: #f7f6f1;
-  --paper-light: #ffffff;
-  --moss: #69724a;
+  --ink: var(--text-primary);
+  --ink-soft: var(--text-muted);
+  --paper: var(--surface-page);
+  --paper-light: var(--surface-card);
+  --moss: var(--color-primary);
   --lime: #d9dfbf;
-  --line: rgba(33, 29, 23, 0.11);
-  --color-accent: #eceee4;
+  --line: var(--border-soft);
+  --color-accent: var(--color-primary-soft);
   --color-accent-contrast: #211d17;
   --nav-bg: rgba(251, 248, 241, 0.74);
-  --nav-link: #72695b;
-  --nav-link-active-bg: #eceee4;
-  --nav-link-active-text: #211d17;
-  --nav-toggler-border: rgba(33, 29, 23, 0.11);
+  --nav-link: var(--text-muted);
+  --nav-link-active-bg: var(--color-primary-soft);
+  --nav-link-active-text: var(--text-primary);
+  --nav-toggler-border: var(--border-soft);
   --accent-gradient: linear-gradient(135deg, #69724a, #889169);
   --badge-bg: #69724a;
-  --badge-text: #ffffff;
+  --badge-text: var(--color-accent-contrast);
   --muted-panel: #f0ebdf;
   --warning-border: rgba(63, 125, 88, 0.14);
   --success-bg: #d1e7dd;
@@ -81,9 +81,9 @@
   --error-text: #842029;
   --warning-bg: #fff3cd;
   --warning-text: #664d03;
-  --toggle-bg: rgba(255, 255, 255, 0.7);
-  --toggle-border: rgba(33, 29, 23, 0.11);
-  --toggle-text: #211d17;
+  --toggle-bg: var(--surface-panel);
+  --toggle-border: var(--border-soft);
+  --toggle-text: var(--text-primary);
   --focus-ring: rgba(63, 125, 88, 0.18);
   color-scheme: light;
 }
@@ -119,13 +119,13 @@
   --shadow: 0 26px 64px rgba(0, 0, 0, 0.45);
   --card-shadow-soft: 0 10px 28px rgba(0, 0, 0, 0.24);
   --nav-bg: rgba(23, 21, 17, 0.74);
-  --nav-link: #b4ab9c;
+  --nav-link: var(--text-muted);
   --nav-link-active-bg: #2f3123;
-  --nav-link-active-text: #f4efe4;
-  --nav-toggler-border: rgba(236, 241, 234, 0.16);
+  --nav-link-active-text: var(--text-primary);
+  --nav-toggler-border: var(--border-soft);
   --accent-gradient: linear-gradient(135deg, #aab38a, #889169);
   --badge-bg: #aab38a;
-  --badge-text: #10100d;
+  --badge-text: var(--color-accent-contrast);
   --muted-panel: #26221c;
   --warning-border: rgba(116, 165, 127, 0.18);
   --success-bg: #123227;
@@ -134,9 +134,9 @@
   --error-text: #f4b5be;
   --warning-bg: #40331a;
   --warning-text: #f2db9c;
-  --toggle-bg: #2f3123;
-  --toggle-border: rgba(236, 241, 234, 0.12);
-  --toggle-text: #f4efe4;
+  --toggle-bg: var(--surface-panel);
+  --toggle-border: var(--border-soft);
+  --toggle-text: var(--text-primary);
   --focus-ring: rgba(116, 165, 127, 0.26);
   color-scheme: dark;
 }
@@ -863,7 +863,7 @@ textarea.form-control::placeholder {
 }
 
 .dashboard-stat strong {
-  color: var(--ink);
+  color: var(--color-text);
   font-family: var(--font-heading);
   font-size: clamp(1.4rem, 3vw, 2rem);
   letter-spacing: -0.04em;
@@ -885,7 +885,7 @@ textarea.form-control::placeholder {
 }
 
 .hero-metric strong {
-  color: var(--ink);
+  color: var(--color-text);
   font-family: var(--font-heading);
   font-size: clamp(1.4rem, 3vw, 2rem);
   letter-spacing: -0.04em;
@@ -953,7 +953,7 @@ textarea.form-control::placeholder {
 }
 
 .manager-health-card strong {
-  color: var(--ink);
+  color: var(--color-text);
   font-family: var(--font-heading);
   font-size: 1.25rem;
 }
@@ -1062,6 +1062,7 @@ textarea.form-control::placeholder {
 }
 
 .detail-value {
+  color: var(--color-text);
   font-family: var(--font-heading);
   font-size: 1.35rem;
   margin: 0.25rem 0 1.25rem;
@@ -1330,7 +1331,7 @@ textarea.form-control::placeholder {
 }
 
 .hero-metric strong {
-  color: var(--ink);
+  color: var(--color-text);
   font-family: var(--font-heading);
   font-size: clamp(1.4rem, 3vw, 2rem);
   letter-spacing: -0.04em;
@@ -1713,6 +1714,7 @@ textarea.form-control::placeholder {
 }
 
 .exercise-card-body h3 {
+  color: var(--color-text);
   font-family: var(--font-heading);
   font-size: 1.7rem;
   letter-spacing: -0.03em;
@@ -1754,7 +1756,7 @@ textarea.form-control::placeholder {
 }
 
 .exercise-record-item strong {
-  color: var(--ink);
+  color: var(--color-text);
   font-size: 0.9rem;
 }
 
@@ -1814,7 +1816,7 @@ textarea.form-control::placeholder {
 }
 
 .exercise-id-panel code {
-  color: var(--ink);
+  color: var(--color-text);
   display: block;
   margin-top: 0.35rem;
   overflow-wrap: anywhere;
@@ -1896,6 +1898,7 @@ textarea.form-control::placeholder {
 }
 
 .day-heading-copy strong {
+  color: var(--color-text);
   font-family: var(--font-heading);
   font-size: 1.3rem;
 }
@@ -2073,7 +2076,7 @@ textarea.form-control::placeholder {
 }
 
 .workout-stat strong {
-  color: var(--ink);
+  color: var(--color-text);
   font-size: 0.88rem;
   margin-top: 0.15rem;
 }
@@ -2093,7 +2096,7 @@ textarea.form-control::placeholder {
 .workout-note-panel {
   background: var(--surface-alt);
   border-radius: 0.9rem;
-  color: var(--ink-soft);
+  color: var(--text-muted);
   line-height: 1.6;
   margin-top: 1.25rem;
   padding: 1rem;
@@ -2272,7 +2275,7 @@ textarea.form-control::placeholder {
 }
 
 .manager-panel-title {
-  color: var(--ink);
+  color: var(--color-text);
   font-family: var(--font-heading);
   font-size: clamp(1.35rem, 3vw, 1.8rem);
   letter-spacing: -0.03em;
@@ -2287,6 +2290,7 @@ textarea.form-control::placeholder {
 }
 
 .review-stats strong {
+  color: var(--color-text);
   font-family: var(--font-heading);
   font-size: 1.65rem;
 }
@@ -2360,6 +2364,7 @@ textarea.form-control::placeholder {
 }
 
 .editor-card-heading strong {
+  color: var(--color-text);
   font-family: var(--font-heading);
   font-size: 1.4rem;
 }
