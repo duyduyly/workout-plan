@@ -151,7 +151,7 @@
       "Core"
     ],
     "images": [
-      "https://i.pinimg.com/736x/bb/ea/e6/bbeae66367ff36e266d840cd8ebff05e.jpg"
+      "https://i.pinimg.com/originals/aa/c6/d0/aac6d000a2497978d81a7b118113d69a.gif"
     ],
     "youtubeUrl": "https://www.youtube.com/watch?v=gcNh17Ckjgg"
   },
@@ -483,7 +483,7 @@
     "images": [
       "https://fitnessprogramer.com/wp-content/uploads/2021/04/Reverse-Lat-Pulldown.gif"
     ],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Reverse%20Grip%20Lat%20Pulldown%20exercise%20tutorial%20proper%20form"
+    "youtubeUrl": "https://www.youtube.com/watch?v=SALxEARiMkw"
   },
   {
     "id": "ex_machine_shoulder_press",
@@ -495,9 +495,9 @@
       "Triceps"
     ],
     "images": [
-      "https://fitnessprogramer.com/wp-content/uploads/2021/02/Shoulder-Press-Machine.gif"
+      "https://i.pinimg.com/originals/67/b8/5a/67b85add1691a2620c3101b49a021899.gif"
     ],
-    "youtubeUrl": "https://www.youtube.com/watch?v=SALxEARiMkw"
+    "youtubeUrl": "https://www.youtube.com/watch?v=TnhIyp4kmO8"
   },
   {
     "id": "ex_cable_lateral_raise",
@@ -614,9 +614,10 @@
       "Hamstrings"
     ],
     "images": [
-      "https://fitnessprogramer.com/wp-content/uploads/2021/08/Seated-Leg-Curl.gif"
+      "https://i.pinimg.com/originals/ae/35/63/ae356321b33c1087e5304fd32151ae04.gif",
+      "https://i.pinimg.com/736x/47/c1/23/47c123b1300853084b8134639c882ff1.jpg"
     ],
-    "youtubeUrl": "https://www.youtube.com/watch?v=swZQC689o9U"
+    "youtubeUrl": "https://www.youtube.com/watch?v=WGih6WFr3uI"
   },
   {
     "id": "ex_seated_calf_raise",
@@ -683,9 +684,9 @@
       "Biceps"
     ],
     "images": [
-      "https://fitnessprogramer.com/wp-content/uploads/2021/02/Preacher-Curl.gif"
+      "https://i.pinimg.com/1200x/cc/8a/2a/cc8a2a3a6ec49a347a9715891796907b.jpg"
     ],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Preacher%20Curl%20exercise%20tutorial%20proper%20form"
+    "youtubeUrl": "https://www.youtube.com/watch?v=1-xvtHS9PsU"
   },
   {
     "id": "ex_close_grip_push_up",
@@ -699,9 +700,9 @@
       "Core"
     ],
     "images": [
-      "https://fitnessprogramer.com/wp-content/uploads/2021/02/Close-Grip-Push-Up.gif"
+      "https://i.pinimg.com/originals/11/ec/4c/11ec4c8f57e566f85f1c97218f48f1cc.gif"
     ],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Close%20Grip%20Push-Up%20exercise%20tutorial%20proper%20form"
+    "youtubeUrl": "https://www.youtube.com/shorts/jz_Vr4JbUjc"
   },
   {
     "id": "ex_dumbbell_skull_crusher",
@@ -712,9 +713,9 @@
       "Triceps"
     ],
     "images": [
-      "https://fitnessprogramer.com/wp-content/uploads/2021/04/Dumbbell-Skull-Crusher.gif"
+      "https://i.pinimg.com/originals/07/35/7d/07357df34f1f8bcd6476093895214fb0.gif"
     ],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Dumbbell%20Skull%20Crusher%20exercise%20tutorial%20proper%20form"
+    "youtubeUrl": "https://www.youtube.com/watch?v=S0fmDR60X-o"
   },
   {
     "id": "ex_cable_crunch",
@@ -726,9 +727,9 @@
       "Abs"
     ],
     "images": [
-      "https://fitnessprogramer.com/wp-content/uploads/2021/02/Cable-Crunch.gif"
+      "https://i.pinimg.com/originals/54/68/d5/5468d5032b585e2e6682f9257d27d568.gif"
     ],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Cable%20Crunch%20exercise%20tutorial%20proper%20form"
+    "youtubeUrl": "https://www.youtube.com/watch?v=b9FJ4hIK3pI"
   },
   {
     "id": "ex_dead_bug",
@@ -743,7 +744,7 @@
     "images": [
       "https://fitnessprogramer.com/wp-content/uploads/2021/02/Dead-Bug.gif"
     ],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Dead%20Bug%20exercise%20tutorial%20proper%20form"
+    "youtubeUrl": "https://www.youtube.com/watch?v=zechBkcIMf0"
   },
   {
     "id": "ex_bird_dog",
@@ -756,9 +757,9 @@
       "Glutes"
     ],
     "images": [
-      "https://fitnessprogramer.com/wp-content/uploads/2021/02/Bird-Dog.gif"
+      "https://i.pinimg.com/1200x/98/a8/cf/98a8cfdcf80313fea356550aa714964d.jpg"
     ],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Bird%20Dog%20exercise%20tutorial%20proper%20form"
+    "youtubeUrl": "https://www.youtube.com/watch?v=QABW99qPiNM"
   },
   {
     "id": "ex_bicycle_crunch",
@@ -773,6 +774,6 @@
     "images": [
       "https://fitnessprogramer.com/wp-content/uploads/2021/02/Bicycle-Crunch.gif"
     ],
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Bicycle%20Crunch%20exercise%20tutorial%20proper%20form"
+    "youtubeUrl": "https://www.youtube.com/watch?v=eqg47ZuGZXQ"
   }
 ]

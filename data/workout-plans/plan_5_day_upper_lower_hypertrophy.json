@@ -1,0 +1,360 @@
+{
+  "id": "plan_5_day_upper_lower_hypertrophy",
+  "name": "5-Day Upper Lower Hypertrophy Gym Plan",
+  "description": "A 5-day hypertrophy-focused plan for beginner-to-intermediate lifters. It uses upper/lower structure with extra shoulder, arm, glute, and core volume while covering all major muscle groups.",
+  "daysPerWeek": 5,
+  "level": "beginner-intermediate",
+  "estimatedMinutesPerSession": 50,
+  "scheduleSuggestion": [
+    "Upper A",
+    "Lower A",
+    "Rest",
+    "Push/Pull",
+    "Lower B",
+    "Arms + Core",
+    "Rest"
+  ],
+  "days": [
+    {
+      "id": "day_1_upper_a_chest_back_shoulders",
+      "name": "Day 1 - Upper A: Chest + Back + Shoulders",
+      "focus": [
+        "Chest",
+        "Back",
+        "Shoulder"
+      ],
+      "note": "Start the week with strong compound upper-body movements.",
+      "workouts": [
+        {
+          "id": "d1_barbell_bench",
+          "exerciseId": "ex_barbell_bench_press",
+          "sets": 3,
+          "reps": "8-10",
+          "weight": "Start light / RPE 7",
+          "restSeconds": 120,
+          "tempo": "3-1-1",
+          "rpe": "7-8",
+          "note": "Feet planted, shoulder blades squeezed, no bouncing."
+        },
+        {
+          "id": "d1_lat_pulldown",
+          "exerciseId": "ex_lat_pulldown",
+          "sets": 3,
+          "reps": "10-12",
+          "weight": "Moderate",
+          "restSeconds": 90,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Pull to upper chest and control the return."
+        },
+        {
+          "id": "d1_seated_row",
+          "exerciseId": "ex_seated_cable_row",
+          "sets": 3,
+          "reps": "10-12",
+          "weight": "Moderate",
+          "restSeconds": 90,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Drive elbows back and squeeze mid-back."
+        },
+        {
+          "id": "d1_db_shoulder_press",
+          "exerciseId": "ex_dumbbell_shoulder_press",
+          "sets": 3,
+          "reps": "10-12",
+          "weight": "Moderate",
+          "restSeconds": 90,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Press overhead without flaring the ribs."
+        },
+        {
+          "id": "d1_cable_lateral_raise",
+          "exerciseId": "ex_cable_lateral_raise",
+          "sets": 3,
+          "reps": "12-15",
+          "weight": "Light",
+          "restSeconds": 60,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Keep constant tension and avoid shrugging."
+        }
+      ]
+    },
+    {
+      "id": "day_2_lower_a_quads_calves",
+      "name": "Day 2 - Lower A: Quads + Glutes + Calves",
+      "focus": [
+        "Quadriceps",
+        "Glutes",
+        "Calves",
+        "Core"
+      ],
+      "note": "Quad-focused lower day. Keep depth consistent and form clean.",
+      "workouts": [
+        {
+          "id": "d2_back_squat",
+          "exerciseId": "ex_barbell_back_squat",
+          "sets": 3,
+          "reps": "8-10",
+          "weight": "Start light / RPE 7",
+          "restSeconds": 120,
+          "tempo": "3-1-1",
+          "rpe": "7-8",
+          "note": "Brace your core and keep knees tracking with toes."
+        },
+        {
+          "id": "d2_leg_press",
+          "exerciseId": "ex_leg_press",
+          "sets": 3,
+          "reps": "10-12",
+          "weight": "Moderate",
+          "restSeconds": 90,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Use a controlled range of motion."
+        },
+        {
+          "id": "d2_bulgarian_split_squat",
+          "exerciseId": "ex_bulgarian_split_squat",
+          "sets": 3,
+          "reps": "8-10 each leg",
+          "weight": "Light to moderate",
+          "restSeconds": 90,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Use balance support if needed."
+        },
+        {
+          "id": "d2_leg_extension",
+          "exerciseId": "ex_leg_extension",
+          "sets": 3,
+          "reps": "12-15",
+          "weight": "Light to moderate",
+          "restSeconds": 60,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Pause at the top and lower slowly."
+        },
+        {
+          "id": "d2_seated_calf",
+          "exerciseId": "ex_seated_calf_raise",
+          "sets": 3,
+          "reps": "12-20",
+          "weight": "Moderate",
+          "restSeconds": 60,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Control the stretch and squeeze."
+        }
+      ]
+    },
+    {
+      "id": "day_3_push_pull_balance",
+      "name": "Day 3 - Push/Pull Balance: Chest + Back + Rear Delts",
+      "focus": [
+        "Chest",
+        "Back",
+        "Shoulder",
+        "Biceps",
+        "Triceps"
+      ],
+      "note": "Moderate upper-body volume with both push and pull patterns.",
+      "workouts": [
+        {
+          "id": "d3_incline_machine_press",
+          "exerciseId": "ex_incline_machine_chest_press",
+          "sets": 3,
+          "reps": "10-12",
+          "weight": "Moderate",
+          "restSeconds": 90,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Keep shoulders down and press smoothly."
+        },
+        {
+          "id": "d3_single_arm_row",
+          "exerciseId": "ex_single_arm_dumbbell_row",
+          "sets": 3,
+          "reps": "10-12 each side",
+          "weight": "Moderate",
+          "restSeconds": 90,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Keep your torso stable and pull with the elbow."
+        },
+        {
+          "id": "d3_straight_arm_pulldown",
+          "exerciseId": "ex_straight_arm_pulldown",
+          "sets": 3,
+          "reps": "12-15",
+          "weight": "Light to moderate",
+          "restSeconds": 60,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Use lats, not arms, to pull the cable down."
+        },
+        {
+          "id": "d3_rear_delt_fly",
+          "exerciseId": "ex_rear_delt_fly",
+          "sets": 3,
+          "reps": "12-15",
+          "weight": "Light",
+          "restSeconds": 60,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Move slowly and avoid momentum."
+        },
+        {
+          "id": "d3_close_grip_pushup",
+          "exerciseId": "ex_close_grip_push_up",
+          "sets": 3,
+          "reps": "8-15",
+          "weight": "Bodyweight",
+          "restSeconds": 60,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Keep elbows controlled and body tight."
+        }
+      ]
+    },
+    {
+      "id": "day_4_lower_b_hamstrings_glutes",
+      "name": "Day 4 - Lower B: Hamstrings + Glutes + Core",
+      "focus": [
+        "Hamstrings",
+        "Glutes",
+        "Core",
+        "Calves"
+      ],
+      "note": "Posterior-chain focused day. Do not overload if your hinge form is weak.",
+      "workouts": [
+        {
+          "id": "d4_romanian_deadlift",
+          "exerciseId": "ex_romanian_deadlift",
+          "sets": 3,
+          "reps": "8-10",
+          "weight": "Start light / RPE 7",
+          "restSeconds": 120,
+          "tempo": "3-1-1",
+          "rpe": "7-8",
+          "note": "Push hips back, keep bar close and spine neutral."
+        },
+        {
+          "id": "d4_hip_thrust",
+          "exerciseId": "ex_barbell_hip_thrust",
+          "sets": 3,
+          "reps": "10-12",
+          "weight": "Moderate",
+          "restSeconds": 90,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Pause at the top and squeeze glutes."
+        },
+        {
+          "id": "d4_lying_leg_curl",
+          "exerciseId": "ex_lying_leg_curl",
+          "sets": 3,
+          "reps": "12-15",
+          "weight": "Moderate",
+          "restSeconds": 60,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Keep hips down and control the return."
+        },
+        {
+          "id": "d4_cable_glute_kickback",
+          "exerciseId": "ex_cable_glute_kickback",
+          "sets": 3,
+          "reps": "12-15 each leg",
+          "weight": "Light to moderate",
+          "restSeconds": 60,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Kick back with glutes, not lower back."
+        },
+        {
+          "id": "d4_standing_calf",
+          "exerciseId": "ex_standing_calf_raise",
+          "sets": 3,
+          "reps": "12-20",
+          "weight": "Moderate",
+          "restSeconds": 60,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Full stretch at bottom, pause at top."
+        }
+      ]
+    },
+    {
+      "id": "day_5_arms_shoulders_core",
+      "name": "Day 5 - Arms + Shoulders + Core",
+      "focus": [
+        "Biceps",
+        "Triceps",
+        "Shoulder",
+        "Core",
+        "Abs"
+      ],
+      "note": "Accessory day to finish the week without heavy spinal loading.",
+      "workouts": [
+        {
+          "id": "d5_face_pull",
+          "exerciseId": "ex_face_pull",
+          "sets": 3,
+          "reps": "12-15",
+          "weight": "Light to moderate",
+          "restSeconds": 60,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Pull to the face and keep elbows high."
+        },
+        {
+          "id": "d5_ez_bar_curl",
+          "exerciseId": "ex_ez_bar_curl",
+          "sets": 3,
+          "reps": "10-12",
+          "weight": "Moderate",
+          "restSeconds": 60,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Keep wrists comfortable and elbows stable."
+        },
+        {
+          "id": "d5_skull_crusher",
+          "exerciseId": "ex_dumbbell_skull_crusher",
+          "sets": 3,
+          "reps": "10-12",
+          "weight": "Light to moderate",
+          "restSeconds": 60,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Lower with control and protect elbows."
+        },
+        {
+          "id": "d5_cable_crunch",
+          "exerciseId": "ex_cable_crunch",
+          "sets": 3,
+          "reps": "12-15",
+          "weight": "Moderate",
+          "restSeconds": 60,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Round through the abs, not the hips only."
+        },
+        {
+          "id": "d5_bicycle_crunch",
+          "exerciseId": "ex_bicycle_crunch",
+          "sets": 3,
+          "reps": "15-20 each side",
+          "weight": "Bodyweight",
+          "restSeconds": 45,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Move with control instead of speed."
+        }
+      ]
+    }
+  ]
+}

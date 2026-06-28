@@ -1,16 +1,26 @@
 [
   {
-    "id": "plan_5_day_toned_full_body",
-    "name": "5-Day Toned Full Body Gym Plan",
-    "description": "A 5-day gym plan designed to build a lean, toned body while covering all major muscle groups. Rest 60-90 seconds between sets and prioritize clean technique before increasing weight.",
-    "file": "workout-plans/plan_5_day_toned_full_body.json",
-    "daysPerWeek": 5
+    "id": "plan_5_day_beginner_balanced_full_body",
+    "name": "5-Day Beginner Balanced Full Body Gym Plan",
+    "file": "workout-plans/plan_5_day_beginner_balanced_full_body.json",
+    "daysPerWeek": 5,
+    "level": "beginner",
+    "estimatedMinutesPerSession": 45
   },
   {
-    "id": "plan_15_day_toned_body_from_exercises",
-    "name": "15-Day Toned Body Gym Program",
-    "description": "A 15-day gym program designed to build a leaner, stronger, and more toned body while covering all major muscle groups. It includes 5 main gym sessions per week with recovery days, controlled tempo, and beginner-to-intermediate friendly exercises.",
-    "file": "workout-plans/15-day-toned-body-program.json",
-    "daysPerWeek": 5
+    "id": "plan_5_day_upper_lower_hypertrophy",
+    "name": "5-Day Upper Lower Hypertrophy Gym Plan",
+    "file": "workout-plans/plan_5_day_upper_lower_hypertrophy.json",
+    "daysPerWeek": 5,
+    "level": "beginner-intermediate",
+    "estimatedMinutesPerSession": 50
+  },
+  {
+    "id": "plan_5_day_toned_strength_mix",
+    "name": "5-Day Toned Strength Mix Gym Plan",
+    "file": "workout-plans/plan_5_day_toned_strength_mix.json",
+    "daysPerWeek": 5,
+    "level": "intermediate",
+    "estimatedMinutesPerSession": 50
   }
 ]

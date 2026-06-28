@@ -1,0 +1,359 @@
+{
+  "id": "plan_5_day_toned_strength_mix",
+  "name": "5-Day Toned Strength Mix Gym Plan",
+  "description": "A 5-day plan that mixes strength-style compound lifts with toned-body accessory work. It covers chest, back, shoulders, arms, quads, hamstrings, glutes, calves, and core across the week.",
+  "daysPerWeek": 5,
+  "level": "intermediate",
+  "estimatedMinutesPerSession": 50,
+  "scheduleSuggestion": [
+    "Push Strength",
+    "Pull Strength",
+    "Rest",
+    "Leg Strength",
+    "Upper Pump",
+    "Lower + Core",
+    "Rest"
+  ],
+  "days": [
+    {
+      "id": "day_1_push_strength",
+      "name": "Day 1 - Push Strength: Chest + Shoulders + Triceps",
+      "focus": [
+        "Chest",
+        "Shoulder",
+        "Triceps"
+      ],
+      "note": "Use controlled heavy-ish compound pressing, then finish with isolation work.",
+      "workouts": [
+        {
+          "id": "d1_barbell_bench_press",
+          "exerciseId": "ex_barbell_bench_press",
+          "sets": 4,
+          "reps": "6-8",
+          "weight": "RPE 7-8",
+          "restSeconds": 120,
+          "tempo": "3-1-1",
+          "rpe": "7-8",
+          "note": "Keep shoulder blades tight and do not bounce the bar."
+        },
+        {
+          "id": "d1_db_incline_press",
+          "exerciseId": "ex_dumbbell_incline_bench_press",
+          "sets": 3,
+          "reps": "8-10",
+          "weight": "Moderate",
+          "restSeconds": 90,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Lower dumbbells slowly and press with control."
+        },
+        {
+          "id": "d1_dumbbell_shoulder_press",
+          "exerciseId": "ex_dumbbell_shoulder_press",
+          "sets": 3,
+          "reps": "8-10",
+          "weight": "Moderate",
+          "restSeconds": 90,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Keep ribs down and press vertically."
+        },
+        {
+          "id": "d1_cable_chest_fly",
+          "exerciseId": "ex_cable_chest_fly",
+          "sets": 3,
+          "reps": "12-15",
+          "weight": "Light to moderate",
+          "restSeconds": 60,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Squeeze chest at the center."
+        },
+        {
+          "id": "d1_rope_triceps_pushdown",
+          "exerciseId": "ex_rope_triceps_pushdown",
+          "sets": 3,
+          "reps": "12-15",
+          "weight": "Moderate",
+          "restSeconds": 60,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Lock elbows near your sides."
+        }
+      ]
+    },
+    {
+      "id": "day_2_pull_strength",
+      "name": "Day 2 - Pull Strength: Back + Rear Delts + Biceps",
+      "focus": [
+        "Back",
+        "Shoulder",
+        "Biceps"
+      ],
+      "note": "Prioritize back tension. Keep rowing form strict.",
+      "workouts": [
+        {
+          "id": "d2_assisted_pullup",
+          "exerciseId": "ex_assisted_pull_up",
+          "sets": 4,
+          "reps": "6-8",
+          "weight": "Assisted / controlled",
+          "restSeconds": 120,
+          "tempo": "3-1-1",
+          "rpe": "7-8",
+          "note": "Use enough assistance for clean reps."
+        },
+        {
+          "id": "d2_bent_over_row",
+          "exerciseId": "ex_bent_over_barbell_row",
+          "sets": 3,
+          "reps": "8-10",
+          "weight": "Start light / RPE 7",
+          "restSeconds": 120,
+          "tempo": "3-1-1",
+          "rpe": "7-8",
+          "note": "Hinge firmly and avoid jerking the bar."
+        },
+        {
+          "id": "d2_reverse_lat_pulldown",
+          "exerciseId": "ex_reverse_grip_lat_pulldown",
+          "sets": 3,
+          "reps": "10-12",
+          "weight": "Moderate",
+          "restSeconds": 90,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Pull to upper chest with underhand grip."
+        },
+        {
+          "id": "d2_rear_delt_fly",
+          "exerciseId": "ex_rear_delt_fly",
+          "sets": 3,
+          "reps": "12-15",
+          "weight": "Light",
+          "restSeconds": 60,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Use rear delts, not traps."
+        },
+        {
+          "id": "d2_hammer_curl",
+          "exerciseId": "ex_hammer_curl",
+          "sets": 3,
+          "reps": "10-12",
+          "weight": "Moderate",
+          "restSeconds": 60,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Neutral grip, no swinging."
+        }
+      ]
+    },
+    {
+      "id": "day_3_leg_strength",
+      "name": "Day 3 - Leg Strength: Quads + Hamstrings + Calves",
+      "focus": [
+        "Quadriceps",
+        "Hamstrings",
+        "Glutes",
+        "Calves"
+      ],
+      "note": "Lower-body strength day. Use longer rest on squat and leg press.",
+      "workouts": [
+        {
+          "id": "d3_back_squat",
+          "exerciseId": "ex_barbell_back_squat",
+          "sets": 4,
+          "reps": "6-8",
+          "weight": "RPE 7-8",
+          "restSeconds": 120,
+          "tempo": "3-1-1",
+          "rpe": "7-8",
+          "note": "Brace hard and keep reps consistent."
+        },
+        {
+          "id": "d3_leg_press",
+          "exerciseId": "ex_leg_press",
+          "sets": 3,
+          "reps": "10-12",
+          "weight": "Moderate to heavy",
+          "restSeconds": 120,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Control depth and avoid knee lockout."
+        },
+        {
+          "id": "d3_dumbbell_rdl",
+          "exerciseId": "ex_dumbbell_romanian_deadlift",
+          "sets": 3,
+          "reps": "10-12",
+          "weight": "Moderate",
+          "restSeconds": 90,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Push hips back and keep dumbbells close."
+        },
+        {
+          "id": "d3_leg_extension",
+          "exerciseId": "ex_leg_extension",
+          "sets": 3,
+          "reps": "12-15",
+          "weight": "Light to moderate",
+          "restSeconds": 60,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Pause and squeeze quads at top."
+        },
+        {
+          "id": "d3_standing_calf_raise",
+          "exerciseId": "ex_standing_calf_raise",
+          "sets": 3,
+          "reps": "12-20",
+          "weight": "Moderate",
+          "restSeconds": 60,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Stretch, pause, and control."
+        }
+      ]
+    },
+    {
+      "id": "day_4_upper_pump",
+      "name": "Day 4 - Upper Pump: Chest + Back + Arms",
+      "focus": [
+        "Chest",
+        "Back",
+        "Biceps",
+        "Triceps",
+        "Shoulder"
+      ],
+      "note": "Higher-rep upper-body work. Keep rest shorter and chase clean reps, not ego weight.",
+      "workouts": [
+        {
+          "id": "d4_push_up",
+          "exerciseId": "ex_push_up",
+          "sets": 3,
+          "reps": "8-15",
+          "weight": "Bodyweight",
+          "restSeconds": 60,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Keep body straight and elbows controlled."
+        },
+        {
+          "id": "d4_cable_row",
+          "exerciseId": "ex_seated_cable_row",
+          "sets": 3,
+          "reps": "12-15",
+          "weight": "Moderate",
+          "restSeconds": 75,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Squeeze mid-back and control the return."
+        },
+        {
+          "id": "d4_pec_deck",
+          "exerciseId": "ex_pec_deck_fly",
+          "sets": 3,
+          "reps": "12-15",
+          "weight": "Light to moderate",
+          "restSeconds": 60,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Do not overstretch shoulders."
+        },
+        {
+          "id": "d4_preacher_curl",
+          "exerciseId": "ex_preacher_curl",
+          "sets": 3,
+          "reps": "10-12",
+          "weight": "Moderate",
+          "restSeconds": 60,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Curl without lifting elbows off the pad."
+        },
+        {
+          "id": "d4_overhead_triceps",
+          "exerciseId": "ex_cable_triceps_overhead_extension",
+          "sets": 3,
+          "reps": "12-15",
+          "weight": "Light to moderate",
+          "restSeconds": 60,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Feel the long-head stretch safely."
+        }
+      ]
+    },
+    {
+      "id": "day_5_lower_core",
+      "name": "Day 5 - Lower + Core: Glutes + Unilateral Legs + Abs",
+      "focus": [
+        "Glutes",
+        "Hamstrings",
+        "Quadriceps",
+        "Core",
+        "Abs"
+      ],
+      "note": "End the week with glutes, single-leg control, and core stability.",
+      "workouts": [
+        {
+          "id": "d5_barbell_hip_thrust",
+          "exerciseId": "ex_barbell_hip_thrust",
+          "sets": 3,
+          "reps": "8-10",
+          "weight": "Moderate to heavy",
+          "restSeconds": 90,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Pause at top and do not overextend lower back."
+        },
+        {
+          "id": "d5_walking_lunge",
+          "exerciseId": "ex_walking_lunge",
+          "sets": 3,
+          "reps": "10-12 each leg",
+          "weight": "Light to moderate",
+          "restSeconds": 90,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Take controlled steps and keep knee stable."
+        },
+        {
+          "id": "d5_seated_leg_curl",
+          "exerciseId": "ex_seated_leg_curl",
+          "sets": 3,
+          "reps": "12-15",
+          "weight": "Moderate",
+          "restSeconds": 60,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Control both curl and return."
+        },
+        {
+          "id": "d5_hanging_knee_raise",
+          "exerciseId": "ex_hanging_knee_raise",
+          "sets": 3,
+          "reps": "10-15",
+          "weight": "Bodyweight",
+          "restSeconds": 60,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Avoid swinging and use abs to lift knees."
+        },
+        {
+          "id": "d5_bird_dog",
+          "exerciseId": "ex_bird_dog",
+          "sets": 3,
+          "reps": "10-12 each side",
+          "weight": "Bodyweight",
+          "restSeconds": 45,
+          "tempo": "2-1-2",
+          "rpe": "7-8",
+          "note": "Move slowly and keep hips stable."
+        }
+      ]
+    }
+  ]
+}

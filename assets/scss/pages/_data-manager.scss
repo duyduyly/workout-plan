@@ -130,7 +130,7 @@
 }
 
 .manager-panel-title {
-  color: var(--ink);
+  color: var(--color-text);
   font-family: var(--font-heading);
   font-size: clamp(1.35rem, 3vw, 1.8rem);
   letter-spacing: -0.03em;
@@ -145,6 +145,7 @@
 }
 
 .review-stats strong {
+  color: var(--color-text);
   font-family: var(--font-heading);
   font-size: 1.65rem;
 }
@@ -218,6 +219,7 @@
 }
 
 .editor-card-heading strong {
+  color: var(--color-text);
   font-family: var(--font-heading);
   font-size: 1.4rem;
 }
